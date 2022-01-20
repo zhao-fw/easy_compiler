@@ -1,0 +1,83 @@
+**************************firstw集合***************************
+             <start> :                  int                void
+           <program> :                  int                void
+                 <N> :                    @
+      <declare_list> :                  int                void
+                   @ :                    @
+           <declare> :                  int                void
+                 int :                  int
+                  ID :                   ID
+                 <M> :                    @
+                 <A> :                    @
+      <func_declare> :                    (
+       <var_declare> :                    ;
+                void :                 void
+                   ; :                    ;
+                   ( :                    (
+            <fparam> :                 void                 int
+                   ) :                    )
+        <sent_block> :                    {
+        <param_list> :                  int
+             <param> :                  int
+                   , :                    ,
+                   { :                    {
+     <inner_declare> :                  int
+         <sent_list> :                   if               while              return                  ID
+                   } :                    }
+     <inner_var_dec> :                  int
+              <sent> :                   if               while              return                  ID
+           <if_sent> :                   if
+        <while_sent> :                while
+       <return_sent> :               return
+       <assign_sent> :                   ID
+                  if :                   if
+        <expression> :                  NUM                  ID                   (
+                else :                 else
+               while :                while
+              return :               return
+                   = :                    =
+    <add_expression> :                  NUM                  ID                   (
+             <relop> :                    <                   >                  ==                  >=                  <=                  !=
+              <item> :                  NUM                  ID                   (
+                   + :                    +
+                   - :                    -
+            <factor> :                  NUM                  ID                   (
+                   * :                    *
+                   / :                    /
+                 NUM :                  NUM
+       <aparam_list> :                    @                 NUM                  ID                   (
+                   < :                    <
+                   > :                    >
+                  == :                   ==
+                  >= :                   >=
+                  <= :                   <=
+                  != :                   !=
+                   # :                    #
+*************************follow集合***************************
+             <start> :                    #
+           <program> :                    #
+                 <N> :                  int                void                else
+      <declare_list> :                    #
+           <declare> :                  int                void                   #
+                 <M> :                    (                  if               while              return                  ID                   {
+                 <A> :                    (                   {
+      <func_declare> :                  int                void                   #
+       <var_declare> :                  int                void                   #
+            <fparam> :                    )
+        <sent_block> :                  int                void                   #                  if               while              return                  ID                   }                else
+        <param_list> :                    )
+             <param> :                    )                   ,
+     <inner_declare> :                   if               while              return                  ID
+         <sent_list> :                    }
+     <inner_var_dec> :                   if               while              return                  ID                 int
+              <sent> :                   if               while              return                  ID                   }
+           <if_sent> :                   if               while              return                  ID                   }
+        <while_sent> :                   if               while              return                  ID                   }
+       <return_sent> :                   if               while              return                  ID                   }
+       <assign_sent> :                   if               while              return                  ID                   }
+        <expression> :                    )                   ;                   ,
+    <add_expression> :                    )                   ;                   <                   >                  ==                  >=                  <=                  !=                   ,
+             <relop> :                  NUM                  ID                   (
+              <item> :                    )                   ;                   <                   >                  ==                  >=                  <=                  !=                   +                   -                   ,
+            <factor> :                    )                   ;                   <                   >                  ==                  >=                  <=                  !=                   +                   -                   *                   /                   ,
+       <aparam_list> :                    )
