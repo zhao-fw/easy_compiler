@@ -1,0 +1,23 @@
+int b;
+int fun(int y, int b, int a)
+{
+ return y;
+}
+int main(int x) 
+{
+ int a;
+ int m;
+ int c;
+ x = x + 2; 
+ a=fun(m, c, x);
+ //fun(m, c, x);
+ c=0;
+ while(c<3)
+ {
+
+  b=1;
+  c=c-b;
+ }
+
+ return x * 2; 
+}

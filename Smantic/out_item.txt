@@ -1,0 +1,4242 @@
+*****************************item_set********************************
+ÏîÄ¿¼¯ 0 : 
+	<start> -> ¡¤ <program> , #
+	<program> -> ¡¤ <N> <declare_list> , #
+	<N> -> ¡¤ @ , int
+	<N> -> ¡¤ @ , void
+ÏîÄ¿¼¯ 1 : 
+	<start> -> <program> ¡¤ , #
+ÏîÄ¿¼¯ 2 : 
+	<program> -> <N> ¡¤ <declare_list> , #
+	<declare_list> -> ¡¤ <declare> <declare_list> , #
+	<declare_list> -> ¡¤ <declare> , #
+	<declare> -> ¡¤ int ID <M> <A> <func_declare> , int
+	<declare> -> ¡¤ int ID <M> <A> <func_declare> , void
+	<declare> -> ¡¤ int ID <var_declare> , int
+	<declare> -> ¡¤ int ID <var_declare> , void
+	<declare> -> ¡¤ void ID <M> <A> <func_declare> , int
+	<declare> -> ¡¤ void ID <M> <A> <func_declare> , void
+	<declare> -> ¡¤ int ID <M> <A> <func_declare> , #
+	<declare> -> ¡¤ int ID <var_declare> , #
+	<declare> -> ¡¤ void ID <M> <A> <func_declare> , #
+ÏîÄ¿¼¯ 3 : 
+	<N> -> @ ¡¤ , int
+	<N> -> @ ¡¤ , void
+ÏîÄ¿¼¯ 4 : 
+	<program> -> <N> <declare_list> ¡¤ , #
+ÏîÄ¿¼¯ 5 : 
+	<declare_list> -> <declare> ¡¤ <declare_list> , #
+	<declare_list> -> <declare> ¡¤ , #
+	<declare_list> -> ¡¤ <declare> <declare_list> , #
+	<declare_list> -> ¡¤ <declare> , #
+	<declare> -> ¡¤ int ID <M> <A> <func_declare> , int
+	<declare> -> ¡¤ int ID <M> <A> <func_declare> , void
+	<declare> -> ¡¤ int ID <var_declare> , int
+	<declare> -> ¡¤ int ID <var_declare> , void
+	<declare> -> ¡¤ void ID <M> <A> <func_declare> , int
+	<declare> -> ¡¤ void ID <M> <A> <func_declare> , void
+	<declare> -> ¡¤ int ID <M> <A> <func_declare> , #
+	<declare> -> ¡¤ int ID <var_declare> , #
+	<declare> -> ¡¤ void ID <M> <A> <func_declare> , #
+ÏîÄ¿¼¯ 6 : 
+	<declare> -> int ¡¤ ID <M> <A> <func_declare> , int
+	<declare> -> int ¡¤ ID <M> <A> <func_declare> , void
+	<declare> -> int ¡¤ ID <var_declare> , int
+	<declare> -> int ¡¤ ID <var_declare> , void
+	<declare> -> int ¡¤ ID <M> <A> <func_declare> , #
+	<declare> -> int ¡¤ ID <var_declare> , #
+ÏîÄ¿¼¯ 7 : 
+	<declare> -> void ¡¤ ID <M> <A> <func_declare> , int
+	<declare> -> void ¡¤ ID <M> <A> <func_declare> , void
+	<declare> -> void ¡¤ ID <M> <A> <func_declare> , #
+ÏîÄ¿¼¯ 8 : 
+	<declare_list> -> <declare> <declare_list> ¡¤ , #
+ÏîÄ¿¼¯ 9 : 
+	<declare> -> int ID ¡¤ <M> <A> <func_declare> , int
+	<declare> -> int ID ¡¤ <M> <A> <func_declare> , void
+	<declare> -> int ID ¡¤ <var_declare> , int
+	<declare> -> int ID ¡¤ <var_declare> , void
+	<declare> -> int ID ¡¤ <M> <A> <func_declare> , #
+	<declare> -> int ID ¡¤ <var_declare> , #
+	<M> -> ¡¤ @ , (
+	<var_declare> -> ¡¤ ; , int
+	<var_declare> -> ¡¤ ; , void
+	<var_declare> -> ¡¤ ; , #
+ÏîÄ¿¼¯ 10 : 
+	<declare> -> void ID ¡¤ <M> <A> <func_declare> , int
+	<declare> -> void ID ¡¤ <M> <A> <func_declare> , void
+	<declare> -> void ID ¡¤ <M> <A> <func_declare> , #
+	<M> -> ¡¤ @ , (
+ÏîÄ¿¼¯ 11 : 
+	<M> -> @ ¡¤ , (
+ÏîÄ¿¼¯ 12 : 
+	<declare> -> int ID <M> ¡¤ <A> <func_declare> , int
+	<declare> -> int ID <M> ¡¤ <A> <func_declare> , void
+	<declare> -> int ID <M> ¡¤ <A> <func_declare> , #
+	<A> -> ¡¤ @ , (
+ÏîÄ¿¼¯ 13 : 
+	<declare> -> int ID <var_declare> ¡¤ , int
+	<declare> -> int ID <var_declare> ¡¤ , void
+	<declare> -> int ID <var_declare> ¡¤ , #
+ÏîÄ¿¼¯ 14 : 
+	<var_declare> -> ; ¡¤ , int
+	<var_declare> -> ; ¡¤ , void
+	<var_declare> -> ; ¡¤ , #
+ÏîÄ¿¼¯ 15 : 
+	<declare> -> void ID <M> ¡¤ <A> <func_declare> , int
+	<declare> -> void ID <M> ¡¤ <A> <func_declare> , void
+	<declare> -> void ID <M> ¡¤ <A> <func_declare> , #
+	<A> -> ¡¤ @ , (
+ÏîÄ¿¼¯ 16 : 
+	<A> -> @ ¡¤ , (
+ÏîÄ¿¼¯ 17 : 
+	<declare> -> int ID <M> <A> ¡¤ <func_declare> , int
+	<declare> -> int ID <M> <A> ¡¤ <func_declare> , void
+	<declare> -> int ID <M> <A> ¡¤ <func_declare> , #
+	<func_declare> -> ¡¤ ( <fparam> ) <sent_block> , int
+	<func_declare> -> ¡¤ ( <fparam> ) <sent_block> , void
+	<func_declare> -> ¡¤ ( <fparam> ) <sent_block> , #
+ÏîÄ¿¼¯ 18 : 
+	<declare> -> void ID <M> <A> ¡¤ <func_declare> , int
+	<declare> -> void ID <M> <A> ¡¤ <func_declare> , void
+	<declare> -> void ID <M> <A> ¡¤ <func_declare> , #
+	<func_declare> -> ¡¤ ( <fparam> ) <sent_block> , int
+	<func_declare> -> ¡¤ ( <fparam> ) <sent_block> , void
+	<func_declare> -> ¡¤ ( <fparam> ) <sent_block> , #
+ÏîÄ¿¼¯ 19 : 
+	<declare> -> int ID <M> <A> <func_declare> ¡¤ , int
+	<declare> -> int ID <M> <A> <func_declare> ¡¤ , void
+	<declare> -> int ID <M> <A> <func_declare> ¡¤ , #
+ÏîÄ¿¼¯ 20 : 
+	<func_declare> -> ( ¡¤ <fparam> ) <sent_block> , int
+	<func_declare> -> ( ¡¤ <fparam> ) <sent_block> , void
+	<func_declare> -> ( ¡¤ <fparam> ) <sent_block> , #
+	<fparam> -> ¡¤ <param_list> , )
+	<fparam> -> ¡¤ void , )
+	<param_list> -> ¡¤ <param> , )
+	<param_list> -> ¡¤ <param> , <param_list> , )
+	<param> -> ¡¤ int ID , )
+	<param> -> ¡¤ int ID , ,
+ÏîÄ¿¼¯ 21 : 
+	<declare> -> void ID <M> <A> <func_declare> ¡¤ , int
+	<declare> -> void ID <M> <A> <func_declare> ¡¤ , void
+	<declare> -> void ID <M> <A> <func_declare> ¡¤ , #
+ÏîÄ¿¼¯ 22 : 
+	<param> -> int ¡¤ ID , )
+	<param> -> int ¡¤ ID , ,
+ÏîÄ¿¼¯ 23 : 
+	<fparam> -> void ¡¤ , )
+ÏîÄ¿¼¯ 24 : 
+	<func_declare> -> ( <fparam> ¡¤ ) <sent_block> , int
+	<func_declare> -> ( <fparam> ¡¤ ) <sent_block> , void
+	<func_declare> -> ( <fparam> ¡¤ ) <sent_block> , #
+ÏîÄ¿¼¯ 25 : 
+	<fparam> -> <param_list> ¡¤ , )
+ÏîÄ¿¼¯ 26 : 
+	<param_list> -> <param> ¡¤ , )
+	<param_list> -> <param> ¡¤ , <param_list> , )
+ÏîÄ¿¼¯ 27 : 
+	<param> -> int ID ¡¤ , )
+	<param> -> int ID ¡¤ , ,
+ÏîÄ¿¼¯ 28 : 
+	<func_declare> -> ( <fparam> ) ¡¤ <sent_block> , int
+	<func_declare> -> ( <fparam> ) ¡¤ <sent_block> , void
+	<func_declare> -> ( <fparam> ) ¡¤ <sent_block> , #
+	<sent_block> -> ¡¤ { <inner_declare> <sent_list> } , int
+	<sent_block> -> ¡¤ { <sent_list> } , int
+	<sent_block> -> ¡¤ { <inner_declare> <sent_list> } , void
+	<sent_block> -> ¡¤ { <sent_list> } , void
+	<sent_block> -> ¡¤ { <inner_declare> <sent_list> } , #
+	<sent_block> -> ¡¤ { <sent_list> } , #
+ÏîÄ¿¼¯ 29 : 
+	<param_list> -> <param> , ¡¤ <param_list> , )
+	<param_list> -> ¡¤ <param> , )
+	<param_list> -> ¡¤ <param> , <param_list> , )
+	<param> -> ¡¤ int ID , )
+	<param> -> ¡¤ int ID , ,
+ÏîÄ¿¼¯ 30 : 
+	<func_declare> -> ( <fparam> ) <sent_block> ¡¤ , int
+	<func_declare> -> ( <fparam> ) <sent_block> ¡¤ , void
+	<func_declare> -> ( <fparam> ) <sent_block> ¡¤ , #
+ÏîÄ¿¼¯ 31 : 
+	<sent_block> -> { ¡¤ <inner_declare> <sent_list> } , int
+	<sent_block> -> { ¡¤ <sent_list> } , int
+	<sent_block> -> { ¡¤ <inner_declare> <sent_list> } , void
+	<sent_block> -> { ¡¤ <sent_list> } , void
+	<sent_block> -> { ¡¤ <inner_declare> <sent_list> } , #
+	<sent_block> -> { ¡¤ <sent_list> } , #
+	<inner_declare> -> ¡¤ <inner_var_dec> , if
+	<inner_declare> -> ¡¤ <inner_var_dec> , while
+	<inner_declare> -> ¡¤ <inner_var_dec> , return
+	<inner_declare> -> ¡¤ <inner_var_dec> , ID
+	<inner_declare> -> ¡¤ <inner_var_dec> <inner_declare> , if
+	<inner_declare> -> ¡¤ <inner_var_dec> <inner_declare> , while
+	<inner_declare> -> ¡¤ <inner_var_dec> <inner_declare> , return
+	<inner_declare> -> ¡¤ <inner_var_dec> <inner_declare> , ID
+	<sent_list> -> ¡¤ <sent> <M> <sent_list> , }
+	<sent_list> -> ¡¤ <sent> , }
+	<inner_var_dec> -> ¡¤ int ID ; , if
+	<inner_var_dec> -> ¡¤ int ID ; , while
+	<inner_var_dec> -> ¡¤ int ID ; , return
+	<inner_var_dec> -> ¡¤ int ID ; , ID
+	<inner_var_dec> -> ¡¤ int ID ; , int
+	<sent> -> ¡¤ <if_sent> , if
+	<sent> -> ¡¤ <if_sent> , while
+	<sent> -> ¡¤ <if_sent> , return
+	<sent> -> ¡¤ <if_sent> , ID
+	<sent> -> ¡¤ <while_sent> , if
+	<sent> -> ¡¤ <while_sent> , while
+	<sent> -> ¡¤ <while_sent> , return
+	<sent> -> ¡¤ <while_sent> , ID
+	<sent> -> ¡¤ <return_sent> , if
+	<sent> -> ¡¤ <return_sent> , while
+	<sent> -> ¡¤ <return_sent> , return
+	<sent> -> ¡¤ <return_sent> , ID
+	<sent> -> ¡¤ <assign_sent> , if
+	<sent> -> ¡¤ <assign_sent> , while
+	<sent> -> ¡¤ <assign_sent> , return
+	<sent> -> ¡¤ <assign_sent> , ID
+	<sent> -> ¡¤ <if_sent> , }
+	<sent> -> ¡¤ <while_sent> , }
+	<sent> -> ¡¤ <return_sent> , }
+	<sent> -> ¡¤ <assign_sent> , }
+	<if_sent> -> ¡¤ if ( <expression> ) <M> <A> <sent_block> , if
+	<if_sent> -> ¡¤ if ( <expression> ) <M> <A> <sent_block> <N> else <M> <A> <sent_block> , if
+	<if_sent> -> ¡¤ if ( <expression> ) <M> <A> <sent_block> , while
+	<if_sent> -> ¡¤ if ( <expression> ) <M> <A> <sent_block> <N> else <M> <A> <sent_block> , while
+	<if_sent> -> ¡¤ if ( <expression> ) <M> <A> <sent_block> , return
+	<if_sent> -> ¡¤ if ( <expression> ) <M> <A> <sent_block> <N> else <M> <A> <sent_block> , return
+	<if_sent> -> ¡¤ if ( <expression> ) <M> <A> <sent_block> , ID
+	<if_sent> -> ¡¤ if ( <expression> ) <M> <A> <sent_block> <N> else <M> <A> <sent_block> , ID
+	<while_sent> -> ¡¤ while <M> ( <expression> ) <M> <A> <sent_block> , if
+	<while_sent> -> ¡¤ while <M> ( <expression> ) <M> <A> <sent_block> , while
+	<while_sent> -> ¡¤ while <M> ( <expression> ) <M> <A> <sent_block> , return
+	<while_sent> -> ¡¤ while <M> ( <expression> ) <M> <A> <sent_block> , ID
+	<return_sent> -> ¡¤ return ; , if
+	<return_sent> -> ¡¤ return <expression> ; , if
+	<return_sent> -> ¡¤ return ; , while
+	<return_sent> -> ¡¤ return <expression> ; , while
+	<return_sent> -> ¡¤ return ; , return
+	<return_sent> -> ¡¤ return <expression> ; , return
+	<return_sent> -> ¡¤ return ; , ID
+	<return_sent> -> ¡¤ return <expression> ; , ID
+	<assign_sent> -> ¡¤ ID = <expression> ; , if
+	<assign_sent> -> ¡¤ ID = <expression> ; , while
+	<assign_sent> -> ¡¤ ID = <expression> ; , return
+	<assign_sent> -> ¡¤ ID = <expression> ; , ID
+	<if_sent> -> ¡¤ if ( <expression> ) <M> <A> <sent_block> , }
+	<if_sent> -> ¡¤ if ( <expression> ) <M> <A> <sent_block> <N> else <M> <A> <sent_block> , }
+	<while_sent> -> ¡¤ while <M> ( <expression> ) <M> <A> <sent_block> , }
+	<return_sent> -> ¡¤ return ; , }
+	<return_sent> -> ¡¤ return <expression> ; , }
+	<assign_sent> -> ¡¤ ID = <expression> ; , }
+ÏîÄ¿¼¯ 32 : 
+	<param_list> -> <param> , <param_list> ¡¤ , )
+ÏîÄ¿¼¯ 33 : 
+	<inner_var_dec> -> int ¡¤ ID ; , if
+	<inner_var_dec> -> int ¡¤ ID ; , while
+	<inner_var_dec> -> int ¡¤ ID ; , return
+	<inner_var_dec> -> int ¡¤ ID ; , ID
+	<inner_var_dec> -> int ¡¤ ID ; , int
+ÏîÄ¿¼¯ 34 : 
+	<assign_sent> -> ID ¡¤ = <expression> ; , if
+	<assign_sent> -> ID ¡¤ = <expression> ; , while
+	<assign_sent> -> ID ¡¤ = <expression> ; , return
+	<assign_sent> -> ID ¡¤ = <expression> ; , ID
+	<assign_sent> -> ID ¡¤ = <expression> ; , }
+ÏîÄ¿¼¯ 35 : 
+	<sent_block> -> { <inner_declare> ¡¤ <sent_list> } , int
+	<sent_block> -> { <inner_declare> ¡¤ <sent_list> } , void
+	<sent_block> -> { <inner_declare> ¡¤ <sent_list> } , #
+	<sent_list> -> ¡¤ <sent> <M> <sent_list> , }
+	<sent_list> -> ¡¤ <sent> , }
+	<sent> -> ¡¤ <if_sent> , if
+	<sent> -> ¡¤ <if_sent> , while
+	<sent> -> ¡¤ <if_sent> , return
+	<sent> -> ¡¤ <if_sent> , ID
+	<sent> -> ¡¤ <while_sent> , if
+	<sent> -> ¡¤ <while_sent> , while
+	<sent> -> ¡¤ <while_sent> , return
+	<sent> -> ¡¤ <while_sent> , ID
+	<sent> -> ¡¤ <return_sent> , if
+	<sent> -> ¡¤ <return_sent> , while
+	<sent> -> ¡¤ <return_sent> , return
+	<sent> -> ¡¤ <return_sent> , ID
+	<sent> -> ¡¤ <assign_sent> , if
+	<sent> -> ¡¤ <assign_sent> , while
+	<sent> -> ¡¤ <assign_sent> , return
+	<sent> -> ¡¤ <assign_sent> , ID
+	<sent> -> ¡¤ <if_sent> , }
+	<sent> -> ¡¤ <while_sent> , }
+	<sent> -> ¡¤ <return_sent> , }
+	<sent> -> ¡¤ <assign_sent> , }
+	<if_sent> -> ¡¤ if ( <expression> ) <M> <A> <sent_block> , if
+	<if_sent> -> ¡¤ if ( <expression> ) <M> <A> <sent_block> <N> else <M> <A> <sent_block> , if
+	<if_sent> -> ¡¤ if ( <expression> ) <M> <A> <sent_block> , while
+	<if_sent> -> ¡¤ if ( <expression> ) <M> <A> <sent_block> <N> else <M> <A> <sent_block> , while
+	<if_sent> -> ¡¤ if ( <expression> ) <M> <A> <sent_block> , return
+	<if_sent> -> ¡¤ if ( <expression> ) <M> <A> <sent_block> <N> else <M> <A> <sent_block> , return
+	<if_sent> -> ¡¤ if ( <expression> ) <M> <A> <sent_block> , ID
+	<if_sent> -> ¡¤ if ( <expression> ) <M> <A> <sent_block> <N> else <M> <A> <sent_block> , ID
+	<while_sent> -> ¡¤ while <M> ( <expression> ) <M> <A> <sent_block> , if
+	<while_sent> -> ¡¤ while <M> ( <expression> ) <M> <A> <sent_block> , while
+	<while_sent> -> ¡¤ while <M> ( <expression> ) <M> <A> <sent_block> , return
+	<while_sent> -> ¡¤ while <M> ( <expression> ) <M> <A> <sent_block> , ID
+	<return_sent> -> ¡¤ return ; , if
+	<return_sent> -> ¡¤ return <expression> ; , if
+	<return_sent> -> ¡¤ return ; , while
+	<return_sent> -> ¡¤ return <expression> ; , while
+	<return_sent> -> ¡¤ return ; , return
+	<return_sent> -> ¡¤ return <expression> ; , return
+	<return_sent> -> ¡¤ return ; , ID
+	<return_sent> -> ¡¤ return <expression> ; , ID
+	<assign_sent> -> ¡¤ ID = <expression> ; , if
+	<assign_sent> -> ¡¤ ID = <expression> ; , while
+	<assign_sent> -> ¡¤ ID = <expression> ; , return
+	<assign_sent> -> ¡¤ ID = <expression> ; , ID
+	<if_sent> -> ¡¤ if ( <expression> ) <M> <A> <sent_block> , }
+	<if_sent> -> ¡¤ if ( <expression> ) <M> <A> <sent_block> <N> else <M> <A> <sent_block> , }
+	<while_sent> -> ¡¤ while <M> ( <expression> ) <M> <A> <sent_block> , }
+	<return_sent> -> ¡¤ return ; , }
+	<return_sent> -> ¡¤ return <expression> ; , }
+	<assign_sent> -> ¡¤ ID = <expression> ; , }
+ÏîÄ¿¼¯ 36 : 
+	<sent_block> -> { <sent_list> ¡¤ } , int
+	<sent_block> -> { <sent_list> ¡¤ } , void
+	<sent_block> -> { <sent_list> ¡¤ } , #
+ÏîÄ¿¼¯ 37 : 
+	<inner_declare> -> <inner_var_dec> ¡¤ , if
+	<inner_declare> -> <inner_var_dec> ¡¤ , while
+	<inner_declare> -> <inner_var_dec> ¡¤ , return
+	<inner_declare> -> <inner_var_dec> ¡¤ , ID
+	<inner_declare> -> <inner_var_dec> ¡¤ <inner_declare> , if
+	<inner_declare> -> <inner_var_dec> ¡¤ <inner_declare> , while
+	<inner_declare> -> <inner_var_dec> ¡¤ <inner_declare> , return
+	<inner_declare> -> <inner_var_dec> ¡¤ <inner_declare> , ID
+	<inner_declare> -> ¡¤ <inner_var_dec> , if
+	<inner_declare> -> ¡¤ <inner_var_dec> <inner_declare> , if
+	<inner_declare> -> ¡¤ <inner_var_dec> , while
+	<inner_declare> -> ¡¤ <inner_var_dec> <inner_declare> , while
+	<inner_declare> -> ¡¤ <inner_var_dec> , return
+	<inner_declare> -> ¡¤ <inner_var_dec> <inner_declare> , return
+	<inner_declare> -> ¡¤ <inner_var_dec> , ID
+	<inner_declare> -> ¡¤ <inner_var_dec> <inner_declare> , ID
+	<inner_var_dec> -> ¡¤ int ID ; , if
+	<inner_var_dec> -> ¡¤ int ID ; , int
+	<inner_var_dec> -> ¡¤ int ID ; , while
+	<inner_var_dec> -> ¡¤ int ID ; , return
+	<inner_var_dec> -> ¡¤ int ID ; , ID
+ÏîÄ¿¼¯ 38 : 
+	<sent_list> -> <sent> ¡¤ <M> <sent_list> , }
+	<sent_list> -> <sent> ¡¤ , }
+	<M> -> ¡¤ @ , if
+	<M> -> ¡¤ @ , while
+	<M> -> ¡¤ @ , return
+	<M> -> ¡¤ @ , ID
+ÏîÄ¿¼¯ 39 : 
+	<sent> -> <if_sent> ¡¤ , if
+	<sent> -> <if_sent> ¡¤ , while
+	<sent> -> <if_sent> ¡¤ , return
+	<sent> -> <if_sent> ¡¤ , ID
+	<sent> -> <if_sent> ¡¤ , }
+ÏîÄ¿¼¯ 40 : 
+	<sent> -> <while_sent> ¡¤ , if
+	<sent> -> <while_sent> ¡¤ , while
+	<sent> -> <while_sent> ¡¤ , return
+	<sent> -> <while_sent> ¡¤ , ID
+	<sent> -> <while_sent> ¡¤ , }
+ÏîÄ¿¼¯ 41 : 
+	<sent> -> <return_sent> ¡¤ , if
+	<sent> -> <return_sent> ¡¤ , while
+	<sent> -> <return_sent> ¡¤ , return
+	<sent> -> <return_sent> ¡¤ , ID
+	<sent> -> <return_sent> ¡¤ , }
+ÏîÄ¿¼¯ 42 : 
+	<sent> -> <assign_sent> ¡¤ , if
+	<sent> -> <assign_sent> ¡¤ , while
+	<sent> -> <assign_sent> ¡¤ , return
+	<sent> -> <assign_sent> ¡¤ , ID
+	<sent> -> <assign_sent> ¡¤ , }
+ÏîÄ¿¼¯ 43 : 
+	<if_sent> -> if ¡¤ ( <expression> ) <M> <A> <sent_block> , if
+	<if_sent> -> if ¡¤ ( <expression> ) <M> <A> <sent_block> <N> else <M> <A> <sent_block> , if
+	<if_sent> -> if ¡¤ ( <expression> ) <M> <A> <sent_block> , while
+	<if_sent> -> if ¡¤ ( <expression> ) <M> <A> <sent_block> <N> else <M> <A> <sent_block> , while
+	<if_sent> -> if ¡¤ ( <expression> ) <M> <A> <sent_block> , return
+	<if_sent> -> if ¡¤ ( <expression> ) <M> <A> <sent_block> <N> else <M> <A> <sent_block> , return
+	<if_sent> -> if ¡¤ ( <expression> ) <M> <A> <sent_block> , ID
+	<if_sent> -> if ¡¤ ( <expression> ) <M> <A> <sent_block> <N> else <M> <A> <sent_block> , ID
+	<if_sent> -> if ¡¤ ( <expression> ) <M> <A> <sent_block> , }
+	<if_sent> -> if ¡¤ ( <expression> ) <M> <A> <sent_block> <N> else <M> <A> <sent_block> , }
+ÏîÄ¿¼¯ 44 : 
+	<while_sent> -> while ¡¤ <M> ( <expression> ) <M> <A> <sent_block> , if
+	<while_sent> -> while ¡¤ <M> ( <expression> ) <M> <A> <sent_block> , while
+	<while_sent> -> while ¡¤ <M> ( <expression> ) <M> <A> <sent_block> , return
+	<while_sent> -> while ¡¤ <M> ( <expression> ) <M> <A> <sent_block> , ID
+	<while_sent> -> while ¡¤ <M> ( <expression> ) <M> <A> <sent_block> , }
+	<M> -> ¡¤ @ , (
+ÏîÄ¿¼¯ 45 : 
+	<return_sent> -> return ¡¤ ; , if
+	<return_sent> -> return ¡¤ <expression> ; , if
+	<return_sent> -> return ¡¤ ; , while
+	<return_sent> -> return ¡¤ <expression> ; , while
+	<return_sent> -> return ¡¤ ; , return
+	<return_sent> -> return ¡¤ <expression> ; , return
+	<return_sent> -> return ¡¤ ; , ID
+	<return_sent> -> return ¡¤ <expression> ; , ID
+	<return_sent> -> return ¡¤ ; , }
+	<return_sent> -> return ¡¤ <expression> ; , }
+	<expression> -> ¡¤ <add_expression> , ;
+	<expression> -> ¡¤ <add_expression> <relop> <expression> , ;
+	<add_expression> -> ¡¤ <item> , ;
+	<add_expression> -> ¡¤ <item> + <add_expression> , ;
+	<add_expression> -> ¡¤ <item> - <add_expression> , ;
+	<add_expression> -> ¡¤ <item> , <
+	<add_expression> -> ¡¤ <item> , >
+	<add_expression> -> ¡¤ <item> , ==
+	<add_expression> -> ¡¤ <item> , >=
+	<add_expression> -> ¡¤ <item> , <=
+	<add_expression> -> ¡¤ <item> , !=
+	<add_expression> -> ¡¤ <item> + <add_expression> , <
+	<add_expression> -> ¡¤ <item> + <add_expression> , >
+	<add_expression> -> ¡¤ <item> + <add_expression> , ==
+	<add_expression> -> ¡¤ <item> + <add_expression> , >=
+	<add_expression> -> ¡¤ <item> + <add_expression> , <=
+	<add_expression> -> ¡¤ <item> + <add_expression> , !=
+	<add_expression> -> ¡¤ <item> - <add_expression> , <
+	<add_expression> -> ¡¤ <item> - <add_expression> , >
+	<add_expression> -> ¡¤ <item> - <add_expression> , ==
+	<add_expression> -> ¡¤ <item> - <add_expression> , >=
+	<add_expression> -> ¡¤ <item> - <add_expression> , <=
+	<add_expression> -> ¡¤ <item> - <add_expression> , !=
+	<item> -> ¡¤ <factor> , ;
+	<item> -> ¡¤ <factor> * <item> , ;
+	<item> -> ¡¤ <factor> / <item> , ;
+	<item> -> ¡¤ <factor> , +
+	<item> -> ¡¤ <factor> * <item> , +
+	<item> -> ¡¤ <factor> / <item> , +
+	<item> -> ¡¤ <factor> , -
+	<item> -> ¡¤ <factor> * <item> , -
+	<item> -> ¡¤ <factor> / <item> , -
+	<item> -> ¡¤ <factor> , <
+	<item> -> ¡¤ <factor> * <item> , <
+	<item> -> ¡¤ <factor> / <item> , <
+	<item> -> ¡¤ <factor> , >
+	<item> -> ¡¤ <factor> * <item> , >
+	<item> -> ¡¤ <factor> / <item> , >
+	<item> -> ¡¤ <factor> , ==
+	<item> -> ¡¤ <factor> * <item> , ==
+	<item> -> ¡¤ <factor> / <item> , ==
+	<item> -> ¡¤ <factor> , >=
+	<item> -> ¡¤ <factor> * <item> , >=
+	<item> -> ¡¤ <factor> / <item> , >=
+	<item> -> ¡¤ <factor> , <=
+	<item> -> ¡¤ <factor> * <item> , <=
+	<item> -> ¡¤ <factor> / <item> , <=
+	<item> -> ¡¤ <factor> , !=
+	<item> -> ¡¤ <factor> * <item> , !=
+	<item> -> ¡¤ <factor> / <item> , !=
+	<factor> -> ¡¤ NUM , ;
+	<factor> -> ¡¤ ID , ;
+	<factor> -> ¡¤ ( <expression> ) , ;
+	<factor> -> ¡¤ ID ( <aparam_list> ) , ;
+	<factor> -> ¡¤ NUM , *
+	<factor> -> ¡¤ ID , *
+	<factor> -> ¡¤ ( <expression> ) , *
+	<factor> -> ¡¤ ID ( <aparam_list> ) , *
+	<factor> -> ¡¤ NUM , /
+	<factor> -> ¡¤ ID , /
+	<factor> -> ¡¤ ( <expression> ) , /
+	<factor> -> ¡¤ ID ( <aparam_list> ) , /
+	<factor> -> ¡¤ NUM , +
+	<factor> -> ¡¤ ID , +
+	<factor> -> ¡¤ ( <expression> ) , +
+	<factor> -> ¡¤ ID ( <aparam_list> ) , +
+	<factor> -> ¡¤ NUM , -
+	<factor> -> ¡¤ ID , -
+	<factor> -> ¡¤ ( <expression> ) , -
+	<factor> -> ¡¤ ID ( <aparam_list> ) , -
+	<factor> -> ¡¤ NUM , <
+	<factor> -> ¡¤ ID , <
+	<factor> -> ¡¤ ( <expression> ) , <
+	<factor> -> ¡¤ ID ( <aparam_list> ) , <
+	<factor> -> ¡¤ NUM , >
+	<factor> -> ¡¤ ID , >
+	<factor> -> ¡¤ ( <expression> ) , >
+	<factor> -> ¡¤ ID ( <aparam_list> ) , >
+	<factor> -> ¡¤ NUM , ==
+	<factor> -> ¡¤ ID , ==
+	<factor> -> ¡¤ ( <expression> ) , ==
+	<factor> -> ¡¤ ID ( <aparam_list> ) , ==
+	<factor> -> ¡¤ NUM , >=
+	<factor> -> ¡¤ ID , >=
+	<factor> -> ¡¤ ( <expression> ) , >=
+	<factor> -> ¡¤ ID ( <aparam_list> ) , >=
+	<factor> -> ¡¤ NUM , <=
+	<factor> -> ¡¤ ID , <=
+	<factor> -> ¡¤ ( <expression> ) , <=
+	<factor> -> ¡¤ ID ( <aparam_list> ) , <=
+	<factor> -> ¡¤ NUM , !=
+	<factor> -> ¡¤ ID , !=
+	<factor> -> ¡¤ ( <expression> ) , !=
+	<factor> -> ¡¤ ID ( <aparam_list> ) , !=
+ÏîÄ¿¼¯ 46 : 
+	<inner_var_dec> -> int ID ¡¤ ; , if
+	<inner_var_dec> -> int ID ¡¤ ; , while
+	<inner_var_dec> -> int ID ¡¤ ; , return
+	<inner_var_dec> -> int ID ¡¤ ; , ID
+	<inner_var_dec> -> int ID ¡¤ ; , int
+ÏîÄ¿¼¯ 47 : 
+	<assign_sent> -> ID = ¡¤ <expression> ; , if
+	<assign_sent> -> ID = ¡¤ <expression> ; , while
+	<assign_sent> -> ID = ¡¤ <expression> ; , return
+	<assign_sent> -> ID = ¡¤ <expression> ; , ID
+	<assign_sent> -> ID = ¡¤ <expression> ; , }
+	<expression> -> ¡¤ <add_expression> , ;
+	<expression> -> ¡¤ <add_expression> <relop> <expression> , ;
+	<add_expression> -> ¡¤ <item> , ;
+	<add_expression> -> ¡¤ <item> + <add_expression> , ;
+	<add_expression> -> ¡¤ <item> - <add_expression> , ;
+	<add_expression> -> ¡¤ <item> , <
+	<add_expression> -> ¡¤ <item> , >
+	<add_expression> -> ¡¤ <item> , ==
+	<add_expression> -> ¡¤ <item> , >=
+	<add_expression> -> ¡¤ <item> , <=
+	<add_expression> -> ¡¤ <item> , !=
+	<add_expression> -> ¡¤ <item> + <add_expression> , <
+	<add_expression> -> ¡¤ <item> + <add_expression> , >
+	<add_expression> -> ¡¤ <item> + <add_expression> , ==
+	<add_expression> -> ¡¤ <item> + <add_expression> , >=
+	<add_expression> -> ¡¤ <item> + <add_expression> , <=
+	<add_expression> -> ¡¤ <item> + <add_expression> , !=
+	<add_expression> -> ¡¤ <item> - <add_expression> , <
+	<add_expression> -> ¡¤ <item> - <add_expression> , >
+	<add_expression> -> ¡¤ <item> - <add_expression> , ==
+	<add_expression> -> ¡¤ <item> - <add_expression> , >=
+	<add_expression> -> ¡¤ <item> - <add_expression> , <=
+	<add_expression> -> ¡¤ <item> - <add_expression> , !=
+	<item> -> ¡¤ <factor> , ;
+	<item> -> ¡¤ <factor> * <item> , ;
+	<item> -> ¡¤ <factor> / <item> , ;
+	<item> -> ¡¤ <factor> , +
+	<item> -> ¡¤ <factor> * <item> , +
+	<item> -> ¡¤ <factor> / <item> , +
+	<item> -> ¡¤ <factor> , -
+	<item> -> ¡¤ <factor> * <item> , -
+	<item> -> ¡¤ <factor> / <item> , -
+	<item> -> ¡¤ <factor> , <
+	<item> -> ¡¤ <factor> * <item> , <
+	<item> -> ¡¤ <factor> / <item> , <
+	<item> -> ¡¤ <factor> , >
+	<item> -> ¡¤ <factor> * <item> , >
+	<item> -> ¡¤ <factor> / <item> , >
+	<item> -> ¡¤ <factor> , ==
+	<item> -> ¡¤ <factor> * <item> , ==
+	<item> -> ¡¤ <factor> / <item> , ==
+	<item> -> ¡¤ <factor> , >=
+	<item> -> ¡¤ <factor> * <item> , >=
+	<item> -> ¡¤ <factor> / <item> , >=
+	<item> -> ¡¤ <factor> , <=
+	<item> -> ¡¤ <factor> * <item> , <=
+	<item> -> ¡¤ <factor> / <item> , <=
+	<item> -> ¡¤ <factor> , !=
+	<item> -> ¡¤ <factor> * <item> , !=
+	<item> -> ¡¤ <factor> / <item> , !=
+	<factor> -> ¡¤ NUM , ;
+	<factor> -> ¡¤ ID , ;
+	<factor> -> ¡¤ ( <expression> ) , ;
+	<factor> -> ¡¤ ID ( <aparam_list> ) , ;
+	<factor> -> ¡¤ NUM , *
+	<factor> -> ¡¤ ID , *
+	<factor> -> ¡¤ ( <expression> ) , *
+	<factor> -> ¡¤ ID ( <aparam_list> ) , *
+	<factor> -> ¡¤ NUM , /
+	<factor> -> ¡¤ ID , /
+	<factor> -> ¡¤ ( <expression> ) , /
+	<factor> -> ¡¤ ID ( <aparam_list> ) , /
+	<factor> -> ¡¤ NUM , +
+	<factor> -> ¡¤ ID , +
+	<factor> -> ¡¤ ( <expression> ) , +
+	<factor> -> ¡¤ ID ( <aparam_list> ) , +
+	<factor> -> ¡¤ NUM , -
+	<factor> -> ¡¤ ID , -
+	<factor> -> ¡¤ ( <expression> ) , -
+	<factor> -> ¡¤ ID ( <aparam_list> ) , -
+	<factor> -> ¡¤ NUM , <
+	<factor> -> ¡¤ ID , <
+	<factor> -> ¡¤ ( <expression> ) , <
+	<factor> -> ¡¤ ID ( <aparam_list> ) , <
+	<factor> -> ¡¤ NUM , >
+	<factor> -> ¡¤ ID , >
+	<factor> -> ¡¤ ( <expression> ) , >
+	<factor> -> ¡¤ ID ( <aparam_list> ) , >
+	<factor> -> ¡¤ NUM , ==
+	<factor> -> ¡¤ ID , ==
+	<factor> -> ¡¤ ( <expression> ) , ==
+	<factor> -> ¡¤ ID ( <aparam_list> ) , ==
+	<factor> -> ¡¤ NUM , >=
+	<factor> -> ¡¤ ID , >=
+	<factor> -> ¡¤ ( <expression> ) , >=
+	<factor> -> ¡¤ ID ( <aparam_list> ) , >=
+	<factor> -> ¡¤ NUM , <=
+	<factor> -> ¡¤ ID , <=
+	<factor> -> ¡¤ ( <expression> ) , <=
+	<factor> -> ¡¤ ID ( <aparam_list> ) , <=
+	<factor> -> ¡¤ NUM , !=
+	<factor> -> ¡¤ ID , !=
+	<factor> -> ¡¤ ( <expression> ) , !=
+	<factor> -> ¡¤ ID ( <aparam_list> ) , !=
+ÏîÄ¿¼¯ 48 : 
+	<sent_block> -> { <inner_declare> <sent_list> ¡¤ } , int
+	<sent_block> -> { <inner_declare> <sent_list> ¡¤ } , void
+	<sent_block> -> { <inner_declare> <sent_list> ¡¤ } , #
+ÏîÄ¿¼¯ 49 : 
+	<sent_block> -> { <sent_list> } ¡¤ , int
+	<sent_block> -> { <sent_list> } ¡¤ , void
+	<sent_block> -> { <sent_list> } ¡¤ , #
+ÏîÄ¿¼¯ 50 : 
+	<inner_declare> -> <inner_var_dec> <inner_declare> ¡¤ , if
+	<inner_declare> -> <inner_var_dec> <inner_declare> ¡¤ , while
+	<inner_declare> -> <inner_var_dec> <inner_declare> ¡¤ , return
+	<inner_declare> -> <inner_var_dec> <inner_declare> ¡¤ , ID
+ÏîÄ¿¼¯ 51 : 
+	<M> -> @ ¡¤ , if
+	<M> -> @ ¡¤ , while
+	<M> -> @ ¡¤ , return
+	<M> -> @ ¡¤ , ID
+ÏîÄ¿¼¯ 52 : 
+	<sent_list> -> <sent> <M> ¡¤ <sent_list> , }
+	<sent_list> -> ¡¤ <sent> <M> <sent_list> , }
+	<sent_list> -> ¡¤ <sent> , }
+	<sent> -> ¡¤ <if_sent> , if
+	<sent> -> ¡¤ <if_sent> , while
+	<sent> -> ¡¤ <if_sent> , return
+	<sent> -> ¡¤ <if_sent> , ID
+	<sent> -> ¡¤ <while_sent> , if
+	<sent> -> ¡¤ <while_sent> , while
+	<sent> -> ¡¤ <while_sent> , return
+	<sent> -> ¡¤ <while_sent> , ID
+	<sent> -> ¡¤ <return_sent> , if
+	<sent> -> ¡¤ <return_sent> , while
+	<sent> -> ¡¤ <return_sent> , return
+	<sent> -> ¡¤ <return_sent> , ID
+	<sent> -> ¡¤ <assign_sent> , if
+	<sent> -> ¡¤ <assign_sent> , while
+	<sent> -> ¡¤ <assign_sent> , return
+	<sent> -> ¡¤ <assign_sent> , ID
+	<sent> -> ¡¤ <if_sent> , }
+	<sent> -> ¡¤ <while_sent> , }
+	<sent> -> ¡¤ <return_sent> , }
+	<sent> -> ¡¤ <assign_sent> , }
+	<if_sent> -> ¡¤ if ( <expression> ) <M> <A> <sent_block> , if
+	<if_sent> -> ¡¤ if ( <expression> ) <M> <A> <sent_block> <N> else <M> <A> <sent_block> , if
+	<if_sent> -> ¡¤ if ( <expression> ) <M> <A> <sent_block> , while
+	<if_sent> -> ¡¤ if ( <expression> ) <M> <A> <sent_block> <N> else <M> <A> <sent_block> , while
+	<if_sent> -> ¡¤ if ( <expression> ) <M> <A> <sent_block> , return
+	<if_sent> -> ¡¤ if ( <expression> ) <M> <A> <sent_block> <N> else <M> <A> <sent_block> , return
+	<if_sent> -> ¡¤ if ( <expression> ) <M> <A> <sent_block> , ID
+	<if_sent> -> ¡¤ if ( <expression> ) <M> <A> <sent_block> <N> else <M> <A> <sent_block> , ID
+	<while_sent> -> ¡¤ while <M> ( <expression> ) <M> <A> <sent_block> , if
+	<while_sent> -> ¡¤ while <M> ( <expression> ) <M> <A> <sent_block> , while
+	<while_sent> -> ¡¤ while <M> ( <expression> ) <M> <A> <sent_block> , return
+	<while_sent> -> ¡¤ while <M> ( <expression> ) <M> <A> <sent_block> , ID
+	<return_sent> -> ¡¤ return ; , if
+	<return_sent> -> ¡¤ return <expression> ; , if
+	<return_sent> -> ¡¤ return ; , while
+	<return_sent> -> ¡¤ return <expression> ; , while
+	<return_sent> -> ¡¤ return ; , return
+	<return_sent> -> ¡¤ return <expression> ; , return
+	<return_sent> -> ¡¤ return ; , ID
+	<return_sent> -> ¡¤ return <expression> ; , ID
+	<assign_sent> -> ¡¤ ID = <expression> ; , if
+	<assign_sent> -> ¡¤ ID = <expression> ; , while
+	<assign_sent> -> ¡¤ ID = <expression> ; , return
+	<assign_sent> -> ¡¤ ID = <expression> ; , ID
+	<if_sent> -> ¡¤ if ( <expression> ) <M> <A> <sent_block> , }
+	<if_sent> -> ¡¤ if ( <expression> ) <M> <A> <sent_block> <N> else <M> <A> <sent_block> , }
+	<while_sent> -> ¡¤ while <M> ( <expression> ) <M> <A> <sent_block> , }
+	<return_sent> -> ¡¤ return ; , }
+	<return_sent> -> ¡¤ return <expression> ; , }
+	<assign_sent> -> ¡¤ ID = <expression> ; , }
+ÏîÄ¿¼¯ 53 : 
+	<if_sent> -> if ( ¡¤ <expression> ) <M> <A> <sent_block> , if
+	<if_sent> -> if ( ¡¤ <expression> ) <M> <A> <sent_block> <N> else <M> <A> <sent_block> , if
+	<if_sent> -> if ( ¡¤ <expression> ) <M> <A> <sent_block> , while
+	<if_sent> -> if ( ¡¤ <expression> ) <M> <A> <sent_block> <N> else <M> <A> <sent_block> , while
+	<if_sent> -> if ( ¡¤ <expression> ) <M> <A> <sent_block> , return
+	<if_sent> -> if ( ¡¤ <expression> ) <M> <A> <sent_block> <N> else <M> <A> <sent_block> , return
+	<if_sent> -> if ( ¡¤ <expression> ) <M> <A> <sent_block> , ID
+	<if_sent> -> if ( ¡¤ <expression> ) <M> <A> <sent_block> <N> else <M> <A> <sent_block> , ID
+	<if_sent> -> if ( ¡¤ <expression> ) <M> <A> <sent_block> , }
+	<if_sent> -> if ( ¡¤ <expression> ) <M> <A> <sent_block> <N> else <M> <A> <sent_block> , }
+	<expression> -> ¡¤ <add_expression> , )
+	<expression> -> ¡¤ <add_expression> <relop> <expression> , )
+	<add_expression> -> ¡¤ <item> , )
+	<add_expression> -> ¡¤ <item> + <add_expression> , )
+	<add_expression> -> ¡¤ <item> - <add_expression> , )
+	<add_expression> -> ¡¤ <item> , <
+	<add_expression> -> ¡¤ <item> , >
+	<add_expression> -> ¡¤ <item> , ==
+	<add_expression> -> ¡¤ <item> , >=
+	<add_expression> -> ¡¤ <item> , <=
+	<add_expression> -> ¡¤ <item> , !=
+	<add_expression> -> ¡¤ <item> + <add_expression> , <
+	<add_expression> -> ¡¤ <item> + <add_expression> , >
+	<add_expression> -> ¡¤ <item> + <add_expression> , ==
+	<add_expression> -> ¡¤ <item> + <add_expression> , >=
+	<add_expression> -> ¡¤ <item> + <add_expression> , <=
+	<add_expression> -> ¡¤ <item> + <add_expression> , !=
+	<add_expression> -> ¡¤ <item> - <add_expression> , <
+	<add_expression> -> ¡¤ <item> - <add_expression> , >
+	<add_expression> -> ¡¤ <item> - <add_expression> , ==
+	<add_expression> -> ¡¤ <item> - <add_expression> , >=
+	<add_expression> -> ¡¤ <item> - <add_expression> , <=
+	<add_expression> -> ¡¤ <item> - <add_expression> , !=
+	<item> -> ¡¤ <factor> , )
+	<item> -> ¡¤ <factor> * <item> , )
+	<item> -> ¡¤ <factor> / <item> , )
+	<item> -> ¡¤ <factor> , +
+	<item> -> ¡¤ <factor> * <item> , +
+	<item> -> ¡¤ <factor> / <item> , +
+	<item> -> ¡¤ <factor> , -
+	<item> -> ¡¤ <factor> * <item> , -
+	<item> -> ¡¤ <factor> / <item> , -
+	<item> -> ¡¤ <factor> , <
+	<item> -> ¡¤ <factor> * <item> , <
+	<item> -> ¡¤ <factor> / <item> , <
+	<item> -> ¡¤ <factor> , >
+	<item> -> ¡¤ <factor> * <item> , >
+	<item> -> ¡¤ <factor> / <item> , >
+	<item> -> ¡¤ <factor> , ==
+	<item> -> ¡¤ <factor> * <item> , ==
+	<item> -> ¡¤ <factor> / <item> , ==
+	<item> -> ¡¤ <factor> , >=
+	<item> -> ¡¤ <factor> * <item> , >=
+	<item> -> ¡¤ <factor> / <item> , >=
+	<item> -> ¡¤ <factor> , <=
+	<item> -> ¡¤ <factor> * <item> , <=
+	<item> -> ¡¤ <factor> / <item> , <=
+	<item> -> ¡¤ <factor> , !=
+	<item> -> ¡¤ <factor> * <item> , !=
+	<item> -> ¡¤ <factor> / <item> , !=
+	<factor> -> ¡¤ NUM , )
+	<factor> -> ¡¤ ID , )
+	<factor> -> ¡¤ ( <expression> ) , )
+	<factor> -> ¡¤ ID ( <aparam_list> ) , )
+	<factor> -> ¡¤ NUM , *
+	<factor> -> ¡¤ ID , *
+	<factor> -> ¡¤ ( <expression> ) , *
+	<factor> -> ¡¤ ID ( <aparam_list> ) , *
+	<factor> -> ¡¤ NUM , /
+	<factor> -> ¡¤ ID , /
+	<factor> -> ¡¤ ( <expression> ) , /
+	<factor> -> ¡¤ ID ( <aparam_list> ) , /
+	<factor> -> ¡¤ NUM , +
+	<factor> -> ¡¤ ID , +
+	<factor> -> ¡¤ ( <expression> ) , +
+	<factor> -> ¡¤ ID ( <aparam_list> ) , +
+	<factor> -> ¡¤ NUM , -
+	<factor> -> ¡¤ ID , -
+	<factor> -> ¡¤ ( <expression> ) , -
+	<factor> -> ¡¤ ID ( <aparam_list> ) , -
+	<factor> -> ¡¤ NUM , <
+	<factor> -> ¡¤ ID , <
+	<factor> -> ¡¤ ( <expression> ) , <
+	<factor> -> ¡¤ ID ( <aparam_list> ) , <
+	<factor> -> ¡¤ NUM , >
+	<factor> -> ¡¤ ID , >
+	<factor> -> ¡¤ ( <expression> ) , >
+	<factor> -> ¡¤ ID ( <aparam_list> ) , >
+	<factor> -> ¡¤ NUM , ==
+	<factor> -> ¡¤ ID , ==
+	<factor> -> ¡¤ ( <expression> ) , ==
+	<factor> -> ¡¤ ID ( <aparam_list> ) , ==
+	<factor> -> ¡¤ NUM , >=
+	<factor> -> ¡¤ ID , >=
+	<factor> -> ¡¤ ( <expression> ) , >=
+	<factor> -> ¡¤ ID ( <aparam_list> ) , >=
+	<factor> -> ¡¤ NUM , <=
+	<factor> -> ¡¤ ID , <=
+	<factor> -> ¡¤ ( <expression> ) , <=
+	<factor> -> ¡¤ ID ( <aparam_list> ) , <=
+	<factor> -> ¡¤ NUM , !=
+	<factor> -> ¡¤ ID , !=
+	<factor> -> ¡¤ ( <expression> ) , !=
+	<factor> -> ¡¤ ID ( <aparam_list> ) , !=
+ÏîÄ¿¼¯ 54 : 
+	<while_sent> -> while <M> ¡¤ ( <expression> ) <M> <A> <sent_block> , if
+	<while_sent> -> while <M> ¡¤ ( <expression> ) <M> <A> <sent_block> , while
+	<while_sent> -> while <M> ¡¤ ( <expression> ) <M> <A> <sent_block> , return
+	<while_sent> -> while <M> ¡¤ ( <expression> ) <M> <A> <sent_block> , ID
+	<while_sent> -> while <M> ¡¤ ( <expression> ) <M> <A> <sent_block> , }
+ÏîÄ¿¼¯ 55 : 
+	<factor> -> ID ¡¤ , ;
+	<factor> -> ID ¡¤ ( <aparam_list> ) , ;
+	<factor> -> ID ¡¤ , *
+	<factor> -> ID ¡¤ ( <aparam_list> ) , *
+	<factor> -> ID ¡¤ , /
+	<factor> -> ID ¡¤ ( <aparam_list> ) , /
+	<factor> -> ID ¡¤ , +
+	<factor> -> ID ¡¤ ( <aparam_list> ) , +
+	<factor> -> ID ¡¤ , -
+	<factor> -> ID ¡¤ ( <aparam_list> ) , -
+	<factor> -> ID ¡¤ , <
+	<factor> -> ID ¡¤ ( <aparam_list> ) , <
+	<factor> -> ID ¡¤ , >
+	<factor> -> ID ¡¤ ( <aparam_list> ) , >
+	<factor> -> ID ¡¤ , ==
+	<factor> -> ID ¡¤ ( <aparam_list> ) , ==
+	<factor> -> ID ¡¤ , >=
+	<factor> -> ID ¡¤ ( <aparam_list> ) , >=
+	<factor> -> ID ¡¤ , <=
+	<factor> -> ID ¡¤ ( <aparam_list> ) , <=
+	<factor> -> ID ¡¤ , !=
+	<factor> -> ID ¡¤ ( <aparam_list> ) , !=
+ÏîÄ¿¼¯ 56 : 
+	<return_sent> -> return ; ¡¤ , if
+	<return_sent> -> return ; ¡¤ , while
+	<return_sent> -> return ; ¡¤ , return
+	<return_sent> -> return ; ¡¤ , ID
+	<return_sent> -> return ; ¡¤ , }
+ÏîÄ¿¼¯ 57 : 
+	<factor> -> ( ¡¤ <expression> ) , ;
+	<factor> -> ( ¡¤ <expression> ) , *
+	<factor> -> ( ¡¤ <expression> ) , /
+	<factor> -> ( ¡¤ <expression> ) , +
+	<factor> -> ( ¡¤ <expression> ) , -
+	<factor> -> ( ¡¤ <expression> ) , <
+	<factor> -> ( ¡¤ <expression> ) , >
+	<factor> -> ( ¡¤ <expression> ) , ==
+	<factor> -> ( ¡¤ <expression> ) , >=
+	<factor> -> ( ¡¤ <expression> ) , <=
+	<factor> -> ( ¡¤ <expression> ) , !=
+	<expression> -> ¡¤ <add_expression> , )
+	<expression> -> ¡¤ <add_expression> <relop> <expression> , )
+	<add_expression> -> ¡¤ <item> , )
+	<add_expression> -> ¡¤ <item> + <add_expression> , )
+	<add_expression> -> ¡¤ <item> - <add_expression> , )
+	<add_expression> -> ¡¤ <item> , <
+	<add_expression> -> ¡¤ <item> , >
+	<add_expression> -> ¡¤ <item> , ==
+	<add_expression> -> ¡¤ <item> , >=
+	<add_expression> -> ¡¤ <item> , <=
+	<add_expression> -> ¡¤ <item> , !=
+	<add_expression> -> ¡¤ <item> + <add_expression> , <
+	<add_expression> -> ¡¤ <item> + <add_expression> , >
+	<add_expression> -> ¡¤ <item> + <add_expression> , ==
+	<add_expression> -> ¡¤ <item> + <add_expression> , >=
+	<add_expression> -> ¡¤ <item> + <add_expression> , <=
+	<add_expression> -> ¡¤ <item> + <add_expression> , !=
+	<add_expression> -> ¡¤ <item> - <add_expression> , <
+	<add_expression> -> ¡¤ <item> - <add_expression> , >
+	<add_expression> -> ¡¤ <item> - <add_expression> , ==
+	<add_expression> -> ¡¤ <item> - <add_expression> , >=
+	<add_expression> -> ¡¤ <item> - <add_expression> , <=
+	<add_expression> -> ¡¤ <item> - <add_expression> , !=
+	<item> -> ¡¤ <factor> , )
+	<item> -> ¡¤ <factor> * <item> , )
+	<item> -> ¡¤ <factor> / <item> , )
+	<item> -> ¡¤ <factor> , +
+	<item> -> ¡¤ <factor> * <item> , +
+	<item> -> ¡¤ <factor> / <item> , +
+	<item> -> ¡¤ <factor> , -
+	<item> -> ¡¤ <factor> * <item> , -
+	<item> -> ¡¤ <factor> / <item> , -
+	<item> -> ¡¤ <factor> , <
+	<item> -> ¡¤ <factor> * <item> , <
+	<item> -> ¡¤ <factor> / <item> , <
+	<item> -> ¡¤ <factor> , >
+	<item> -> ¡¤ <factor> * <item> , >
+	<item> -> ¡¤ <factor> / <item> , >
+	<item> -> ¡¤ <factor> , ==
+	<item> -> ¡¤ <factor> * <item> , ==
+	<item> -> ¡¤ <factor> / <item> , ==
+	<item> -> ¡¤ <factor> , >=
+	<item> -> ¡¤ <factor> * <item> , >=
+	<item> -> ¡¤ <factor> / <item> , >=
+	<item> -> ¡¤ <factor> , <=
+	<item> -> ¡¤ <factor> * <item> , <=
+	<item> -> ¡¤ <factor> / <item> , <=
+	<item> -> ¡¤ <factor> , !=
+	<item> -> ¡¤ <factor> * <item> , !=
+	<item> -> ¡¤ <factor> / <item> , !=
+	<factor> -> ¡¤ NUM , )
+	<factor> -> ¡¤ ID , )
+	<factor> -> ¡¤ ( <expression> ) , )
+	<factor> -> ¡¤ ID ( <aparam_list> ) , )
+	<factor> -> ¡¤ NUM , *
+	<factor> -> ¡¤ ID , *
+	<factor> -> ¡¤ ( <expression> ) , *
+	<factor> -> ¡¤ ID ( <aparam_list> ) , *
+	<factor> -> ¡¤ NUM , /
+	<factor> -> ¡¤ ID , /
+	<factor> -> ¡¤ ( <expression> ) , /
+	<factor> -> ¡¤ ID ( <aparam_list> ) , /
+	<factor> -> ¡¤ NUM , +
+	<factor> -> ¡¤ ID , +
+	<factor> -> ¡¤ ( <expression> ) , +
+	<factor> -> ¡¤ ID ( <aparam_list> ) , +
+	<factor> -> ¡¤ NUM , -
+	<factor> -> ¡¤ ID , -
+	<factor> -> ¡¤ ( <expression> ) , -
+	<factor> -> ¡¤ ID ( <aparam_list> ) , -
+	<factor> -> ¡¤ NUM , <
+	<factor> -> ¡¤ ID , <
+	<factor> -> ¡¤ ( <expression> ) , <
+	<factor> -> ¡¤ ID ( <aparam_list> ) , <
+	<factor> -> ¡¤ NUM , >
+	<factor> -> ¡¤ ID , >
+	<factor> -> ¡¤ ( <expression> ) , >
+	<factor> -> ¡¤ ID ( <aparam_list> ) , >
+	<factor> -> ¡¤ NUM , ==
+	<factor> -> ¡¤ ID , ==
+	<factor> -> ¡¤ ( <expression> ) , ==
+	<factor> -> ¡¤ ID ( <aparam_list> ) , ==
+	<factor> -> ¡¤ NUM , >=
+	<factor> -> ¡¤ ID , >=
+	<factor> -> ¡¤ ( <expression> ) , >=
+	<factor> -> ¡¤ ID ( <aparam_list> ) , >=
+	<factor> -> ¡¤ NUM , <=
+	<factor> -> ¡¤ ID , <=
+	<factor> -> ¡¤ ( <expression> ) , <=
+	<factor> -> ¡¤ ID ( <aparam_list> ) , <=
+	<factor> -> ¡¤ NUM , !=
+	<factor> -> ¡¤ ID , !=
+	<factor> -> ¡¤ ( <expression> ) , !=
+	<factor> -> ¡¤ ID ( <aparam_list> ) , !=
+ÏîÄ¿¼¯ 58 : 
+	<return_sent> -> return <expression> ¡¤ ; , if
+	<return_sent> -> return <expression> ¡¤ ; , while
+	<return_sent> -> return <expression> ¡¤ ; , return
+	<return_sent> -> return <expression> ¡¤ ; , ID
+	<return_sent> -> return <expression> ¡¤ ; , }
+ÏîÄ¿¼¯ 59 : 
+	<expression> -> <add_expression> ¡¤ , ;
+	<expression> -> <add_expression> ¡¤ <relop> <expression> , ;
+	<relop> -> ¡¤ < , NUM
+	<relop> -> ¡¤ < , ID
+	<relop> -> ¡¤ < , (
+	<relop> -> ¡¤ > , NUM
+	<relop> -> ¡¤ > , ID
+	<relop> -> ¡¤ > , (
+	<relop> -> ¡¤ == , NUM
+	<relop> -> ¡¤ == , ID
+	<relop> -> ¡¤ == , (
+	<relop> -> ¡¤ >= , NUM
+	<relop> -> ¡¤ >= , ID
+	<relop> -> ¡¤ >= , (
+	<relop> -> ¡¤ <= , NUM
+	<relop> -> ¡¤ <= , ID
+	<relop> -> ¡¤ <= , (
+	<relop> -> ¡¤ != , NUM
+	<relop> -> ¡¤ != , ID
+	<relop> -> ¡¤ != , (
+ÏîÄ¿¼¯ 60 : 
+	<add_expression> -> <item> ¡¤ , ;
+	<add_expression> -> <item> ¡¤ + <add_expression> , ;
+	<add_expression> -> <item> ¡¤ - <add_expression> , ;
+	<add_expression> -> <item> ¡¤ , <
+	<add_expression> -> <item> ¡¤ , >
+	<add_expression> -> <item> ¡¤ , ==
+	<add_expression> -> <item> ¡¤ , >=
+	<add_expression> -> <item> ¡¤ , <=
+	<add_expression> -> <item> ¡¤ , !=
+	<add_expression> -> <item> ¡¤ + <add_expression> , <
+	<add_expression> -> <item> ¡¤ + <add_expression> , >
+	<add_expression> -> <item> ¡¤ + <add_expression> , ==
+	<add_expression> -> <item> ¡¤ + <add_expression> , >=
+	<add_expression> -> <item> ¡¤ + <add_expression> , <=
+	<add_expression> -> <item> ¡¤ + <add_expression> , !=
+	<add_expression> -> <item> ¡¤ - <add_expression> , <
+	<add_expression> -> <item> ¡¤ - <add_expression> , >
+	<add_expression> -> <item> ¡¤ - <add_expression> , ==
+	<add_expression> -> <item> ¡¤ - <add_expression> , >=
+	<add_expression> -> <item> ¡¤ - <add_expression> , <=
+	<add_expression> -> <item> ¡¤ - <add_expression> , !=
+ÏîÄ¿¼¯ 61 : 
+	<item> -> <factor> ¡¤ , ;
+	<item> -> <factor> ¡¤ * <item> , ;
+	<item> -> <factor> ¡¤ / <item> , ;
+	<item> -> <factor> ¡¤ , +
+	<item> -> <factor> ¡¤ * <item> , +
+	<item> -> <factor> ¡¤ / <item> , +
+	<item> -> <factor> ¡¤ , -
+	<item> -> <factor> ¡¤ * <item> , -
+	<item> -> <factor> ¡¤ / <item> , -
+	<item> -> <factor> ¡¤ , <
+	<item> -> <factor> ¡¤ * <item> , <
+	<item> -> <factor> ¡¤ / <item> , <
+	<item> -> <factor> ¡¤ , >
+	<item> -> <factor> ¡¤ * <item> , >
+	<item> -> <factor> ¡¤ / <item> , >
+	<item> -> <factor> ¡¤ , ==
+	<item> -> <factor> ¡¤ * <item> , ==
+	<item> -> <factor> ¡¤ / <item> , ==
+	<item> -> <factor> ¡¤ , >=
+	<item> -> <factor> ¡¤ * <item> , >=
+	<item> -> <factor> ¡¤ / <item> , >=
+	<item> -> <factor> ¡¤ , <=
+	<item> -> <factor> ¡¤ * <item> , <=
+	<item> -> <factor> ¡¤ / <item> , <=
+	<item> -> <factor> ¡¤ , !=
+	<item> -> <factor> ¡¤ * <item> , !=
+	<item> -> <factor> ¡¤ / <item> , !=
+ÏîÄ¿¼¯ 62 : 
+	<factor> -> NUM ¡¤ , ;
+	<factor> -> NUM ¡¤ , *
+	<factor> -> NUM ¡¤ , /
+	<factor> -> NUM ¡¤ , +
+	<factor> -> NUM ¡¤ , -
+	<factor> -> NUM ¡¤ , <
+	<factor> -> NUM ¡¤ , >
+	<factor> -> NUM ¡¤ , ==
+	<factor> -> NUM ¡¤ , >=
+	<factor> -> NUM ¡¤ , <=
+	<factor> -> NUM ¡¤ , !=
+ÏîÄ¿¼¯ 63 : 
+	<inner_var_dec> -> int ID ; ¡¤ , if
+	<inner_var_dec> -> int ID ; ¡¤ , while
+	<inner_var_dec> -> int ID ; ¡¤ , return
+	<inner_var_dec> -> int ID ; ¡¤ , ID
+	<inner_var_dec> -> int ID ; ¡¤ , int
+ÏîÄ¿¼¯ 64 : 
+	<assign_sent> -> ID = <expression> ¡¤ ; , if
+	<assign_sent> -> ID = <expression> ¡¤ ; , while
+	<assign_sent> -> ID = <expression> ¡¤ ; , return
+	<assign_sent> -> ID = <expression> ¡¤ ; , ID
+	<assign_sent> -> ID = <expression> ¡¤ ; , }
+ÏîÄ¿¼¯ 65 : 
+	<sent_block> -> { <inner_declare> <sent_list> } ¡¤ , int
+	<sent_block> -> { <inner_declare> <sent_list> } ¡¤ , void
+	<sent_block> -> { <inner_declare> <sent_list> } ¡¤ , #
+ÏîÄ¿¼¯ 66 : 
+	<sent_list> -> <sent> <M> <sent_list> ¡¤ , }
+ÏîÄ¿¼¯ 67 : 
+	<factor> -> ID ¡¤ , )
+	<factor> -> ID ¡¤ ( <aparam_list> ) , )
+	<factor> -> ID ¡¤ , *
+	<factor> -> ID ¡¤ ( <aparam_list> ) , *
+	<factor> -> ID ¡¤ , /
+	<factor> -> ID ¡¤ ( <aparam_list> ) , /
+	<factor> -> ID ¡¤ , +
+	<factor> -> ID ¡¤ ( <aparam_list> ) , +
+	<factor> -> ID ¡¤ , -
+	<factor> -> ID ¡¤ ( <aparam_list> ) , -
+	<factor> -> ID ¡¤ , <
+	<factor> -> ID ¡¤ ( <aparam_list> ) , <
+	<factor> -> ID ¡¤ , >
+	<factor> -> ID ¡¤ ( <aparam_list> ) , >
+	<factor> -> ID ¡¤ , ==
+	<factor> -> ID ¡¤ ( <aparam_list> ) , ==
+	<factor> -> ID ¡¤ , >=
+	<factor> -> ID ¡¤ ( <aparam_list> ) , >=
+	<factor> -> ID ¡¤ , <=
+	<factor> -> ID ¡¤ ( <aparam_list> ) , <=
+	<factor> -> ID ¡¤ , !=
+	<factor> -> ID ¡¤ ( <aparam_list> ) , !=
+ÏîÄ¿¼¯ 68 : 
+	<factor> -> ( ¡¤ <expression> ) , )
+	<factor> -> ( ¡¤ <expression> ) , *
+	<factor> -> ( ¡¤ <expression> ) , /
+	<factor> -> ( ¡¤ <expression> ) , +
+	<factor> -> ( ¡¤ <expression> ) , -
+	<factor> -> ( ¡¤ <expression> ) , <
+	<factor> -> ( ¡¤ <expression> ) , >
+	<factor> -> ( ¡¤ <expression> ) , ==
+	<factor> -> ( ¡¤ <expression> ) , >=
+	<factor> -> ( ¡¤ <expression> ) , <=
+	<factor> -> ( ¡¤ <expression> ) , !=
+	<expression> -> ¡¤ <add_expression> , )
+	<expression> -> ¡¤ <add_expression> <relop> <expression> , )
+	<add_expression> -> ¡¤ <item> , )
+	<add_expression> -> ¡¤ <item> + <add_expression> , )
+	<add_expression> -> ¡¤ <item> - <add_expression> , )
+	<add_expression> -> ¡¤ <item> , <
+	<add_expression> -> ¡¤ <item> , >
+	<add_expression> -> ¡¤ <item> , ==
+	<add_expression> -> ¡¤ <item> , >=
+	<add_expression> -> ¡¤ <item> , <=
+	<add_expression> -> ¡¤ <item> , !=
+	<add_expression> -> ¡¤ <item> + <add_expression> , <
+	<add_expression> -> ¡¤ <item> + <add_expression> , >
+	<add_expression> -> ¡¤ <item> + <add_expression> , ==
+	<add_expression> -> ¡¤ <item> + <add_expression> , >=
+	<add_expression> -> ¡¤ <item> + <add_expression> , <=
+	<add_expression> -> ¡¤ <item> + <add_expression> , !=
+	<add_expression> -> ¡¤ <item> - <add_expression> , <
+	<add_expression> -> ¡¤ <item> - <add_expression> , >
+	<add_expression> -> ¡¤ <item> - <add_expression> , ==
+	<add_expression> -> ¡¤ <item> - <add_expression> , >=
+	<add_expression> -> ¡¤ <item> - <add_expression> , <=
+	<add_expression> -> ¡¤ <item> - <add_expression> , !=
+	<item> -> ¡¤ <factor> , )
+	<item> -> ¡¤ <factor> * <item> , )
+	<item> -> ¡¤ <factor> / <item> , )
+	<item> -> ¡¤ <factor> , +
+	<item> -> ¡¤ <factor> * <item> , +
+	<item> -> ¡¤ <factor> / <item> , +
+	<item> -> ¡¤ <factor> , -
+	<item> -> ¡¤ <factor> * <item> , -
+	<item> -> ¡¤ <factor> / <item> , -
+	<item> -> ¡¤ <factor> , <
+	<item> -> ¡¤ <factor> * <item> , <
+	<item> -> ¡¤ <factor> / <item> , <
+	<item> -> ¡¤ <factor> , >
+	<item> -> ¡¤ <factor> * <item> , >
+	<item> -> ¡¤ <factor> / <item> , >
+	<item> -> ¡¤ <factor> , ==
+	<item> -> ¡¤ <factor> * <item> , ==
+	<item> -> ¡¤ <factor> / <item> , ==
+	<item> -> ¡¤ <factor> , >=
+	<item> -> ¡¤ <factor> * <item> , >=
+	<item> -> ¡¤ <factor> / <item> , >=
+	<item> -> ¡¤ <factor> , <=
+	<item> -> ¡¤ <factor> * <item> , <=
+	<item> -> ¡¤ <factor> / <item> , <=
+	<item> -> ¡¤ <factor> , !=
+	<item> -> ¡¤ <factor> * <item> , !=
+	<item> -> ¡¤ <factor> / <item> , !=
+	<factor> -> ¡¤ NUM , )
+	<factor> -> ¡¤ ID , )
+	<factor> -> ¡¤ ( <expression> ) , )
+	<factor> -> ¡¤ ID ( <aparam_list> ) , )
+	<factor> -> ¡¤ NUM , *
+	<factor> -> ¡¤ ID , *
+	<factor> -> ¡¤ ( <expression> ) , *
+	<factor> -> ¡¤ ID ( <aparam_list> ) , *
+	<factor> -> ¡¤ NUM , /
+	<factor> -> ¡¤ ID , /
+	<factor> -> ¡¤ ( <expression> ) , /
+	<factor> -> ¡¤ ID ( <aparam_list> ) , /
+	<factor> -> ¡¤ NUM , +
+	<factor> -> ¡¤ ID , +
+	<factor> -> ¡¤ ( <expression> ) , +
+	<factor> -> ¡¤ ID ( <aparam_list> ) , +
+	<factor> -> ¡¤ NUM , -
+	<factor> -> ¡¤ ID , -
+	<factor> -> ¡¤ ( <expression> ) , -
+	<factor> -> ¡¤ ID ( <aparam_list> ) , -
+	<factor> -> ¡¤ NUM , <
+	<factor> -> ¡¤ ID , <
+	<factor> -> ¡¤ ( <expression> ) , <
+	<factor> -> ¡¤ ID ( <aparam_list> ) , <
+	<factor> -> ¡¤ NUM , >
+	<factor> -> ¡¤ ID , >
+	<factor> -> ¡¤ ( <expression> ) , >
+	<factor> -> ¡¤ ID ( <aparam_list> ) , >
+	<factor> -> ¡¤ NUM , ==
+	<factor> -> ¡¤ ID , ==
+	<factor> -> ¡¤ ( <expression> ) , ==
+	<factor> -> ¡¤ ID ( <aparam_list> ) , ==
+	<factor> -> ¡¤ NUM , >=
+	<factor> -> ¡¤ ID , >=
+	<factor> -> ¡¤ ( <expression> ) , >=
+	<factor> -> ¡¤ ID ( <aparam_list> ) , >=
+	<factor> -> ¡¤ NUM , <=
+	<factor> -> ¡¤ ID , <=
+	<factor> -> ¡¤ ( <expression> ) , <=
+	<factor> -> ¡¤ ID ( <aparam_list> ) , <=
+	<factor> -> ¡¤ NUM , !=
+	<factor> -> ¡¤ ID , !=
+	<factor> -> ¡¤ ( <expression> ) , !=
+	<factor> -> ¡¤ ID ( <aparam_list> ) , !=
+ÏîÄ¿¼¯ 69 : 
+	<if_sent> -> if ( <expression> ¡¤ ) <M> <A> <sent_block> , if
+	<if_sent> -> if ( <expression> ¡¤ ) <M> <A> <sent_block> <N> else <M> <A> <sent_block> , if
+	<if_sent> -> if ( <expression> ¡¤ ) <M> <A> <sent_block> , while
+	<if_sent> -> if ( <expression> ¡¤ ) <M> <A> <sent_block> <N> else <M> <A> <sent_block> , while
+	<if_sent> -> if ( <expression> ¡¤ ) <M> <A> <sent_block> , return
+	<if_sent> -> if ( <expression> ¡¤ ) <M> <A> <sent_block> <N> else <M> <A> <sent_block> , return
+	<if_sent> -> if ( <expression> ¡¤ ) <M> <A> <sent_block> , ID
+	<if_sent> -> if ( <expression> ¡¤ ) <M> <A> <sent_block> <N> else <M> <A> <sent_block> , ID
+	<if_sent> -> if ( <expression> ¡¤ ) <M> <A> <sent_block> , }
+	<if_sent> -> if ( <expression> ¡¤ ) <M> <A> <sent_block> <N> else <M> <A> <sent_block> , }
+ÏîÄ¿¼¯ 70 : 
+	<expression> -> <add_expression> ¡¤ , )
+	<expression> -> <add_expression> ¡¤ <relop> <expression> , )
+	<relop> -> ¡¤ < , NUM
+	<relop> -> ¡¤ < , ID
+	<relop> -> ¡¤ < , (
+	<relop> -> ¡¤ > , NUM
+	<relop> -> ¡¤ > , ID
+	<relop> -> ¡¤ > , (
+	<relop> -> ¡¤ == , NUM
+	<relop> -> ¡¤ == , ID
+	<relop> -> ¡¤ == , (
+	<relop> -> ¡¤ >= , NUM
+	<relop> -> ¡¤ >= , ID
+	<relop> -> ¡¤ >= , (
+	<relop> -> ¡¤ <= , NUM
+	<relop> -> ¡¤ <= , ID
+	<relop> -> ¡¤ <= , (
+	<relop> -> ¡¤ != , NUM
+	<relop> -> ¡¤ != , ID
+	<relop> -> ¡¤ != , (
+ÏîÄ¿¼¯ 71 : 
+	<add_expression> -> <item> ¡¤ , )
+	<add_expression> -> <item> ¡¤ + <add_expression> , )
+	<add_expression> -> <item> ¡¤ - <add_expression> , )
+	<add_expression> -> <item> ¡¤ , <
+	<add_expression> -> <item> ¡¤ , >
+	<add_expression> -> <item> ¡¤ , ==
+	<add_expression> -> <item> ¡¤ , >=
+	<add_expression> -> <item> ¡¤ , <=
+	<add_expression> -> <item> ¡¤ , !=
+	<add_expression> -> <item> ¡¤ + <add_expression> , <
+	<add_expression> -> <item> ¡¤ + <add_expression> , >
+	<add_expression> -> <item> ¡¤ + <add_expression> , ==
+	<add_expression> -> <item> ¡¤ + <add_expression> , >=
+	<add_expression> -> <item> ¡¤ + <add_expression> , <=
+	<add_expression> -> <item> ¡¤ + <add_expression> , !=
+	<add_expression> -> <item> ¡¤ - <add_expression> , <
+	<add_expression> -> <item> ¡¤ - <add_expression> , >
+	<add_expression> -> <item> ¡¤ - <add_expression> , ==
+	<add_expression> -> <item> ¡¤ - <add_expression> , >=
+	<add_expression> -> <item> ¡¤ - <add_expression> , <=
+	<add_expression> -> <item> ¡¤ - <add_expression> , !=
+ÏîÄ¿¼¯ 72 : 
+	<item> -> <factor> ¡¤ , )
+	<item> -> <factor> ¡¤ * <item> , )
+	<item> -> <factor> ¡¤ / <item> , )
+	<item> -> <factor> ¡¤ , +
+	<item> -> <factor> ¡¤ * <item> , +
+	<item> -> <factor> ¡¤ / <item> , +
+	<item> -> <factor> ¡¤ , -
+	<item> -> <factor> ¡¤ * <item> , -
+	<item> -> <factor> ¡¤ / <item> , -
+	<item> -> <factor> ¡¤ , <
+	<item> -> <factor> ¡¤ * <item> , <
+	<item> -> <factor> ¡¤ / <item> , <
+	<item> -> <factor> ¡¤ , >
+	<item> -> <factor> ¡¤ * <item> , >
+	<item> -> <factor> ¡¤ / <item> , >
+	<item> -> <factor> ¡¤ , ==
+	<item> -> <factor> ¡¤ * <item> , ==
+	<item> -> <factor> ¡¤ / <item> , ==
+	<item> -> <factor> ¡¤ , >=
+	<item> -> <factor> ¡¤ * <item> , >=
+	<item> -> <factor> ¡¤ / <item> , >=
+	<item> -> <factor> ¡¤ , <=
+	<item> -> <factor> ¡¤ * <item> , <=
+	<item> -> <factor> ¡¤ / <item> , <=
+	<item> -> <factor> ¡¤ , !=
+	<item> -> <factor> ¡¤ * <item> , !=
+	<item> -> <factor> ¡¤ / <item> , !=
+ÏîÄ¿¼¯ 73 : 
+	<factor> -> NUM ¡¤ , )
+	<factor> -> NUM ¡¤ , *
+	<factor> -> NUM ¡¤ , /
+	<factor> -> NUM ¡¤ , +
+	<factor> -> NUM ¡¤ , -
+	<factor> -> NUM ¡¤ , <
+	<factor> -> NUM ¡¤ , >
+	<factor> -> NUM ¡¤ , ==
+	<factor> -> NUM ¡¤ , >=
+	<factor> -> NUM ¡¤ , <=
+	<factor> -> NUM ¡¤ , !=
+ÏîÄ¿¼¯ 74 : 
+	<while_sent> -> while <M> ( ¡¤ <expression> ) <M> <A> <sent_block> , if
+	<while_sent> -> while <M> ( ¡¤ <expression> ) <M> <A> <sent_block> , while
+	<while_sent> -> while <M> ( ¡¤ <expression> ) <M> <A> <sent_block> , return
+	<while_sent> -> while <M> ( ¡¤ <expression> ) <M> <A> <sent_block> , ID
+	<while_sent> -> while <M> ( ¡¤ <expression> ) <M> <A> <sent_block> , }
+	<expression> -> ¡¤ <add_expression> , )
+	<expression> -> ¡¤ <add_expression> <relop> <expression> , )
+	<add_expression> -> ¡¤ <item> , )
+	<add_expression> -> ¡¤ <item> + <add_expression> , )
+	<add_expression> -> ¡¤ <item> - <add_expression> , )
+	<add_expression> -> ¡¤ <item> , <
+	<add_expression> -> ¡¤ <item> , >
+	<add_expression> -> ¡¤ <item> , ==
+	<add_expression> -> ¡¤ <item> , >=
+	<add_expression> -> ¡¤ <item> , <=
+	<add_expression> -> ¡¤ <item> , !=
+	<add_expression> -> ¡¤ <item> + <add_expression> , <
+	<add_expression> -> ¡¤ <item> + <add_expression> , >
+	<add_expression> -> ¡¤ <item> + <add_expression> , ==
+	<add_expression> -> ¡¤ <item> + <add_expression> , >=
+	<add_expression> -> ¡¤ <item> + <add_expression> , <=
+	<add_expression> -> ¡¤ <item> + <add_expression> , !=
+	<add_expression> -> ¡¤ <item> - <add_expression> , <
+	<add_expression> -> ¡¤ <item> - <add_expression> , >
+	<add_expression> -> ¡¤ <item> - <add_expression> , ==
+	<add_expression> -> ¡¤ <item> - <add_expression> , >=
+	<add_expression> -> ¡¤ <item> - <add_expression> , <=
+	<add_expression> -> ¡¤ <item> - <add_expression> , !=
+	<item> -> ¡¤ <factor> , )
+	<item> -> ¡¤ <factor> * <item> , )
+	<item> -> ¡¤ <factor> / <item> , )
+	<item> -> ¡¤ <factor> , +
+	<item> -> ¡¤ <factor> * <item> , +
+	<item> -> ¡¤ <factor> / <item> , +
+	<item> -> ¡¤ <factor> , -
+	<item> -> ¡¤ <factor> * <item> , -
+	<item> -> ¡¤ <factor> / <item> , -
+	<item> -> ¡¤ <factor> , <
+	<item> -> ¡¤ <factor> * <item> , <
+	<item> -> ¡¤ <factor> / <item> , <
+	<item> -> ¡¤ <factor> , >
+	<item> -> ¡¤ <factor> * <item> , >
+	<item> -> ¡¤ <factor> / <item> , >
+	<item> -> ¡¤ <factor> , ==
+	<item> -> ¡¤ <factor> * <item> , ==
+	<item> -> ¡¤ <factor> / <item> , ==
+	<item> -> ¡¤ <factor> , >=
+	<item> -> ¡¤ <factor> * <item> , >=
+	<item> -> ¡¤ <factor> / <item> , >=
+	<item> -> ¡¤ <factor> , <=
+	<item> -> ¡¤ <factor> * <item> , <=
+	<item> -> ¡¤ <factor> / <item> , <=
+	<item> -> ¡¤ <factor> , !=
+	<item> -> ¡¤ <factor> * <item> , !=
+	<item> -> ¡¤ <factor> / <item> , !=
+	<factor> -> ¡¤ NUM , )
+	<factor> -> ¡¤ ID , )
+	<factor> -> ¡¤ ( <expression> ) , )
+	<factor> -> ¡¤ ID ( <aparam_list> ) , )
+	<factor> -> ¡¤ NUM , *
+	<factor> -> ¡¤ ID , *
+	<factor> -> ¡¤ ( <expression> ) , *
+	<factor> -> ¡¤ ID ( <aparam_list> ) , *
+	<factor> -> ¡¤ NUM , /
+	<factor> -> ¡¤ ID , /
+	<factor> -> ¡¤ ( <expression> ) , /
+	<factor> -> ¡¤ ID ( <aparam_list> ) , /
+	<factor> -> ¡¤ NUM , +
+	<factor> -> ¡¤ ID , +
+	<factor> -> ¡¤ ( <expression> ) , +
+	<factor> -> ¡¤ ID ( <aparam_list> ) , +
+	<factor> -> ¡¤ NUM , -
+	<factor> -> ¡¤ ID , -
+	<factor> -> ¡¤ ( <expression> ) , -
+	<factor> -> ¡¤ ID ( <aparam_list> ) , -
+	<factor> -> ¡¤ NUM , <
+	<factor> -> ¡¤ ID , <
+	<factor> -> ¡¤ ( <expression> ) , <
+	<factor> -> ¡¤ ID ( <aparam_list> ) , <
+	<factor> -> ¡¤ NUM , >
+	<factor> -> ¡¤ ID , >
+	<factor> -> ¡¤ ( <expression> ) , >
+	<factor> -> ¡¤ ID ( <aparam_list> ) , >
+	<factor> -> ¡¤ NUM , ==
+	<factor> -> ¡¤ ID , ==
+	<factor> -> ¡¤ ( <expression> ) , ==
+	<factor> -> ¡¤ ID ( <aparam_list> ) , ==
+	<factor> -> ¡¤ NUM , >=
+	<factor> -> ¡¤ ID , >=
+	<factor> -> ¡¤ ( <expression> ) , >=
+	<factor> -> ¡¤ ID ( <aparam_list> ) , >=
+	<factor> -> ¡¤ NUM , <=
+	<factor> -> ¡¤ ID , <=
+	<factor> -> ¡¤ ( <expression> ) , <=
+	<factor> -> ¡¤ ID ( <aparam_list> ) , <=
+	<factor> -> ¡¤ NUM , !=
+	<factor> -> ¡¤ ID , !=
+	<factor> -> ¡¤ ( <expression> ) , !=
+	<factor> -> ¡¤ ID ( <aparam_list> ) , !=
+ÏîÄ¿¼¯ 75 : 
+	<factor> -> ID ( ¡¤ <aparam_list> ) , ;
+	<factor> -> ID ( ¡¤ <aparam_list> ) , *
+	<factor> -> ID ( ¡¤ <aparam_list> ) , /
+	<factor> -> ID ( ¡¤ <aparam_list> ) , +
+	<factor> -> ID ( ¡¤ <aparam_list> ) , -
+	<factor> -> ID ( ¡¤ <aparam_list> ) , <
+	<factor> -> ID ( ¡¤ <aparam_list> ) , >
+	<factor> -> ID ( ¡¤ <aparam_list> ) , ==
+	<factor> -> ID ( ¡¤ <aparam_list> ) , >=
+	<factor> -> ID ( ¡¤ <aparam_list> ) , <=
+	<factor> -> ID ( ¡¤ <aparam_list> ) , !=
+	<aparam_list> -> ¡¤ @ , )
+	<aparam_list> -> ¡¤ <expression> , )
+	<aparam_list> -> ¡¤ <expression> , <aparam_list> , )
+	<expression> -> ¡¤ <add_expression> , )
+	<expression> -> ¡¤ <add_expression> <relop> <expression> , )
+	<expression> -> ¡¤ <add_expression> , ,
+	<expression> -> ¡¤ <add_expression> <relop> <expression> , ,
+	<add_expression> -> ¡¤ <item> , )
+	<add_expression> -> ¡¤ <item> + <add_expression> , )
+	<add_expression> -> ¡¤ <item> - <add_expression> , )
+	<add_expression> -> ¡¤ <item> , <
+	<add_expression> -> ¡¤ <item> , >
+	<add_expression> -> ¡¤ <item> , ==
+	<add_expression> -> ¡¤ <item> , >=
+	<add_expression> -> ¡¤ <item> , <=
+	<add_expression> -> ¡¤ <item> , !=
+	<add_expression> -> ¡¤ <item> + <add_expression> , <
+	<add_expression> -> ¡¤ <item> + <add_expression> , >
+	<add_expression> -> ¡¤ <item> + <add_expression> , ==
+	<add_expression> -> ¡¤ <item> + <add_expression> , >=
+	<add_expression> -> ¡¤ <item> + <add_expression> , <=
+	<add_expression> -> ¡¤ <item> + <add_expression> , !=
+	<add_expression> -> ¡¤ <item> - <add_expression> , <
+	<add_expression> -> ¡¤ <item> - <add_expression> , >
+	<add_expression> -> ¡¤ <item> - <add_expression> , ==
+	<add_expression> -> ¡¤ <item> - <add_expression> , >=
+	<add_expression> -> ¡¤ <item> - <add_expression> , <=
+	<add_expression> -> ¡¤ <item> - <add_expression> , !=
+	<add_expression> -> ¡¤ <item> , ,
+	<add_expression> -> ¡¤ <item> + <add_expression> , ,
+	<add_expression> -> ¡¤ <item> - <add_expression> , ,
+	<item> -> ¡¤ <factor> , )
+	<item> -> ¡¤ <factor> * <item> , )
+	<item> -> ¡¤ <factor> / <item> , )
+	<item> -> ¡¤ <factor> , +
+	<item> -> ¡¤ <factor> * <item> , +
+	<item> -> ¡¤ <factor> / <item> , +
+	<item> -> ¡¤ <factor> , -
+	<item> -> ¡¤ <factor> * <item> , -
+	<item> -> ¡¤ <factor> / <item> , -
+	<item> -> ¡¤ <factor> , <
+	<item> -> ¡¤ <factor> * <item> , <
+	<item> -> ¡¤ <factor> / <item> , <
+	<item> -> ¡¤ <factor> , >
+	<item> -> ¡¤ <factor> * <item> , >
+	<item> -> ¡¤ <factor> / <item> , >
+	<item> -> ¡¤ <factor> , ==
+	<item> -> ¡¤ <factor> * <item> , ==
+	<item> -> ¡¤ <factor> / <item> , ==
+	<item> -> ¡¤ <factor> , >=
+	<item> -> ¡¤ <factor> * <item> , >=
+	<item> -> ¡¤ <factor> / <item> , >=
+	<item> -> ¡¤ <factor> , <=
+	<item> -> ¡¤ <factor> * <item> , <=
+	<item> -> ¡¤ <factor> / <item> , <=
+	<item> -> ¡¤ <factor> , !=
+	<item> -> ¡¤ <factor> * <item> , !=
+	<item> -> ¡¤ <factor> / <item> , !=
+	<item> -> ¡¤ <factor> , ,
+	<item> -> ¡¤ <factor> * <item> , ,
+	<item> -> ¡¤ <factor> / <item> , ,
+	<factor> -> ¡¤ NUM , )
+	<factor> -> ¡¤ ID , )
+	<factor> -> ¡¤ ( <expression> ) , )
+	<factor> -> ¡¤ ID ( <aparam_list> ) , )
+	<factor> -> ¡¤ NUM , *
+	<factor> -> ¡¤ ID , *
+	<factor> -> ¡¤ ( <expression> ) , *
+	<factor> -> ¡¤ ID ( <aparam_list> ) , *
+	<factor> -> ¡¤ NUM , /
+	<factor> -> ¡¤ ID , /
+	<factor> -> ¡¤ ( <expression> ) , /
+	<factor> -> ¡¤ ID ( <aparam_list> ) , /
+	<factor> -> ¡¤ NUM , +
+	<factor> -> ¡¤ ID , +
+	<factor> -> ¡¤ ( <expression> ) , +
+	<factor> -> ¡¤ ID ( <aparam_list> ) , +
+	<factor> -> ¡¤ NUM , -
+	<factor> -> ¡¤ ID , -
+	<factor> -> ¡¤ ( <expression> ) , -
+	<factor> -> ¡¤ ID ( <aparam_list> ) , -
+	<factor> -> ¡¤ NUM , <
+	<factor> -> ¡¤ ID , <
+	<factor> -> ¡¤ ( <expression> ) , <
+	<factor> -> ¡¤ ID ( <aparam_list> ) , <
+	<factor> -> ¡¤ NUM , >
+	<factor> -> ¡¤ ID , >
+	<factor> -> ¡¤ ( <expression> ) , >
+	<factor> -> ¡¤ ID ( <aparam_list> ) , >
+	<factor> -> ¡¤ NUM , ==
+	<factor> -> ¡¤ ID , ==
+	<factor> -> ¡¤ ( <expression> ) , ==
+	<factor> -> ¡¤ ID ( <aparam_list> ) , ==
+	<factor> -> ¡¤ NUM , >=
+	<factor> -> ¡¤ ID , >=
+	<factor> -> ¡¤ ( <expression> ) , >=
+	<factor> -> ¡¤ ID ( <aparam_list> ) , >=
+	<factor> -> ¡¤ NUM , <=
+	<factor> -> ¡¤ ID , <=
+	<factor> -> ¡¤ ( <expression> ) , <=
+	<factor> -> ¡¤ ID ( <aparam_list> ) , <=
+	<factor> -> ¡¤ NUM , !=
+	<factor> -> ¡¤ ID , !=
+	<factor> -> ¡¤ ( <expression> ) , !=
+	<factor> -> ¡¤ ID ( <aparam_list> ) , !=
+	<factor> -> ¡¤ NUM , ,
+	<factor> -> ¡¤ ID , ,
+	<factor> -> ¡¤ ( <expression> ) , ,
+	<factor> -> ¡¤ ID ( <aparam_list> ) , ,
+ÏîÄ¿¼¯ 76 : 
+	<factor> -> ( <expression> ¡¤ ) , ;
+	<factor> -> ( <expression> ¡¤ ) , *
+	<factor> -> ( <expression> ¡¤ ) , /
+	<factor> -> ( <expression> ¡¤ ) , +
+	<factor> -> ( <expression> ¡¤ ) , -
+	<factor> -> ( <expression> ¡¤ ) , <
+	<factor> -> ( <expression> ¡¤ ) , >
+	<factor> -> ( <expression> ¡¤ ) , ==
+	<factor> -> ( <expression> ¡¤ ) , >=
+	<factor> -> ( <expression> ¡¤ ) , <=
+	<factor> -> ( <expression> ¡¤ ) , !=
+ÏîÄ¿¼¯ 77 : 
+	<return_sent> -> return <expression> ; ¡¤ , if
+	<return_sent> -> return <expression> ; ¡¤ , while
+	<return_sent> -> return <expression> ; ¡¤ , return
+	<return_sent> -> return <expression> ; ¡¤ , ID
+	<return_sent> -> return <expression> ; ¡¤ , }
+ÏîÄ¿¼¯ 78 : 
+	<expression> -> <add_expression> <relop> ¡¤ <expression> , ;
+	<expression> -> ¡¤ <add_expression> , ;
+	<expression> -> ¡¤ <add_expression> <relop> <expression> , ;
+	<add_expression> -> ¡¤ <item> , ;
+	<add_expression> -> ¡¤ <item> + <add_expression> , ;
+	<add_expression> -> ¡¤ <item> - <add_expression> , ;
+	<add_expression> -> ¡¤ <item> , <
+	<add_expression> -> ¡¤ <item> , >
+	<add_expression> -> ¡¤ <item> , ==
+	<add_expression> -> ¡¤ <item> , >=
+	<add_expression> -> ¡¤ <item> , <=
+	<add_expression> -> ¡¤ <item> , !=
+	<add_expression> -> ¡¤ <item> + <add_expression> , <
+	<add_expression> -> ¡¤ <item> + <add_expression> , >
+	<add_expression> -> ¡¤ <item> + <add_expression> , ==
+	<add_expression> -> ¡¤ <item> + <add_expression> , >=
+	<add_expression> -> ¡¤ <item> + <add_expression> , <=
+	<add_expression> -> ¡¤ <item> + <add_expression> , !=
+	<add_expression> -> ¡¤ <item> - <add_expression> , <
+	<add_expression> -> ¡¤ <item> - <add_expression> , >
+	<add_expression> -> ¡¤ <item> - <add_expression> , ==
+	<add_expression> -> ¡¤ <item> - <add_expression> , >=
+	<add_expression> -> ¡¤ <item> - <add_expression> , <=
+	<add_expression> -> ¡¤ <item> - <add_expression> , !=
+	<item> -> ¡¤ <factor> , ;
+	<item> -> ¡¤ <factor> * <item> , ;
+	<item> -> ¡¤ <factor> / <item> , ;
+	<item> -> ¡¤ <factor> , +
+	<item> -> ¡¤ <factor> * <item> , +
+	<item> -> ¡¤ <factor> / <item> , +
+	<item> -> ¡¤ <factor> , -
+	<item> -> ¡¤ <factor> * <item> , -
+	<item> -> ¡¤ <factor> / <item> , -
+	<item> -> ¡¤ <factor> , <
+	<item> -> ¡¤ <factor> * <item> , <
+	<item> -> ¡¤ <factor> / <item> , <
+	<item> -> ¡¤ <factor> , >
+	<item> -> ¡¤ <factor> * <item> , >
+	<item> -> ¡¤ <factor> / <item> , >
+	<item> -> ¡¤ <factor> , ==
+	<item> -> ¡¤ <factor> * <item> , ==
+	<item> -> ¡¤ <factor> / <item> , ==
+	<item> -> ¡¤ <factor> , >=
+	<item> -> ¡¤ <factor> * <item> , >=
+	<item> -> ¡¤ <factor> / <item> , >=
+	<item> -> ¡¤ <factor> , <=
+	<item> -> ¡¤ <factor> * <item> , <=
+	<item> -> ¡¤ <factor> / <item> , <=
+	<item> -> ¡¤ <factor> , !=
+	<item> -> ¡¤ <factor> * <item> , !=
+	<item> -> ¡¤ <factor> / <item> , !=
+	<factor> -> ¡¤ NUM , ;
+	<factor> -> ¡¤ ID , ;
+	<factor> -> ¡¤ ( <expression> ) , ;
+	<factor> -> ¡¤ ID ( <aparam_list> ) , ;
+	<factor> -> ¡¤ NUM , *
+	<factor> -> ¡¤ ID , *
+	<factor> -> ¡¤ ( <expression> ) , *
+	<factor> -> ¡¤ ID ( <aparam_list> ) , *
+	<factor> -> ¡¤ NUM , /
+	<factor> -> ¡¤ ID , /
+	<factor> -> ¡¤ ( <expression> ) , /
+	<factor> -> ¡¤ ID ( <aparam_list> ) , /
+	<factor> -> ¡¤ NUM , +
+	<factor> -> ¡¤ ID , +
+	<factor> -> ¡¤ ( <expression> ) , +
+	<factor> -> ¡¤ ID ( <aparam_list> ) , +
+	<factor> -> ¡¤ NUM , -
+	<factor> -> ¡¤ ID , -
+	<factor> -> ¡¤ ( <expression> ) , -
+	<factor> -> ¡¤ ID ( <aparam_list> ) , -
+	<factor> -> ¡¤ NUM , <
+	<factor> -> ¡¤ ID , <
+	<factor> -> ¡¤ ( <expression> ) , <
+	<factor> -> ¡¤ ID ( <aparam_list> ) , <
+	<factor> -> ¡¤ NUM , >
+	<factor> -> ¡¤ ID , >
+	<factor> -> ¡¤ ( <expression> ) , >
+	<factor> -> ¡¤ ID ( <aparam_list> ) , >
+	<factor> -> ¡¤ NUM , ==
+	<factor> -> ¡¤ ID , ==
+	<factor> -> ¡¤ ( <expression> ) , ==
+	<factor> -> ¡¤ ID ( <aparam_list> ) , ==
+	<factor> -> ¡¤ NUM , >=
+	<factor> -> ¡¤ ID , >=
+	<factor> -> ¡¤ ( <expression> ) , >=
+	<factor> -> ¡¤ ID ( <aparam_list> ) , >=
+	<factor> -> ¡¤ NUM , <=
+	<factor> -> ¡¤ ID , <=
+	<factor> -> ¡¤ ( <expression> ) , <=
+	<factor> -> ¡¤ ID ( <aparam_list> ) , <=
+	<factor> -> ¡¤ NUM , !=
+	<factor> -> ¡¤ ID , !=
+	<factor> -> ¡¤ ( <expression> ) , !=
+	<factor> -> ¡¤ ID ( <aparam_list> ) , !=
+ÏîÄ¿¼¯ 79 : 
+	<relop> -> < ¡¤ , NUM
+	<relop> -> < ¡¤ , ID
+	<relop> -> < ¡¤ , (
+ÏîÄ¿¼¯ 80 : 
+	<relop> -> > ¡¤ , NUM
+	<relop> -> > ¡¤ , ID
+	<relop> -> > ¡¤ , (
+ÏîÄ¿¼¯ 81 : 
+	<relop> -> == ¡¤ , NUM
+	<relop> -> == ¡¤ , ID
+	<relop> -> == ¡¤ , (
+ÏîÄ¿¼¯ 82 : 
+	<relop> -> >= ¡¤ , NUM
+	<relop> -> >= ¡¤ , ID
+	<relop> -> >= ¡¤ , (
+ÏîÄ¿¼¯ 83 : 
+	<relop> -> <= ¡¤ , NUM
+	<relop> -> <= ¡¤ , ID
+	<relop> -> <= ¡¤ , (
+ÏîÄ¿¼¯ 84 : 
+	<relop> -> != ¡¤ , NUM
+	<relop> -> != ¡¤ , ID
+	<relop> -> != ¡¤ , (
+ÏîÄ¿¼¯ 85 : 
+	<add_expression> -> <item> + ¡¤ <add_expression> , ;
+	<add_expression> -> <item> + ¡¤ <add_expression> , <
+	<add_expression> -> <item> + ¡¤ <add_expression> , >
+	<add_expression> -> <item> + ¡¤ <add_expression> , ==
+	<add_expression> -> <item> + ¡¤ <add_expression> , >=
+	<add_expression> -> <item> + ¡¤ <add_expression> , <=
+	<add_expression> -> <item> + ¡¤ <add_expression> , !=
+	<add_expression> -> ¡¤ <item> , ;
+	<add_expression> -> ¡¤ <item> + <add_expression> , ;
+	<add_expression> -> ¡¤ <item> - <add_expression> , ;
+	<add_expression> -> ¡¤ <item> , <
+	<add_expression> -> ¡¤ <item> + <add_expression> , <
+	<add_expression> -> ¡¤ <item> - <add_expression> , <
+	<add_expression> -> ¡¤ <item> , >
+	<add_expression> -> ¡¤ <item> + <add_expression> , >
+	<add_expression> -> ¡¤ <item> - <add_expression> , >
+	<add_expression> -> ¡¤ <item> , ==
+	<add_expression> -> ¡¤ <item> + <add_expression> , ==
+	<add_expression> -> ¡¤ <item> - <add_expression> , ==
+	<add_expression> -> ¡¤ <item> , >=
+	<add_expression> -> ¡¤ <item> + <add_expression> , >=
+	<add_expression> -> ¡¤ <item> - <add_expression> , >=
+	<add_expression> -> ¡¤ <item> , <=
+	<add_expression> -> ¡¤ <item> + <add_expression> , <=
+	<add_expression> -> ¡¤ <item> - <add_expression> , <=
+	<add_expression> -> ¡¤ <item> , !=
+	<add_expression> -> ¡¤ <item> + <add_expression> , !=
+	<add_expression> -> ¡¤ <item> - <add_expression> , !=
+	<item> -> ¡¤ <factor> , ;
+	<item> -> ¡¤ <factor> * <item> , ;
+	<item> -> ¡¤ <factor> / <item> , ;
+	<item> -> ¡¤ <factor> , +
+	<item> -> ¡¤ <factor> * <item> , +
+	<item> -> ¡¤ <factor> / <item> , +
+	<item> -> ¡¤ <factor> , -
+	<item> -> ¡¤ <factor> * <item> , -
+	<item> -> ¡¤ <factor> / <item> , -
+	<item> -> ¡¤ <factor> , <
+	<item> -> ¡¤ <factor> * <item> , <
+	<item> -> ¡¤ <factor> / <item> , <
+	<item> -> ¡¤ <factor> , >
+	<item> -> ¡¤ <factor> * <item> , >
+	<item> -> ¡¤ <factor> / <item> , >
+	<item> -> ¡¤ <factor> , ==
+	<item> -> ¡¤ <factor> * <item> , ==
+	<item> -> ¡¤ <factor> / <item> , ==
+	<item> -> ¡¤ <factor> , >=
+	<item> -> ¡¤ <factor> * <item> , >=
+	<item> -> ¡¤ <factor> / <item> , >=
+	<item> -> ¡¤ <factor> , <=
+	<item> -> ¡¤ <factor> * <item> , <=
+	<item> -> ¡¤ <factor> / <item> , <=
+	<item> -> ¡¤ <factor> , !=
+	<item> -> ¡¤ <factor> * <item> , !=
+	<item> -> ¡¤ <factor> / <item> , !=
+	<factor> -> ¡¤ NUM , ;
+	<factor> -> ¡¤ ID , ;
+	<factor> -> ¡¤ ( <expression> ) , ;
+	<factor> -> ¡¤ ID ( <aparam_list> ) , ;
+	<factor> -> ¡¤ NUM , *
+	<factor> -> ¡¤ ID , *
+	<factor> -> ¡¤ ( <expression> ) , *
+	<factor> -> ¡¤ ID ( <aparam_list> ) , *
+	<factor> -> ¡¤ NUM , /
+	<factor> -> ¡¤ ID , /
+	<factor> -> ¡¤ ( <expression> ) , /
+	<factor> -> ¡¤ ID ( <aparam_list> ) , /
+	<factor> -> ¡¤ NUM , +
+	<factor> -> ¡¤ ID , +
+	<factor> -> ¡¤ ( <expression> ) , +
+	<factor> -> ¡¤ ID ( <aparam_list> ) , +
+	<factor> -> ¡¤ NUM , -
+	<factor> -> ¡¤ ID , -
+	<factor> -> ¡¤ ( <expression> ) , -
+	<factor> -> ¡¤ ID ( <aparam_list> ) , -
+	<factor> -> ¡¤ NUM , <
+	<factor> -> ¡¤ ID , <
+	<factor> -> ¡¤ ( <expression> ) , <
+	<factor> -> ¡¤ ID ( <aparam_list> ) , <
+	<factor> -> ¡¤ NUM , >
+	<factor> -> ¡¤ ID , >
+	<factor> -> ¡¤ ( <expression> ) , >
+	<factor> -> ¡¤ ID ( <aparam_list> ) , >
+	<factor> -> ¡¤ NUM , ==
+	<factor> -> ¡¤ ID , ==
+	<factor> -> ¡¤ ( <expression> ) , ==
+	<factor> -> ¡¤ ID ( <aparam_list> ) , ==
+	<factor> -> ¡¤ NUM , >=
+	<factor> -> ¡¤ ID , >=
+	<factor> -> ¡¤ ( <expression> ) , >=
+	<factor> -> ¡¤ ID ( <aparam_list> ) , >=
+	<factor> -> ¡¤ NUM , <=
+	<factor> -> ¡¤ ID , <=
+	<factor> -> ¡¤ ( <expression> ) , <=
+	<factor> -> ¡¤ ID ( <aparam_list> ) , <=
+	<factor> -> ¡¤ NUM , !=
+	<factor> -> ¡¤ ID , !=
+	<factor> -> ¡¤ ( <expression> ) , !=
+	<factor> -> ¡¤ ID ( <aparam_list> ) , !=
+ÏîÄ¿¼¯ 86 : 
+	<add_expression> -> <item> - ¡¤ <add_expression> , ;
+	<add_expression> -> <item> - ¡¤ <add_expression> , <
+	<add_expression> -> <item> - ¡¤ <add_expression> , >
+	<add_expression> -> <item> - ¡¤ <add_expression> , ==
+	<add_expression> -> <item> - ¡¤ <add_expression> , >=
+	<add_expression> -> <item> - ¡¤ <add_expression> , <=
+	<add_expression> -> <item> - ¡¤ <add_expression> , !=
+	<add_expression> -> ¡¤ <item> , ;
+	<add_expression> -> ¡¤ <item> + <add_expression> , ;
+	<add_expression> -> ¡¤ <item> - <add_expression> , ;
+	<add_expression> -> ¡¤ <item> , <
+	<add_expression> -> ¡¤ <item> + <add_expression> , <
+	<add_expression> -> ¡¤ <item> - <add_expression> , <
+	<add_expression> -> ¡¤ <item> , >
+	<add_expression> -> ¡¤ <item> + <add_expression> , >
+	<add_expression> -> ¡¤ <item> - <add_expression> , >
+	<add_expression> -> ¡¤ <item> , ==
+	<add_expression> -> ¡¤ <item> + <add_expression> , ==
+	<add_expression> -> ¡¤ <item> - <add_expression> , ==
+	<add_expression> -> ¡¤ <item> , >=
+	<add_expression> -> ¡¤ <item> + <add_expression> , >=
+	<add_expression> -> ¡¤ <item> - <add_expression> , >=
+	<add_expression> -> ¡¤ <item> , <=
+	<add_expression> -> ¡¤ <item> + <add_expression> , <=
+	<add_expression> -> ¡¤ <item> - <add_expression> , <=
+	<add_expression> -> ¡¤ <item> , !=
+	<add_expression> -> ¡¤ <item> + <add_expression> , !=
+	<add_expression> -> ¡¤ <item> - <add_expression> , !=
+	<item> -> ¡¤ <factor> , ;
+	<item> -> ¡¤ <factor> * <item> , ;
+	<item> -> ¡¤ <factor> / <item> , ;
+	<item> -> ¡¤ <factor> , +
+	<item> -> ¡¤ <factor> * <item> , +
+	<item> -> ¡¤ <factor> / <item> , +
+	<item> -> ¡¤ <factor> , -
+	<item> -> ¡¤ <factor> * <item> , -
+	<item> -> ¡¤ <factor> / <item> , -
+	<item> -> ¡¤ <factor> , <
+	<item> -> ¡¤ <factor> * <item> , <
+	<item> -> ¡¤ <factor> / <item> , <
+	<item> -> ¡¤ <factor> , >
+	<item> -> ¡¤ <factor> * <item> , >
+	<item> -> ¡¤ <factor> / <item> , >
+	<item> -> ¡¤ <factor> , ==
+	<item> -> ¡¤ <factor> * <item> , ==
+	<item> -> ¡¤ <factor> / <item> , ==
+	<item> -> ¡¤ <factor> , >=
+	<item> -> ¡¤ <factor> * <item> , >=
+	<item> -> ¡¤ <factor> / <item> , >=
+	<item> -> ¡¤ <factor> , <=
+	<item> -> ¡¤ <factor> * <item> , <=
+	<item> -> ¡¤ <factor> / <item> , <=
+	<item> -> ¡¤ <factor> , !=
+	<item> -> ¡¤ <factor> * <item> , !=
+	<item> -> ¡¤ <factor> / <item> , !=
+	<factor> -> ¡¤ NUM , ;
+	<factor> -> ¡¤ ID , ;
+	<factor> -> ¡¤ ( <expression> ) , ;
+	<factor> -> ¡¤ ID ( <aparam_list> ) , ;
+	<factor> -> ¡¤ NUM , *
+	<factor> -> ¡¤ ID , *
+	<factor> -> ¡¤ ( <expression> ) , *
+	<factor> -> ¡¤ ID ( <aparam_list> ) , *
+	<factor> -> ¡¤ NUM , /
+	<factor> -> ¡¤ ID , /
+	<factor> -> ¡¤ ( <expression> ) , /
+	<factor> -> ¡¤ ID ( <aparam_list> ) , /
+	<factor> -> ¡¤ NUM , +
+	<factor> -> ¡¤ ID , +
+	<factor> -> ¡¤ ( <expression> ) , +
+	<factor> -> ¡¤ ID ( <aparam_list> ) , +
+	<factor> -> ¡¤ NUM , -
+	<factor> -> ¡¤ ID , -
+	<factor> -> ¡¤ ( <expression> ) , -
+	<factor> -> ¡¤ ID ( <aparam_list> ) , -
+	<factor> -> ¡¤ NUM , <
+	<factor> -> ¡¤ ID , <
+	<factor> -> ¡¤ ( <expression> ) , <
+	<factor> -> ¡¤ ID ( <aparam_list> ) , <
+	<factor> -> ¡¤ NUM , >
+	<factor> -> ¡¤ ID , >
+	<factor> -> ¡¤ ( <expression> ) , >
+	<factor> -> ¡¤ ID ( <aparam_list> ) , >
+	<factor> -> ¡¤ NUM , ==
+	<factor> -> ¡¤ ID , ==
+	<factor> -> ¡¤ ( <expression> ) , ==
+	<factor> -> ¡¤ ID ( <aparam_list> ) , ==
+	<factor> -> ¡¤ NUM , >=
+	<factor> -> ¡¤ ID , >=
+	<factor> -> ¡¤ ( <expression> ) , >=
+	<factor> -> ¡¤ ID ( <aparam_list> ) , >=
+	<factor> -> ¡¤ NUM , <=
+	<factor> -> ¡¤ ID , <=
+	<factor> -> ¡¤ ( <expression> ) , <=
+	<factor> -> ¡¤ ID ( <aparam_list> ) , <=
+	<factor> -> ¡¤ NUM , !=
+	<factor> -> ¡¤ ID , !=
+	<factor> -> ¡¤ ( <expression> ) , !=
+	<factor> -> ¡¤ ID ( <aparam_list> ) , !=
+ÏîÄ¿¼¯ 87 : 
+	<item> -> <factor> * ¡¤ <item> , ;
+	<item> -> <factor> * ¡¤ <item> , +
+	<item> -> <factor> * ¡¤ <item> , -
+	<item> -> <factor> * ¡¤ <item> , <
+	<item> -> <factor> * ¡¤ <item> , >
+	<item> -> <factor> * ¡¤ <item> , ==
+	<item> -> <factor> * ¡¤ <item> , >=
+	<item> -> <factor> * ¡¤ <item> , <=
+	<item> -> <factor> * ¡¤ <item> , !=
+	<item> -> ¡¤ <factor> , ;
+	<item> -> ¡¤ <factor> * <item> , ;
+	<item> -> ¡¤ <factor> / <item> , ;
+	<item> -> ¡¤ <factor> , +
+	<item> -> ¡¤ <factor> * <item> , +
+	<item> -> ¡¤ <factor> / <item> , +
+	<item> -> ¡¤ <factor> , -
+	<item> -> ¡¤ <factor> * <item> , -
+	<item> -> ¡¤ <factor> / <item> , -
+	<item> -> ¡¤ <factor> , <
+	<item> -> ¡¤ <factor> * <item> , <
+	<item> -> ¡¤ <factor> / <item> , <
+	<item> -> ¡¤ <factor> , >
+	<item> -> ¡¤ <factor> * <item> , >
+	<item> -> ¡¤ <factor> / <item> , >
+	<item> -> ¡¤ <factor> , ==
+	<item> -> ¡¤ <factor> * <item> , ==
+	<item> -> ¡¤ <factor> / <item> , ==
+	<item> -> ¡¤ <factor> , >=
+	<item> -> ¡¤ <factor> * <item> , >=
+	<item> -> ¡¤ <factor> / <item> , >=
+	<item> -> ¡¤ <factor> , <=
+	<item> -> ¡¤ <factor> * <item> , <=
+	<item> -> ¡¤ <factor> / <item> , <=
+	<item> -> ¡¤ <factor> , !=
+	<item> -> ¡¤ <factor> * <item> , !=
+	<item> -> ¡¤ <factor> / <item> , !=
+	<factor> -> ¡¤ NUM , ;
+	<factor> -> ¡¤ ID , ;
+	<factor> -> ¡¤ ( <expression> ) , ;
+	<factor> -> ¡¤ ID ( <aparam_list> ) , ;
+	<factor> -> ¡¤ NUM , *
+	<factor> -> ¡¤ ID , *
+	<factor> -> ¡¤ ( <expression> ) , *
+	<factor> -> ¡¤ ID ( <aparam_list> ) , *
+	<factor> -> ¡¤ NUM , /
+	<factor> -> ¡¤ ID , /
+	<factor> -> ¡¤ ( <expression> ) , /
+	<factor> -> ¡¤ ID ( <aparam_list> ) , /
+	<factor> -> ¡¤ NUM , +
+	<factor> -> ¡¤ ID , +
+	<factor> -> ¡¤ ( <expression> ) , +
+	<factor> -> ¡¤ ID ( <aparam_list> ) , +
+	<factor> -> ¡¤ NUM , -
+	<factor> -> ¡¤ ID , -
+	<factor> -> ¡¤ ( <expression> ) , -
+	<factor> -> ¡¤ ID ( <aparam_list> ) , -
+	<factor> -> ¡¤ NUM , <
+	<factor> -> ¡¤ ID , <
+	<factor> -> ¡¤ ( <expression> ) , <
+	<factor> -> ¡¤ ID ( <aparam_list> ) , <
+	<factor> -> ¡¤ NUM , >
+	<factor> -> ¡¤ ID , >
+	<factor> -> ¡¤ ( <expression> ) , >
+	<factor> -> ¡¤ ID ( <aparam_list> ) , >
+	<factor> -> ¡¤ NUM , ==
+	<factor> -> ¡¤ ID , ==
+	<factor> -> ¡¤ ( <expression> ) , ==
+	<factor> -> ¡¤ ID ( <aparam_list> ) , ==
+	<factor> -> ¡¤ NUM , >=
+	<factor> -> ¡¤ ID , >=
+	<factor> -> ¡¤ ( <expression> ) , >=
+	<factor> -> ¡¤ ID ( <aparam_list> ) , >=
+	<factor> -> ¡¤ NUM , <=
+	<factor> -> ¡¤ ID , <=
+	<factor> -> ¡¤ ( <expression> ) , <=
+	<factor> -> ¡¤ ID ( <aparam_list> ) , <=
+	<factor> -> ¡¤ NUM , !=
+	<factor> -> ¡¤ ID , !=
+	<factor> -> ¡¤ ( <expression> ) , !=
+	<factor> -> ¡¤ ID ( <aparam_list> ) , !=
+ÏîÄ¿¼¯ 88 : 
+	<item> -> <factor> / ¡¤ <item> , ;
+	<item> -> <factor> / ¡¤ <item> , +
+	<item> -> <factor> / ¡¤ <item> , -
+	<item> -> <factor> / ¡¤ <item> , <
+	<item> -> <factor> / ¡¤ <item> , >
+	<item> -> <factor> / ¡¤ <item> , ==
+	<item> -> <factor> / ¡¤ <item> , >=
+	<item> -> <factor> / ¡¤ <item> , <=
+	<item> -> <factor> / ¡¤ <item> , !=
+	<item> -> ¡¤ <factor> , ;
+	<item> -> ¡¤ <factor> * <item> , ;
+	<item> -> ¡¤ <factor> / <item> , ;
+	<item> -> ¡¤ <factor> , +
+	<item> -> ¡¤ <factor> * <item> , +
+	<item> -> ¡¤ <factor> / <item> , +
+	<item> -> ¡¤ <factor> , -
+	<item> -> ¡¤ <factor> * <item> , -
+	<item> -> ¡¤ <factor> / <item> , -
+	<item> -> ¡¤ <factor> , <
+	<item> -> ¡¤ <factor> * <item> , <
+	<item> -> ¡¤ <factor> / <item> , <
+	<item> -> ¡¤ <factor> , >
+	<item> -> ¡¤ <factor> * <item> , >
+	<item> -> ¡¤ <factor> / <item> , >
+	<item> -> ¡¤ <factor> , ==
+	<item> -> ¡¤ <factor> * <item> , ==
+	<item> -> ¡¤ <factor> / <item> , ==
+	<item> -> ¡¤ <factor> , >=
+	<item> -> ¡¤ <factor> * <item> , >=
+	<item> -> ¡¤ <factor> / <item> , >=
+	<item> -> ¡¤ <factor> , <=
+	<item> -> ¡¤ <factor> * <item> , <=
+	<item> -> ¡¤ <factor> / <item> , <=
+	<item> -> ¡¤ <factor> , !=
+	<item> -> ¡¤ <factor> * <item> , !=
+	<item> -> ¡¤ <factor> / <item> , !=
+	<factor> -> ¡¤ NUM , ;
+	<factor> -> ¡¤ ID , ;
+	<factor> -> ¡¤ ( <expression> ) , ;
+	<factor> -> ¡¤ ID ( <aparam_list> ) , ;
+	<factor> -> ¡¤ NUM , *
+	<factor> -> ¡¤ ID , *
+	<factor> -> ¡¤ ( <expression> ) , *
+	<factor> -> ¡¤ ID ( <aparam_list> ) , *
+	<factor> -> ¡¤ NUM , /
+	<factor> -> ¡¤ ID , /
+	<factor> -> ¡¤ ( <expression> ) , /
+	<factor> -> ¡¤ ID ( <aparam_list> ) , /
+	<factor> -> ¡¤ NUM , +
+	<factor> -> ¡¤ ID , +
+	<factor> -> ¡¤ ( <expression> ) , +
+	<factor> -> ¡¤ ID ( <aparam_list> ) , +
+	<factor> -> ¡¤ NUM , -
+	<factor> -> ¡¤ ID , -
+	<factor> -> ¡¤ ( <expression> ) , -
+	<factor> -> ¡¤ ID ( <aparam_list> ) , -
+	<factor> -> ¡¤ NUM , <
+	<factor> -> ¡¤ ID , <
+	<factor> -> ¡¤ ( <expression> ) , <
+	<factor> -> ¡¤ ID ( <aparam_list> ) , <
+	<factor> -> ¡¤ NUM , >
+	<factor> -> ¡¤ ID , >
+	<factor> -> ¡¤ ( <expression> ) , >
+	<factor> -> ¡¤ ID ( <aparam_list> ) , >
+	<factor> -> ¡¤ NUM , ==
+	<factor> -> ¡¤ ID , ==
+	<factor> -> ¡¤ ( <expression> ) , ==
+	<factor> -> ¡¤ ID ( <aparam_list> ) , ==
+	<factor> -> ¡¤ NUM , >=
+	<factor> -> ¡¤ ID , >=
+	<factor> -> ¡¤ ( <expression> ) , >=
+	<factor> -> ¡¤ ID ( <aparam_list> ) , >=
+	<factor> -> ¡¤ NUM , <=
+	<factor> -> ¡¤ ID , <=
+	<factor> -> ¡¤ ( <expression> ) , <=
+	<factor> -> ¡¤ ID ( <aparam_list> ) , <=
+	<factor> -> ¡¤ NUM , !=
+	<factor> -> ¡¤ ID , !=
+	<factor> -> ¡¤ ( <expression> ) , !=
+	<factor> -> ¡¤ ID ( <aparam_list> ) , !=
+ÏîÄ¿¼¯ 89 : 
+	<assign_sent> -> ID = <expression> ; ¡¤ , if
+	<assign_sent> -> ID = <expression> ; ¡¤ , while
+	<assign_sent> -> ID = <expression> ; ¡¤ , return
+	<assign_sent> -> ID = <expression> ; ¡¤ , ID
+	<assign_sent> -> ID = <expression> ; ¡¤ , }
+ÏîÄ¿¼¯ 90 : 
+	<factor> -> ID ( ¡¤ <aparam_list> ) , )
+	<factor> -> ID ( ¡¤ <aparam_list> ) , *
+	<factor> -> ID ( ¡¤ <aparam_list> ) , /
+	<factor> -> ID ( ¡¤ <aparam_list> ) , +
+	<factor> -> ID ( ¡¤ <aparam_list> ) , -
+	<factor> -> ID ( ¡¤ <aparam_list> ) , <
+	<factor> -> ID ( ¡¤ <aparam_list> ) , >
+	<factor> -> ID ( ¡¤ <aparam_list> ) , ==
+	<factor> -> ID ( ¡¤ <aparam_list> ) , >=
+	<factor> -> ID ( ¡¤ <aparam_list> ) , <=
+	<factor> -> ID ( ¡¤ <aparam_list> ) , !=
+	<aparam_list> -> ¡¤ @ , )
+	<aparam_list> -> ¡¤ <expression> , )
+	<aparam_list> -> ¡¤ <expression> , <aparam_list> , )
+	<expression> -> ¡¤ <add_expression> , )
+	<expression> -> ¡¤ <add_expression> <relop> <expression> , )
+	<expression> -> ¡¤ <add_expression> , ,
+	<expression> -> ¡¤ <add_expression> <relop> <expression> , ,
+	<add_expression> -> ¡¤ <item> , )
+	<add_expression> -> ¡¤ <item> + <add_expression> , )
+	<add_expression> -> ¡¤ <item> - <add_expression> , )
+	<add_expression> -> ¡¤ <item> , <
+	<add_expression> -> ¡¤ <item> , >
+	<add_expression> -> ¡¤ <item> , ==
+	<add_expression> -> ¡¤ <item> , >=
+	<add_expression> -> ¡¤ <item> , <=
+	<add_expression> -> ¡¤ <item> , !=
+	<add_expression> -> ¡¤ <item> + <add_expression> , <
+	<add_expression> -> ¡¤ <item> + <add_expression> , >
+	<add_expression> -> ¡¤ <item> + <add_expression> , ==
+	<add_expression> -> ¡¤ <item> + <add_expression> , >=
+	<add_expression> -> ¡¤ <item> + <add_expression> , <=
+	<add_expression> -> ¡¤ <item> + <add_expression> , !=
+	<add_expression> -> ¡¤ <item> - <add_expression> , <
+	<add_expression> -> ¡¤ <item> - <add_expression> , >
+	<add_expression> -> ¡¤ <item> - <add_expression> , ==
+	<add_expression> -> ¡¤ <item> - <add_expression> , >=
+	<add_expression> -> ¡¤ <item> - <add_expression> , <=
+	<add_expression> -> ¡¤ <item> - <add_expression> , !=
+	<add_expression> -> ¡¤ <item> , ,
+	<add_expression> -> ¡¤ <item> + <add_expression> , ,
+	<add_expression> -> ¡¤ <item> - <add_expression> , ,
+	<item> -> ¡¤ <factor> , )
+	<item> -> ¡¤ <factor> * <item> , )
+	<item> -> ¡¤ <factor> / <item> , )
+	<item> -> ¡¤ <factor> , +
+	<item> -> ¡¤ <factor> * <item> , +
+	<item> -> ¡¤ <factor> / <item> , +
+	<item> -> ¡¤ <factor> , -
+	<item> -> ¡¤ <factor> * <item> , -
+	<item> -> ¡¤ <factor> / <item> , -
+	<item> -> ¡¤ <factor> , <
+	<item> -> ¡¤ <factor> * <item> , <
+	<item> -> ¡¤ <factor> / <item> , <
+	<item> -> ¡¤ <factor> , >
+	<item> -> ¡¤ <factor> * <item> , >
+	<item> -> ¡¤ <factor> / <item> , >
+	<item> -> ¡¤ <factor> , ==
+	<item> -> ¡¤ <factor> * <item> , ==
+	<item> -> ¡¤ <factor> / <item> , ==
+	<item> -> ¡¤ <factor> , >=
+	<item> -> ¡¤ <factor> * <item> , >=
+	<item> -> ¡¤ <factor> / <item> , >=
+	<item> -> ¡¤ <factor> , <=
+	<item> -> ¡¤ <factor> * <item> , <=
+	<item> -> ¡¤ <factor> / <item> , <=
+	<item> -> ¡¤ <factor> , !=
+	<item> -> ¡¤ <factor> * <item> , !=
+	<item> -> ¡¤ <factor> / <item> , !=
+	<item> -> ¡¤ <factor> , ,
+	<item> -> ¡¤ <factor> * <item> , ,
+	<item> -> ¡¤ <factor> / <item> , ,
+	<factor> -> ¡¤ NUM , )
+	<factor> -> ¡¤ ID , )
+	<factor> -> ¡¤ ( <expression> ) , )
+	<factor> -> ¡¤ ID ( <aparam_list> ) , )
+	<factor> -> ¡¤ NUM , *
+	<factor> -> ¡¤ ID , *
+	<factor> -> ¡¤ ( <expression> ) , *
+	<factor> -> ¡¤ ID ( <aparam_list> ) , *
+	<factor> -> ¡¤ NUM , /
+	<factor> -> ¡¤ ID , /
+	<factor> -> ¡¤ ( <expression> ) , /
+	<factor> -> ¡¤ ID ( <aparam_list> ) , /
+	<factor> -> ¡¤ NUM , +
+	<factor> -> ¡¤ ID , +
+	<factor> -> ¡¤ ( <expression> ) , +
+	<factor> -> ¡¤ ID ( <aparam_list> ) , +
+	<factor> -> ¡¤ NUM , -
+	<factor> -> ¡¤ ID , -
+	<factor> -> ¡¤ ( <expression> ) , -
+	<factor> -> ¡¤ ID ( <aparam_list> ) , -
+	<factor> -> ¡¤ NUM , <
+	<factor> -> ¡¤ ID , <
+	<factor> -> ¡¤ ( <expression> ) , <
+	<factor> -> ¡¤ ID ( <aparam_list> ) , <
+	<factor> -> ¡¤ NUM , >
+	<factor> -> ¡¤ ID , >
+	<factor> -> ¡¤ ( <expression> ) , >
+	<factor> -> ¡¤ ID ( <aparam_list> ) , >
+	<factor> -> ¡¤ NUM , ==
+	<factor> -> ¡¤ ID , ==
+	<factor> -> ¡¤ ( <expression> ) , ==
+	<factor> -> ¡¤ ID ( <aparam_list> ) , ==
+	<factor> -> ¡¤ NUM , >=
+	<factor> -> ¡¤ ID , >=
+	<factor> -> ¡¤ ( <expression> ) , >=
+	<factor> -> ¡¤ ID ( <aparam_list> ) , >=
+	<factor> -> ¡¤ NUM , <=
+	<factor> -> ¡¤ ID , <=
+	<factor> -> ¡¤ ( <expression> ) , <=
+	<factor> -> ¡¤ ID ( <aparam_list> ) , <=
+	<factor> -> ¡¤ NUM , !=
+	<factor> -> ¡¤ ID , !=
+	<factor> -> ¡¤ ( <expression> ) , !=
+	<factor> -> ¡¤ ID ( <aparam_list> ) , !=
+	<factor> -> ¡¤ NUM , ,
+	<factor> -> ¡¤ ID , ,
+	<factor> -> ¡¤ ( <expression> ) , ,
+	<factor> -> ¡¤ ID ( <aparam_list> ) , ,
+ÏîÄ¿¼¯ 91 : 
+	<factor> -> ( <expression> ¡¤ ) , )
+	<factor> -> ( <expression> ¡¤ ) , *
+	<factor> -> ( <expression> ¡¤ ) , /
+	<factor> -> ( <expression> ¡¤ ) , +
+	<factor> -> ( <expression> ¡¤ ) , -
+	<factor> -> ( <expression> ¡¤ ) , <
+	<factor> -> ( <expression> ¡¤ ) , >
+	<factor> -> ( <expression> ¡¤ ) , ==
+	<factor> -> ( <expression> ¡¤ ) , >=
+	<factor> -> ( <expression> ¡¤ ) , <=
+	<factor> -> ( <expression> ¡¤ ) , !=
+ÏîÄ¿¼¯ 92 : 
+	<if_sent> -> if ( <expression> ) ¡¤ <M> <A> <sent_block> , if
+	<if_sent> -> if ( <expression> ) ¡¤ <M> <A> <sent_block> <N> else <M> <A> <sent_block> , if
+	<if_sent> -> if ( <expression> ) ¡¤ <M> <A> <sent_block> , while
+	<if_sent> -> if ( <expression> ) ¡¤ <M> <A> <sent_block> <N> else <M> <A> <sent_block> , while
+	<if_sent> -> if ( <expression> ) ¡¤ <M> <A> <sent_block> , return
+	<if_sent> -> if ( <expression> ) ¡¤ <M> <A> <sent_block> <N> else <M> <A> <sent_block> , return
+	<if_sent> -> if ( <expression> ) ¡¤ <M> <A> <sent_block> , ID
+	<if_sent> -> if ( <expression> ) ¡¤ <M> <A> <sent_block> <N> else <M> <A> <sent_block> , ID
+	<if_sent> -> if ( <expression> ) ¡¤ <M> <A> <sent_block> , }
+	<if_sent> -> if ( <expression> ) ¡¤ <M> <A> <sent_block> <N> else <M> <A> <sent_block> , }
+	<M> -> ¡¤ @ , {
+ÏîÄ¿¼¯ 93 : 
+	<expression> -> <add_expression> <relop> ¡¤ <expression> , )
+	<expression> -> ¡¤ <add_expression> , )
+	<expression> -> ¡¤ <add_expression> <relop> <expression> , )
+	<add_expression> -> ¡¤ <item> , )
+	<add_expression> -> ¡¤ <item> + <add_expression> , )
+	<add_expression> -> ¡¤ <item> - <add_expression> , )
+	<add_expression> -> ¡¤ <item> , <
+	<add_expression> -> ¡¤ <item> , >
+	<add_expression> -> ¡¤ <item> , ==
+	<add_expression> -> ¡¤ <item> , >=
+	<add_expression> -> ¡¤ <item> , <=
+	<add_expression> -> ¡¤ <item> , !=
+	<add_expression> -> ¡¤ <item> + <add_expression> , <
+	<add_expression> -> ¡¤ <item> + <add_expression> , >
+	<add_expression> -> ¡¤ <item> + <add_expression> , ==
+	<add_expression> -> ¡¤ <item> + <add_expression> , >=
+	<add_expression> -> ¡¤ <item> + <add_expression> , <=
+	<add_expression> -> ¡¤ <item> + <add_expression> , !=
+	<add_expression> -> ¡¤ <item> - <add_expression> , <
+	<add_expression> -> ¡¤ <item> - <add_expression> , >
+	<add_expression> -> ¡¤ <item> - <add_expression> , ==
+	<add_expression> -> ¡¤ <item> - <add_expression> , >=
+	<add_expression> -> ¡¤ <item> - <add_expression> , <=
+	<add_expression> -> ¡¤ <item> - <add_expression> , !=
+	<item> -> ¡¤ <factor> , )
+	<item> -> ¡¤ <factor> * <item> , )
+	<item> -> ¡¤ <factor> / <item> , )
+	<item> -> ¡¤ <factor> , +
+	<item> -> ¡¤ <factor> * <item> , +
+	<item> -> ¡¤ <factor> / <item> , +
+	<item> -> ¡¤ <factor> , -
+	<item> -> ¡¤ <factor> * <item> , -
+	<item> -> ¡¤ <factor> / <item> , -
+	<item> -> ¡¤ <factor> , <
+	<item> -> ¡¤ <factor> * <item> , <
+	<item> -> ¡¤ <factor> / <item> , <
+	<item> -> ¡¤ <factor> , >
+	<item> -> ¡¤ <factor> * <item> , >
+	<item> -> ¡¤ <factor> / <item> , >
+	<item> -> ¡¤ <factor> , ==
+	<item> -> ¡¤ <factor> * <item> , ==
+	<item> -> ¡¤ <factor> / <item> , ==
+	<item> -> ¡¤ <factor> , >=
+	<item> -> ¡¤ <factor> * <item> , >=
+	<item> -> ¡¤ <factor> / <item> , >=
+	<item> -> ¡¤ <factor> , <=
+	<item> -> ¡¤ <factor> * <item> , <=
+	<item> -> ¡¤ <factor> / <item> , <=
+	<item> -> ¡¤ <factor> , !=
+	<item> -> ¡¤ <factor> * <item> , !=
+	<item> -> ¡¤ <factor> / <item> , !=
+	<factor> -> ¡¤ NUM , )
+	<factor> -> ¡¤ ID , )
+	<factor> -> ¡¤ ( <expression> ) , )
+	<factor> -> ¡¤ ID ( <aparam_list> ) , )
+	<factor> -> ¡¤ NUM , *
+	<factor> -> ¡¤ ID , *
+	<factor> -> ¡¤ ( <expression> ) , *
+	<factor> -> ¡¤ ID ( <aparam_list> ) , *
+	<factor> -> ¡¤ NUM , /
+	<factor> -> ¡¤ ID , /
+	<factor> -> ¡¤ ( <expression> ) , /
+	<factor> -> ¡¤ ID ( <aparam_list> ) , /
+	<factor> -> ¡¤ NUM , +
+	<factor> -> ¡¤ ID , +
+	<factor> -> ¡¤ ( <expression> ) , +
+	<factor> -> ¡¤ ID ( <aparam_list> ) , +
+	<factor> -> ¡¤ NUM , -
+	<factor> -> ¡¤ ID , -
+	<factor> -> ¡¤ ( <expression> ) , -
+	<factor> -> ¡¤ ID ( <aparam_list> ) , -
+	<factor> -> ¡¤ NUM , <
+	<factor> -> ¡¤ ID , <
+	<factor> -> ¡¤ ( <expression> ) , <
+	<factor> -> ¡¤ ID ( <aparam_list> ) , <
+	<factor> -> ¡¤ NUM , >
+	<factor> -> ¡¤ ID , >
+	<factor> -> ¡¤ ( <expression> ) , >
+	<factor> -> ¡¤ ID ( <aparam_list> ) , >
+	<factor> -> ¡¤ NUM , ==
+	<factor> -> ¡¤ ID , ==
+	<factor> -> ¡¤ ( <expression> ) , ==
+	<factor> -> ¡¤ ID ( <aparam_list> ) , ==
+	<factor> -> ¡¤ NUM , >=
+	<factor> -> ¡¤ ID , >=
+	<factor> -> ¡¤ ( <expression> ) , >=
+	<factor> -> ¡¤ ID ( <aparam_list> ) , >=
+	<factor> -> ¡¤ NUM , <=
+	<factor> -> ¡¤ ID , <=
+	<factor> -> ¡¤ ( <expression> ) , <=
+	<factor> -> ¡¤ ID ( <aparam_list> ) , <=
+	<factor> -> ¡¤ NUM , !=
+	<factor> -> ¡¤ ID , !=
+	<factor> -> ¡¤ ( <expression> ) , !=
+	<factor> -> ¡¤ ID ( <aparam_list> ) , !=
+ÏîÄ¿¼¯ 94 : 
+	<add_expression> -> <item> + ¡¤ <add_expression> , )
+	<add_expression> -> <item> + ¡¤ <add_expression> , <
+	<add_expression> -> <item> + ¡¤ <add_expression> , >
+	<add_expression> -> <item> + ¡¤ <add_expression> , ==
+	<add_expression> -> <item> + ¡¤ <add_expression> , >=
+	<add_expression> -> <item> + ¡¤ <add_expression> , <=
+	<add_expression> -> <item> + ¡¤ <add_expression> , !=
+	<add_expression> -> ¡¤ <item> , )
+	<add_expression> -> ¡¤ <item> + <add_expression> , )
+	<add_expression> -> ¡¤ <item> - <add_expression> , )
+	<add_expression> -> ¡¤ <item> , <
+	<add_expression> -> ¡¤ <item> + <add_expression> , <
+	<add_expression> -> ¡¤ <item> - <add_expression> , <
+	<add_expression> -> ¡¤ <item> , >
+	<add_expression> -> ¡¤ <item> + <add_expression> , >
+	<add_expression> -> ¡¤ <item> - <add_expression> , >
+	<add_expression> -> ¡¤ <item> , ==
+	<add_expression> -> ¡¤ <item> + <add_expression> , ==
+	<add_expression> -> ¡¤ <item> - <add_expression> , ==
+	<add_expression> -> ¡¤ <item> , >=
+	<add_expression> -> ¡¤ <item> + <add_expression> , >=
+	<add_expression> -> ¡¤ <item> - <add_expression> , >=
+	<add_expression> -> ¡¤ <item> , <=
+	<add_expression> -> ¡¤ <item> + <add_expression> , <=
+	<add_expression> -> ¡¤ <item> - <add_expression> , <=
+	<add_expression> -> ¡¤ <item> , !=
+	<add_expression> -> ¡¤ <item> + <add_expression> , !=
+	<add_expression> -> ¡¤ <item> - <add_expression> , !=
+	<item> -> ¡¤ <factor> , )
+	<item> -> ¡¤ <factor> * <item> , )
+	<item> -> ¡¤ <factor> / <item> , )
+	<item> -> ¡¤ <factor> , +
+	<item> -> ¡¤ <factor> * <item> , +
+	<item> -> ¡¤ <factor> / <item> , +
+	<item> -> ¡¤ <factor> , -
+	<item> -> ¡¤ <factor> * <item> , -
+	<item> -> ¡¤ <factor> / <item> , -
+	<item> -> ¡¤ <factor> , <
+	<item> -> ¡¤ <factor> * <item> , <
+	<item> -> ¡¤ <factor> / <item> , <
+	<item> -> ¡¤ <factor> , >
+	<item> -> ¡¤ <factor> * <item> , >
+	<item> -> ¡¤ <factor> / <item> , >
+	<item> -> ¡¤ <factor> , ==
+	<item> -> ¡¤ <factor> * <item> , ==
+	<item> -> ¡¤ <factor> / <item> , ==
+	<item> -> ¡¤ <factor> , >=
+	<item> -> ¡¤ <factor> * <item> , >=
+	<item> -> ¡¤ <factor> / <item> , >=
+	<item> -> ¡¤ <factor> , <=
+	<item> -> ¡¤ <factor> * <item> , <=
+	<item> -> ¡¤ <factor> / <item> , <=
+	<item> -> ¡¤ <factor> , !=
+	<item> -> ¡¤ <factor> * <item> , !=
+	<item> -> ¡¤ <factor> / <item> , !=
+	<factor> -> ¡¤ NUM , )
+	<factor> -> ¡¤ ID , )
+	<factor> -> ¡¤ ( <expression> ) , )
+	<factor> -> ¡¤ ID ( <aparam_list> ) , )
+	<factor> -> ¡¤ NUM , *
+	<factor> -> ¡¤ ID , *
+	<factor> -> ¡¤ ( <expression> ) , *
+	<factor> -> ¡¤ ID ( <aparam_list> ) , *
+	<factor> -> ¡¤ NUM , /
+	<factor> -> ¡¤ ID , /
+	<factor> -> ¡¤ ( <expression> ) , /
+	<factor> -> ¡¤ ID ( <aparam_list> ) , /
+	<factor> -> ¡¤ NUM , +
+	<factor> -> ¡¤ ID , +
+	<factor> -> ¡¤ ( <expression> ) , +
+	<factor> -> ¡¤ ID ( <aparam_list> ) , +
+	<factor> -> ¡¤ NUM , -
+	<factor> -> ¡¤ ID , -
+	<factor> -> ¡¤ ( <expression> ) , -
+	<factor> -> ¡¤ ID ( <aparam_list> ) , -
+	<factor> -> ¡¤ NUM , <
+	<factor> -> ¡¤ ID , <
+	<factor> -> ¡¤ ( <expression> ) , <
+	<factor> -> ¡¤ ID ( <aparam_list> ) , <
+	<factor> -> ¡¤ NUM , >
+	<factor> -> ¡¤ ID , >
+	<factor> -> ¡¤ ( <expression> ) , >
+	<factor> -> ¡¤ ID ( <aparam_list> ) , >
+	<factor> -> ¡¤ NUM , ==
+	<factor> -> ¡¤ ID , ==
+	<factor> -> ¡¤ ( <expression> ) , ==
+	<factor> -> ¡¤ ID ( <aparam_list> ) , ==
+	<factor> -> ¡¤ NUM , >=
+	<factor> -> ¡¤ ID , >=
+	<factor> -> ¡¤ ( <expression> ) , >=
+	<factor> -> ¡¤ ID ( <aparam_list> ) , >=
+	<factor> -> ¡¤ NUM , <=
+	<factor> -> ¡¤ ID , <=
+	<factor> -> ¡¤ ( <expression> ) , <=
+	<factor> -> ¡¤ ID ( <aparam_list> ) , <=
+	<factor> -> ¡¤ NUM , !=
+	<factor> -> ¡¤ ID , !=
+	<factor> -> ¡¤ ( <expression> ) , !=
+	<factor> -> ¡¤ ID ( <aparam_list> ) , !=
+ÏîÄ¿¼¯ 95 : 
+	<add_expression> -> <item> - ¡¤ <add_expression> , )
+	<add_expression> -> <item> - ¡¤ <add_expression> , <
+	<add_expression> -> <item> - ¡¤ <add_expression> , >
+	<add_expression> -> <item> - ¡¤ <add_expression> , ==
+	<add_expression> -> <item> - ¡¤ <add_expression> , >=
+	<add_expression> -> <item> - ¡¤ <add_expression> , <=
+	<add_expression> -> <item> - ¡¤ <add_expression> , !=
+	<add_expression> -> ¡¤ <item> , )
+	<add_expression> -> ¡¤ <item> + <add_expression> , )
+	<add_expression> -> ¡¤ <item> - <add_expression> , )
+	<add_expression> -> ¡¤ <item> , <
+	<add_expression> -> ¡¤ <item> + <add_expression> , <
+	<add_expression> -> ¡¤ <item> - <add_expression> , <
+	<add_expression> -> ¡¤ <item> , >
+	<add_expression> -> ¡¤ <item> + <add_expression> , >
+	<add_expression> -> ¡¤ <item> - <add_expression> , >
+	<add_expression> -> ¡¤ <item> , ==
+	<add_expression> -> ¡¤ <item> + <add_expression> , ==
+	<add_expression> -> ¡¤ <item> - <add_expression> , ==
+	<add_expression> -> ¡¤ <item> , >=
+	<add_expression> -> ¡¤ <item> + <add_expression> , >=
+	<add_expression> -> ¡¤ <item> - <add_expression> , >=
+	<add_expression> -> ¡¤ <item> , <=
+	<add_expression> -> ¡¤ <item> + <add_expression> , <=
+	<add_expression> -> ¡¤ <item> - <add_expression> , <=
+	<add_expression> -> ¡¤ <item> , !=
+	<add_expression> -> ¡¤ <item> + <add_expression> , !=
+	<add_expression> -> ¡¤ <item> - <add_expression> , !=
+	<item> -> ¡¤ <factor> , )
+	<item> -> ¡¤ <factor> * <item> , )
+	<item> -> ¡¤ <factor> / <item> , )
+	<item> -> ¡¤ <factor> , +
+	<item> -> ¡¤ <factor> * <item> , +
+	<item> -> ¡¤ <factor> / <item> , +
+	<item> -> ¡¤ <factor> , -
+	<item> -> ¡¤ <factor> * <item> , -
+	<item> -> ¡¤ <factor> / <item> , -
+	<item> -> ¡¤ <factor> , <
+	<item> -> ¡¤ <factor> * <item> , <
+	<item> -> ¡¤ <factor> / <item> , <
+	<item> -> ¡¤ <factor> , >
+	<item> -> ¡¤ <factor> * <item> , >
+	<item> -> ¡¤ <factor> / <item> , >
+	<item> -> ¡¤ <factor> , ==
+	<item> -> ¡¤ <factor> * <item> , ==
+	<item> -> ¡¤ <factor> / <item> , ==
+	<item> -> ¡¤ <factor> , >=
+	<item> -> ¡¤ <factor> * <item> , >=
+	<item> -> ¡¤ <factor> / <item> , >=
+	<item> -> ¡¤ <factor> , <=
+	<item> -> ¡¤ <factor> * <item> , <=
+	<item> -> ¡¤ <factor> / <item> , <=
+	<item> -> ¡¤ <factor> , !=
+	<item> -> ¡¤ <factor> * <item> , !=
+	<item> -> ¡¤ <factor> / <item> , !=
+	<factor> -> ¡¤ NUM , )
+	<factor> -> ¡¤ ID , )
+	<factor> -> ¡¤ ( <expression> ) , )
+	<factor> -> ¡¤ ID ( <aparam_list> ) , )
+	<factor> -> ¡¤ NUM , *
+	<factor> -> ¡¤ ID , *
+	<factor> -> ¡¤ ( <expression> ) , *
+	<factor> -> ¡¤ ID ( <aparam_list> ) , *
+	<factor> -> ¡¤ NUM , /
+	<factor> -> ¡¤ ID , /
+	<factor> -> ¡¤ ( <expression> ) , /
+	<factor> -> ¡¤ ID ( <aparam_list> ) , /
+	<factor> -> ¡¤ NUM , +
+	<factor> -> ¡¤ ID , +
+	<factor> -> ¡¤ ( <expression> ) , +
+	<factor> -> ¡¤ ID ( <aparam_list> ) , +
+	<factor> -> ¡¤ NUM , -
+	<factor> -> ¡¤ ID , -
+	<factor> -> ¡¤ ( <expression> ) , -
+	<factor> -> ¡¤ ID ( <aparam_list> ) , -
+	<factor> -> ¡¤ NUM , <
+	<factor> -> ¡¤ ID , <
+	<factor> -> ¡¤ ( <expression> ) , <
+	<factor> -> ¡¤ ID ( <aparam_list> ) , <
+	<factor> -> ¡¤ NUM , >
+	<factor> -> ¡¤ ID , >
+	<factor> -> ¡¤ ( <expression> ) , >
+	<factor> -> ¡¤ ID ( <aparam_list> ) , >
+	<factor> -> ¡¤ NUM , ==
+	<factor> -> ¡¤ ID , ==
+	<factor> -> ¡¤ ( <expression> ) , ==
+	<factor> -> ¡¤ ID ( <aparam_list> ) , ==
+	<factor> -> ¡¤ NUM , >=
+	<factor> -> ¡¤ ID , >=
+	<factor> -> ¡¤ ( <expression> ) , >=
+	<factor> -> ¡¤ ID ( <aparam_list> ) , >=
+	<factor> -> ¡¤ NUM , <=
+	<factor> -> ¡¤ ID , <=
+	<factor> -> ¡¤ ( <expression> ) , <=
+	<factor> -> ¡¤ ID ( <aparam_list> ) , <=
+	<factor> -> ¡¤ NUM , !=
+	<factor> -> ¡¤ ID , !=
+	<factor> -> ¡¤ ( <expression> ) , !=
+	<factor> -> ¡¤ ID ( <aparam_list> ) , !=
+ÏîÄ¿¼¯ 96 : 
+	<item> -> <factor> * ¡¤ <item> , )
+	<item> -> <factor> * ¡¤ <item> , +
+	<item> -> <factor> * ¡¤ <item> , -
+	<item> -> <factor> * ¡¤ <item> , <
+	<item> -> <factor> * ¡¤ <item> , >
+	<item> -> <factor> * ¡¤ <item> , ==
+	<item> -> <factor> * ¡¤ <item> , >=
+	<item> -> <factor> * ¡¤ <item> , <=
+	<item> -> <factor> * ¡¤ <item> , !=
+	<item> -> ¡¤ <factor> , )
+	<item> -> ¡¤ <factor> * <item> , )
+	<item> -> ¡¤ <factor> / <item> , )
+	<item> -> ¡¤ <factor> , +
+	<item> -> ¡¤ <factor> * <item> , +
+	<item> -> ¡¤ <factor> / <item> , +
+	<item> -> ¡¤ <factor> , -
+	<item> -> ¡¤ <factor> * <item> , -
+	<item> -> ¡¤ <factor> / <item> , -
+	<item> -> ¡¤ <factor> , <
+	<item> -> ¡¤ <factor> * <item> , <
+	<item> -> ¡¤ <factor> / <item> , <
+	<item> -> ¡¤ <factor> , >
+	<item> -> ¡¤ <factor> * <item> , >
+	<item> -> ¡¤ <factor> / <item> , >
+	<item> -> ¡¤ <factor> , ==
+	<item> -> ¡¤ <factor> * <item> , ==
+	<item> -> ¡¤ <factor> / <item> , ==
+	<item> -> ¡¤ <factor> , >=
+	<item> -> ¡¤ <factor> * <item> , >=
+	<item> -> ¡¤ <factor> / <item> , >=
+	<item> -> ¡¤ <factor> , <=
+	<item> -> ¡¤ <factor> * <item> , <=
+	<item> -> ¡¤ <factor> / <item> , <=
+	<item> -> ¡¤ <factor> , !=
+	<item> -> ¡¤ <factor> * <item> , !=
+	<item> -> ¡¤ <factor> / <item> , !=
+	<factor> -> ¡¤ NUM , )
+	<factor> -> ¡¤ ID , )
+	<factor> -> ¡¤ ( <expression> ) , )
+	<factor> -> ¡¤ ID ( <aparam_list> ) , )
+	<factor> -> ¡¤ NUM , *
+	<factor> -> ¡¤ ID , *
+	<factor> -> ¡¤ ( <expression> ) , *
+	<factor> -> ¡¤ ID ( <aparam_list> ) , *
+	<factor> -> ¡¤ NUM , /
+	<factor> -> ¡¤ ID , /
+	<factor> -> ¡¤ ( <expression> ) , /
+	<factor> -> ¡¤ ID ( <aparam_list> ) , /
+	<factor> -> ¡¤ NUM , +
+	<factor> -> ¡¤ ID , +
+	<factor> -> ¡¤ ( <expression> ) , +
+	<factor> -> ¡¤ ID ( <aparam_list> ) , +
+	<factor> -> ¡¤ NUM , -
+	<factor> -> ¡¤ ID , -
+	<factor> -> ¡¤ ( <expression> ) , -
+	<factor> -> ¡¤ ID ( <aparam_list> ) , -
+	<factor> -> ¡¤ NUM , <
+	<factor> -> ¡¤ ID , <
+	<factor> -> ¡¤ ( <expression> ) , <
+	<factor> -> ¡¤ ID ( <aparam_list> ) , <
+	<factor> -> ¡¤ NUM , >
+	<factor> -> ¡¤ ID , >
+	<factor> -> ¡¤ ( <expression> ) , >
+	<factor> -> ¡¤ ID ( <aparam_list> ) , >
+	<factor> -> ¡¤ NUM , ==
+	<factor> -> ¡¤ ID , ==
+	<factor> -> ¡¤ ( <expression> ) , ==
+	<factor> -> ¡¤ ID ( <aparam_list> ) , ==
+	<factor> -> ¡¤ NUM , >=
+	<factor> -> ¡¤ ID , >=
+	<factor> -> ¡¤ ( <expression> ) , >=
+	<factor> -> ¡¤ ID ( <aparam_list> ) , >=
+	<factor> -> ¡¤ NUM , <=
+	<factor> -> ¡¤ ID , <=
+	<factor> -> ¡¤ ( <expression> ) , <=
+	<factor> -> ¡¤ ID ( <aparam_list> ) , <=
+	<factor> -> ¡¤ NUM , !=
+	<factor> -> ¡¤ ID , !=
+	<factor> -> ¡¤ ( <expression> ) , !=
+	<factor> -> ¡¤ ID ( <aparam_list> ) , !=
+ÏîÄ¿¼¯ 97 : 
+	<item> -> <factor> / ¡¤ <item> , )
+	<item> -> <factor> / ¡¤ <item> , +
+	<item> -> <factor> / ¡¤ <item> , -
+	<item> -> <factor> / ¡¤ <item> , <
+	<item> -> <factor> / ¡¤ <item> , >
+	<item> -> <factor> / ¡¤ <item> , ==
+	<item> -> <factor> / ¡¤ <item> , >=
+	<item> -> <factor> / ¡¤ <item> , <=
+	<item> -> <factor> / ¡¤ <item> , !=
+	<item> -> ¡¤ <factor> , )
+	<item> -> ¡¤ <factor> * <item> , )
+	<item> -> ¡¤ <factor> / <item> , )
+	<item> -> ¡¤ <factor> , +
+	<item> -> ¡¤ <factor> * <item> , +
+	<item> -> ¡¤ <factor> / <item> , +
+	<item> -> ¡¤ <factor> , -
+	<item> -> ¡¤ <factor> * <item> , -
+	<item> -> ¡¤ <factor> / <item> , -
+	<item> -> ¡¤ <factor> , <
+	<item> -> ¡¤ <factor> * <item> , <
+	<item> -> ¡¤ <factor> / <item> , <
+	<item> -> ¡¤ <factor> , >
+	<item> -> ¡¤ <factor> * <item> , >
+	<item> -> ¡¤ <factor> / <item> , >
+	<item> -> ¡¤ <factor> , ==
+	<item> -> ¡¤ <factor> * <item> , ==
+	<item> -> ¡¤ <factor> / <item> , ==
+	<item> -> ¡¤ <factor> , >=
+	<item> -> ¡¤ <factor> * <item> , >=
+	<item> -> ¡¤ <factor> / <item> , >=
+	<item> -> ¡¤ <factor> , <=
+	<item> -> ¡¤ <factor> * <item> , <=
+	<item> -> ¡¤ <factor> / <item> , <=
+	<item> -> ¡¤ <factor> , !=
+	<item> -> ¡¤ <factor> * <item> , !=
+	<item> -> ¡¤ <factor> / <item> , !=
+	<factor> -> ¡¤ NUM , )
+	<factor> -> ¡¤ ID , )
+	<factor> -> ¡¤ ( <expression> ) , )
+	<factor> -> ¡¤ ID ( <aparam_list> ) , )
+	<factor> -> ¡¤ NUM , *
+	<factor> -> ¡¤ ID , *
+	<factor> -> ¡¤ ( <expression> ) , *
+	<factor> -> ¡¤ ID ( <aparam_list> ) , *
+	<factor> -> ¡¤ NUM , /
+	<factor> -> ¡¤ ID , /
+	<factor> -> ¡¤ ( <expression> ) , /
+	<factor> -> ¡¤ ID ( <aparam_list> ) , /
+	<factor> -> ¡¤ NUM , +
+	<factor> -> ¡¤ ID , +
+	<factor> -> ¡¤ ( <expression> ) , +
+	<factor> -> ¡¤ ID ( <aparam_list> ) , +
+	<factor> -> ¡¤ NUM , -
+	<factor> -> ¡¤ ID , -
+	<factor> -> ¡¤ ( <expression> ) , -
+	<factor> -> ¡¤ ID ( <aparam_list> ) , -
+	<factor> -> ¡¤ NUM , <
+	<factor> -> ¡¤ ID , <
+	<factor> -> ¡¤ ( <expression> ) , <
+	<factor> -> ¡¤ ID ( <aparam_list> ) , <
+	<factor> -> ¡¤ NUM , >
+	<factor> -> ¡¤ ID , >
+	<factor> -> ¡¤ ( <expression> ) , >
+	<factor> -> ¡¤ ID ( <aparam_list> ) , >
+	<factor> -> ¡¤ NUM , ==
+	<factor> -> ¡¤ ID , ==
+	<factor> -> ¡¤ ( <expression> ) , ==
+	<factor> -> ¡¤ ID ( <aparam_list> ) , ==
+	<factor> -> ¡¤ NUM , >=
+	<factor> -> ¡¤ ID , >=
+	<factor> -> ¡¤ ( <expression> ) , >=
+	<factor> -> ¡¤ ID ( <aparam_list> ) , >=
+	<factor> -> ¡¤ NUM , <=
+	<factor> -> ¡¤ ID , <=
+	<factor> -> ¡¤ ( <expression> ) , <=
+	<factor> -> ¡¤ ID ( <aparam_list> ) , <=
+	<factor> -> ¡¤ NUM , !=
+	<factor> -> ¡¤ ID , !=
+	<factor> -> ¡¤ ( <expression> ) , !=
+	<factor> -> ¡¤ ID ( <aparam_list> ) , !=
+ÏîÄ¿¼¯ 98 : 
+	<while_sent> -> while <M> ( <expression> ¡¤ ) <M> <A> <sent_block> , if
+	<while_sent> -> while <M> ( <expression> ¡¤ ) <M> <A> <sent_block> , while
+	<while_sent> -> while <M> ( <expression> ¡¤ ) <M> <A> <sent_block> , return
+	<while_sent> -> while <M> ( <expression> ¡¤ ) <M> <A> <sent_block> , ID
+	<while_sent> -> while <M> ( <expression> ¡¤ ) <M> <A> <sent_block> , }
+ÏîÄ¿¼¯ 99 : 
+	<aparam_list> -> @ ¡¤ , )
+ÏîÄ¿¼¯ 100 : 
+	<factor> -> ID ¡¤ , )
+	<factor> -> ID ¡¤ ( <aparam_list> ) , )
+	<factor> -> ID ¡¤ , *
+	<factor> -> ID ¡¤ ( <aparam_list> ) , *
+	<factor> -> ID ¡¤ , /
+	<factor> -> ID ¡¤ ( <aparam_list> ) , /
+	<factor> -> ID ¡¤ , +
+	<factor> -> ID ¡¤ ( <aparam_list> ) , +
+	<factor> -> ID ¡¤ , -
+	<factor> -> ID ¡¤ ( <aparam_list> ) , -
+	<factor> -> ID ¡¤ , <
+	<factor> -> ID ¡¤ ( <aparam_list> ) , <
+	<factor> -> ID ¡¤ , >
+	<factor> -> ID ¡¤ ( <aparam_list> ) , >
+	<factor> -> ID ¡¤ , ==
+	<factor> -> ID ¡¤ ( <aparam_list> ) , ==
+	<factor> -> ID ¡¤ , >=
+	<factor> -> ID ¡¤ ( <aparam_list> ) , >=
+	<factor> -> ID ¡¤ , <=
+	<factor> -> ID ¡¤ ( <aparam_list> ) , <=
+	<factor> -> ID ¡¤ , !=
+	<factor> -> ID ¡¤ ( <aparam_list> ) , !=
+	<factor> -> ID ¡¤ , ,
+	<factor> -> ID ¡¤ ( <aparam_list> ) , ,
+ÏîÄ¿¼¯ 101 : 
+	<factor> -> ( ¡¤ <expression> ) , )
+	<factor> -> ( ¡¤ <expression> ) , *
+	<factor> -> ( ¡¤ <expression> ) , /
+	<factor> -> ( ¡¤ <expression> ) , +
+	<factor> -> ( ¡¤ <expression> ) , -
+	<factor> -> ( ¡¤ <expression> ) , <
+	<factor> -> ( ¡¤ <expression> ) , >
+	<factor> -> ( ¡¤ <expression> ) , ==
+	<factor> -> ( ¡¤ <expression> ) , >=
+	<factor> -> ( ¡¤ <expression> ) , <=
+	<factor> -> ( ¡¤ <expression> ) , !=
+	<factor> -> ( ¡¤ <expression> ) , ,
+	<expression> -> ¡¤ <add_expression> , )
+	<expression> -> ¡¤ <add_expression> <relop> <expression> , )
+	<add_expression> -> ¡¤ <item> , )
+	<add_expression> -> ¡¤ <item> + <add_expression> , )
+	<add_expression> -> ¡¤ <item> - <add_expression> , )
+	<add_expression> -> ¡¤ <item> , <
+	<add_expression> -> ¡¤ <item> , >
+	<add_expression> -> ¡¤ <item> , ==
+	<add_expression> -> ¡¤ <item> , >=
+	<add_expression> -> ¡¤ <item> , <=
+	<add_expression> -> ¡¤ <item> , !=
+	<add_expression> -> ¡¤ <item> + <add_expression> , <
+	<add_expression> -> ¡¤ <item> + <add_expression> , >
+	<add_expression> -> ¡¤ <item> + <add_expression> , ==
+	<add_expression> -> ¡¤ <item> + <add_expression> , >=
+	<add_expression> -> ¡¤ <item> + <add_expression> , <=
+	<add_expression> -> ¡¤ <item> + <add_expression> , !=
+	<add_expression> -> ¡¤ <item> - <add_expression> , <
+	<add_expression> -> ¡¤ <item> - <add_expression> , >
+	<add_expression> -> ¡¤ <item> - <add_expression> , ==
+	<add_expression> -> ¡¤ <item> - <add_expression> , >=
+	<add_expression> -> ¡¤ <item> - <add_expression> , <=
+	<add_expression> -> ¡¤ <item> - <add_expression> , !=
+	<item> -> ¡¤ <factor> , )
+	<item> -> ¡¤ <factor> * <item> , )
+	<item> -> ¡¤ <factor> / <item> , )
+	<item> -> ¡¤ <factor> , +
+	<item> -> ¡¤ <factor> * <item> , +
+	<item> -> ¡¤ <factor> / <item> , +
+	<item> -> ¡¤ <factor> , -
+	<item> -> ¡¤ <factor> * <item> , -
+	<item> -> ¡¤ <factor> / <item> , -
+	<item> -> ¡¤ <factor> , <
+	<item> -> ¡¤ <factor> * <item> , <
+	<item> -> ¡¤ <factor> / <item> , <
+	<item> -> ¡¤ <factor> , >
+	<item> -> ¡¤ <factor> * <item> , >
+	<item> -> ¡¤ <factor> / <item> , >
+	<item> -> ¡¤ <factor> , ==
+	<item> -> ¡¤ <factor> * <item> , ==
+	<item> -> ¡¤ <factor> / <item> , ==
+	<item> -> ¡¤ <factor> , >=
+	<item> -> ¡¤ <factor> * <item> , >=
+	<item> -> ¡¤ <factor> / <item> , >=
+	<item> -> ¡¤ <factor> , <=
+	<item> -> ¡¤ <factor> * <item> , <=
+	<item> -> ¡¤ <factor> / <item> , <=
+	<item> -> ¡¤ <factor> , !=
+	<item> -> ¡¤ <factor> * <item> , !=
+	<item> -> ¡¤ <factor> / <item> , !=
+	<factor> -> ¡¤ NUM , )
+	<factor> -> ¡¤ ID , )
+	<factor> -> ¡¤ ( <expression> ) , )
+	<factor> -> ¡¤ ID ( <aparam_list> ) , )
+	<factor> -> ¡¤ NUM , *
+	<factor> -> ¡¤ ID , *
+	<factor> -> ¡¤ ( <expression> ) , *
+	<factor> -> ¡¤ ID ( <aparam_list> ) , *
+	<factor> -> ¡¤ NUM , /
+	<factor> -> ¡¤ ID , /
+	<factor> -> ¡¤ ( <expression> ) , /
+	<factor> -> ¡¤ ID ( <aparam_list> ) , /
+	<factor> -> ¡¤ NUM , +
+	<factor> -> ¡¤ ID , +
+	<factor> -> ¡¤ ( <expression> ) , +
+	<factor> -> ¡¤ ID ( <aparam_list> ) , +
+	<factor> -> ¡¤ NUM , -
+	<factor> -> ¡¤ ID , -
+	<factor> -> ¡¤ ( <expression> ) , -
+	<factor> -> ¡¤ ID ( <aparam_list> ) , -
+	<factor> -> ¡¤ NUM , <
+	<factor> -> ¡¤ ID , <
+	<factor> -> ¡¤ ( <expression> ) , <
+	<factor> -> ¡¤ ID ( <aparam_list> ) , <
+	<factor> -> ¡¤ NUM , >
+	<factor> -> ¡¤ ID , >
+	<factor> -> ¡¤ ( <expression> ) , >
+	<factor> -> ¡¤ ID ( <aparam_list> ) , >
+	<factor> -> ¡¤ NUM , ==
+	<factor> -> ¡¤ ID , ==
+	<factor> -> ¡¤ ( <expression> ) , ==
+	<factor> -> ¡¤ ID ( <aparam_list> ) , ==
+	<factor> -> ¡¤ NUM , >=
+	<factor> -> ¡¤ ID , >=
+	<factor> -> ¡¤ ( <expression> ) , >=
+	<factor> -> ¡¤ ID ( <aparam_list> ) , >=
+	<factor> -> ¡¤ NUM , <=
+	<factor> -> ¡¤ ID , <=
+	<factor> -> ¡¤ ( <expression> ) , <=
+	<factor> -> ¡¤ ID ( <aparam_list> ) , <=
+	<factor> -> ¡¤ NUM , !=
+	<factor> -> ¡¤ ID , !=
+	<factor> -> ¡¤ ( <expression> ) , !=
+	<factor> -> ¡¤ ID ( <aparam_list> ) , !=
+ÏîÄ¿¼¯ 102 : 
+	<aparam_list> -> <expression> ¡¤ , )
+	<aparam_list> -> <expression> ¡¤ , <aparam_list> , )
+ÏîÄ¿¼¯ 103 : 
+	<expression> -> <add_expression> ¡¤ , )
+	<expression> -> <add_expression> ¡¤ <relop> <expression> , )
+	<expression> -> <add_expression> ¡¤ , ,
+	<expression> -> <add_expression> ¡¤ <relop> <expression> , ,
+	<relop> -> ¡¤ < , NUM
+	<relop> -> ¡¤ < , ID
+	<relop> -> ¡¤ < , (
+	<relop> -> ¡¤ > , NUM
+	<relop> -> ¡¤ > , ID
+	<relop> -> ¡¤ > , (
+	<relop> -> ¡¤ == , NUM
+	<relop> -> ¡¤ == , ID
+	<relop> -> ¡¤ == , (
+	<relop> -> ¡¤ >= , NUM
+	<relop> -> ¡¤ >= , ID
+	<relop> -> ¡¤ >= , (
+	<relop> -> ¡¤ <= , NUM
+	<relop> -> ¡¤ <= , ID
+	<relop> -> ¡¤ <= , (
+	<relop> -> ¡¤ != , NUM
+	<relop> -> ¡¤ != , ID
+	<relop> -> ¡¤ != , (
+ÏîÄ¿¼¯ 104 : 
+	<add_expression> -> <item> ¡¤ , )
+	<add_expression> -> <item> ¡¤ + <add_expression> , )
+	<add_expression> -> <item> ¡¤ - <add_expression> , )
+	<add_expression> -> <item> ¡¤ , <
+	<add_expression> -> <item> ¡¤ , >
+	<add_expression> -> <item> ¡¤ , ==
+	<add_expression> -> <item> ¡¤ , >=
+	<add_expression> -> <item> ¡¤ , <=
+	<add_expression> -> <item> ¡¤ , !=
+	<add_expression> -> <item> ¡¤ + <add_expression> , <
+	<add_expression> -> <item> ¡¤ + <add_expression> , >
+	<add_expression> -> <item> ¡¤ + <add_expression> , ==
+	<add_expression> -> <item> ¡¤ + <add_expression> , >=
+	<add_expression> -> <item> ¡¤ + <add_expression> , <=
+	<add_expression> -> <item> ¡¤ + <add_expression> , !=
+	<add_expression> -> <item> ¡¤ - <add_expression> , <
+	<add_expression> -> <item> ¡¤ - <add_expression> , >
+	<add_expression> -> <item> ¡¤ - <add_expression> , ==
+	<add_expression> -> <item> ¡¤ - <add_expression> , >=
+	<add_expression> -> <item> ¡¤ - <add_expression> , <=
+	<add_expression> -> <item> ¡¤ - <add_expression> , !=
+	<add_expression> -> <item> ¡¤ , ,
+	<add_expression> -> <item> ¡¤ + <add_expression> , ,
+	<add_expression> -> <item> ¡¤ - <add_expression> , ,
+ÏîÄ¿¼¯ 105 : 
+	<item> -> <factor> ¡¤ , )
+	<item> -> <factor> ¡¤ * <item> , )
+	<item> -> <factor> ¡¤ / <item> , )
+	<item> -> <factor> ¡¤ , +
+	<item> -> <factor> ¡¤ * <item> , +
+	<item> -> <factor> ¡¤ / <item> , +
+	<item> -> <factor> ¡¤ , -
+	<item> -> <factor> ¡¤ * <item> , -
+	<item> -> <factor> ¡¤ / <item> , -
+	<item> -> <factor> ¡¤ , <
+	<item> -> <factor> ¡¤ * <item> , <
+	<item> -> <factor> ¡¤ / <item> , <
+	<item> -> <factor> ¡¤ , >
+	<item> -> <factor> ¡¤ * <item> , >
+	<item> -> <factor> ¡¤ / <item> , >
+	<item> -> <factor> ¡¤ , ==
+	<item> -> <factor> ¡¤ * <item> , ==
+	<item> -> <factor> ¡¤ / <item> , ==
+	<item> -> <factor> ¡¤ , >=
+	<item> -> <factor> ¡¤ * <item> , >=
+	<item> -> <factor> ¡¤ / <item> , >=
+	<item> -> <factor> ¡¤ , <=
+	<item> -> <factor> ¡¤ * <item> , <=
+	<item> -> <factor> ¡¤ / <item> , <=
+	<item> -> <factor> ¡¤ , !=
+	<item> -> <factor> ¡¤ * <item> , !=
+	<item> -> <factor> ¡¤ / <item> , !=
+	<item> -> <factor> ¡¤ , ,
+	<item> -> <factor> ¡¤ * <item> , ,
+	<item> -> <factor> ¡¤ / <item> , ,
+ÏîÄ¿¼¯ 106 : 
+	<factor> -> NUM ¡¤ , )
+	<factor> -> NUM ¡¤ , *
+	<factor> -> NUM ¡¤ , /
+	<factor> -> NUM ¡¤ , +
+	<factor> -> NUM ¡¤ , -
+	<factor> -> NUM ¡¤ , <
+	<factor> -> NUM ¡¤ , >
+	<factor> -> NUM ¡¤ , ==
+	<factor> -> NUM ¡¤ , >=
+	<factor> -> NUM ¡¤ , <=
+	<factor> -> NUM ¡¤ , !=
+	<factor> -> NUM ¡¤ , ,
+ÏîÄ¿¼¯ 107 : 
+	<factor> -> ID ( <aparam_list> ¡¤ ) , ;
+	<factor> -> ID ( <aparam_list> ¡¤ ) , *
+	<factor> -> ID ( <aparam_list> ¡¤ ) , /
+	<factor> -> ID ( <aparam_list> ¡¤ ) , +
+	<factor> -> ID ( <aparam_list> ¡¤ ) , -
+	<factor> -> ID ( <aparam_list> ¡¤ ) , <
+	<factor> -> ID ( <aparam_list> ¡¤ ) , >
+	<factor> -> ID ( <aparam_list> ¡¤ ) , ==
+	<factor> -> ID ( <aparam_list> ¡¤ ) , >=
+	<factor> -> ID ( <aparam_list> ¡¤ ) , <=
+	<factor> -> ID ( <aparam_list> ¡¤ ) , !=
+ÏîÄ¿¼¯ 108 : 
+	<factor> -> ( <expression> ) ¡¤ , ;
+	<factor> -> ( <expression> ) ¡¤ , *
+	<factor> -> ( <expression> ) ¡¤ , /
+	<factor> -> ( <expression> ) ¡¤ , +
+	<factor> -> ( <expression> ) ¡¤ , -
+	<factor> -> ( <expression> ) ¡¤ , <
+	<factor> -> ( <expression> ) ¡¤ , >
+	<factor> -> ( <expression> ) ¡¤ , ==
+	<factor> -> ( <expression> ) ¡¤ , >=
+	<factor> -> ( <expression> ) ¡¤ , <=
+	<factor> -> ( <expression> ) ¡¤ , !=
+ÏîÄ¿¼¯ 109 : 
+	<expression> -> <add_expression> <relop> <expression> ¡¤ , ;
+ÏîÄ¿¼¯ 110 : 
+	<add_expression> -> <item> + <add_expression> ¡¤ , ;
+	<add_expression> -> <item> + <add_expression> ¡¤ , <
+	<add_expression> -> <item> + <add_expression> ¡¤ , >
+	<add_expression> -> <item> + <add_expression> ¡¤ , ==
+	<add_expression> -> <item> + <add_expression> ¡¤ , >=
+	<add_expression> -> <item> + <add_expression> ¡¤ , <=
+	<add_expression> -> <item> + <add_expression> ¡¤ , !=
+ÏîÄ¿¼¯ 111 : 
+	<add_expression> -> <item> - <add_expression> ¡¤ , ;
+	<add_expression> -> <item> - <add_expression> ¡¤ , <
+	<add_expression> -> <item> - <add_expression> ¡¤ , >
+	<add_expression> -> <item> - <add_expression> ¡¤ , ==
+	<add_expression> -> <item> - <add_expression> ¡¤ , >=
+	<add_expression> -> <item> - <add_expression> ¡¤ , <=
+	<add_expression> -> <item> - <add_expression> ¡¤ , !=
+ÏîÄ¿¼¯ 112 : 
+	<item> -> <factor> * <item> ¡¤ , ;
+	<item> -> <factor> * <item> ¡¤ , +
+	<item> -> <factor> * <item> ¡¤ , -
+	<item> -> <factor> * <item> ¡¤ , <
+	<item> -> <factor> * <item> ¡¤ , >
+	<item> -> <factor> * <item> ¡¤ , ==
+	<item> -> <factor> * <item> ¡¤ , >=
+	<item> -> <factor> * <item> ¡¤ , <=
+	<item> -> <factor> * <item> ¡¤ , !=
+ÏîÄ¿¼¯ 113 : 
+	<item> -> <factor> / <item> ¡¤ , ;
+	<item> -> <factor> / <item> ¡¤ , +
+	<item> -> <factor> / <item> ¡¤ , -
+	<item> -> <factor> / <item> ¡¤ , <
+	<item> -> <factor> / <item> ¡¤ , >
+	<item> -> <factor> / <item> ¡¤ , ==
+	<item> -> <factor> / <item> ¡¤ , >=
+	<item> -> <factor> / <item> ¡¤ , <=
+	<item> -> <factor> / <item> ¡¤ , !=
+ÏîÄ¿¼¯ 114 : 
+	<factor> -> ID ( <aparam_list> ¡¤ ) , )
+	<factor> -> ID ( <aparam_list> ¡¤ ) , *
+	<factor> -> ID ( <aparam_list> ¡¤ ) , /
+	<factor> -> ID ( <aparam_list> ¡¤ ) , +
+	<factor> -> ID ( <aparam_list> ¡¤ ) , -
+	<factor> -> ID ( <aparam_list> ¡¤ ) , <
+	<factor> -> ID ( <aparam_list> ¡¤ ) , >
+	<factor> -> ID ( <aparam_list> ¡¤ ) , ==
+	<factor> -> ID ( <aparam_list> ¡¤ ) , >=
+	<factor> -> ID ( <aparam_list> ¡¤ ) , <=
+	<factor> -> ID ( <aparam_list> ¡¤ ) , !=
+ÏîÄ¿¼¯ 115 : 
+	<factor> -> ( <expression> ) ¡¤ , )
+	<factor> -> ( <expression> ) ¡¤ , *
+	<factor> -> ( <expression> ) ¡¤ , /
+	<factor> -> ( <expression> ) ¡¤ , +
+	<factor> -> ( <expression> ) ¡¤ , -
+	<factor> -> ( <expression> ) ¡¤ , <
+	<factor> -> ( <expression> ) ¡¤ , >
+	<factor> -> ( <expression> ) ¡¤ , ==
+	<factor> -> ( <expression> ) ¡¤ , >=
+	<factor> -> ( <expression> ) ¡¤ , <=
+	<factor> -> ( <expression> ) ¡¤ , !=
+ÏîÄ¿¼¯ 116 : 
+	<M> -> @ ¡¤ , {
+ÏîÄ¿¼¯ 117 : 
+	<if_sent> -> if ( <expression> ) <M> ¡¤ <A> <sent_block> , if
+	<if_sent> -> if ( <expression> ) <M> ¡¤ <A> <sent_block> <N> else <M> <A> <sent_block> , if
+	<if_sent> -> if ( <expression> ) <M> ¡¤ <A> <sent_block> , while
+	<if_sent> -> if ( <expression> ) <M> ¡¤ <A> <sent_block> <N> else <M> <A> <sent_block> , while
+	<if_sent> -> if ( <expression> ) <M> ¡¤ <A> <sent_block> , return
+	<if_sent> -> if ( <expression> ) <M> ¡¤ <A> <sent_block> <N> else <M> <A> <sent_block> , return
+	<if_sent> -> if ( <expression> ) <M> ¡¤ <A> <sent_block> , ID
+	<if_sent> -> if ( <expression> ) <M> ¡¤ <A> <sent_block> <N> else <M> <A> <sent_block> , ID
+	<if_sent> -> if ( <expression> ) <M> ¡¤ <A> <sent_block> , }
+	<if_sent> -> if ( <expression> ) <M> ¡¤ <A> <sent_block> <N> else <M> <A> <sent_block> , }
+	<A> -> ¡¤ @ , {
+ÏîÄ¿¼¯ 118 : 
+	<expression> -> <add_expression> <relop> <expression> ¡¤ , )
+ÏîÄ¿¼¯ 119 : 
+	<add_expression> -> <item> + <add_expression> ¡¤ , )
+	<add_expression> -> <item> + <add_expression> ¡¤ , <
+	<add_expression> -> <item> + <add_expression> ¡¤ , >
+	<add_expression> -> <item> + <add_expression> ¡¤ , ==
+	<add_expression> -> <item> + <add_expression> ¡¤ , >=
+	<add_expression> -> <item> + <add_expression> ¡¤ , <=
+	<add_expression> -> <item> + <add_expression> ¡¤ , !=
+ÏîÄ¿¼¯ 120 : 
+	<add_expression> -> <item> - <add_expression> ¡¤ , )
+	<add_expression> -> <item> - <add_expression> ¡¤ , <
+	<add_expression> -> <item> - <add_expression> ¡¤ , >
+	<add_expression> -> <item> - <add_expression> ¡¤ , ==
+	<add_expression> -> <item> - <add_expression> ¡¤ , >=
+	<add_expression> -> <item> - <add_expression> ¡¤ , <=
+	<add_expression> -> <item> - <add_expression> ¡¤ , !=
+ÏîÄ¿¼¯ 121 : 
+	<item> -> <factor> * <item> ¡¤ , )
+	<item> -> <factor> * <item> ¡¤ , +
+	<item> -> <factor> * <item> ¡¤ , -
+	<item> -> <factor> * <item> ¡¤ , <
+	<item> -> <factor> * <item> ¡¤ , >
+	<item> -> <factor> * <item> ¡¤ , ==
+	<item> -> <factor> * <item> ¡¤ , >=
+	<item> -> <factor> * <item> ¡¤ , <=
+	<item> -> <factor> * <item> ¡¤ , !=
+ÏîÄ¿¼¯ 122 : 
+	<item> -> <factor> / <item> ¡¤ , )
+	<item> -> <factor> / <item> ¡¤ , +
+	<item> -> <factor> / <item> ¡¤ , -
+	<item> -> <factor> / <item> ¡¤ , <
+	<item> -> <factor> / <item> ¡¤ , >
+	<item> -> <factor> / <item> ¡¤ , ==
+	<item> -> <factor> / <item> ¡¤ , >=
+	<item> -> <factor> / <item> ¡¤ , <=
+	<item> -> <factor> / <item> ¡¤ , !=
+ÏîÄ¿¼¯ 123 : 
+	<while_sent> -> while <M> ( <expression> ) ¡¤ <M> <A> <sent_block> , if
+	<while_sent> -> while <M> ( <expression> ) ¡¤ <M> <A> <sent_block> , while
+	<while_sent> -> while <M> ( <expression> ) ¡¤ <M> <A> <sent_block> , return
+	<while_sent> -> while <M> ( <expression> ) ¡¤ <M> <A> <sent_block> , ID
+	<while_sent> -> while <M> ( <expression> ) ¡¤ <M> <A> <sent_block> , }
+	<M> -> ¡¤ @ , {
+ÏîÄ¿¼¯ 124 : 
+	<factor> -> ID ( ¡¤ <aparam_list> ) , )
+	<factor> -> ID ( ¡¤ <aparam_list> ) , *
+	<factor> -> ID ( ¡¤ <aparam_list> ) , /
+	<factor> -> ID ( ¡¤ <aparam_list> ) , +
+	<factor> -> ID ( ¡¤ <aparam_list> ) , -
+	<factor> -> ID ( ¡¤ <aparam_list> ) , <
+	<factor> -> ID ( ¡¤ <aparam_list> ) , >
+	<factor> -> ID ( ¡¤ <aparam_list> ) , ==
+	<factor> -> ID ( ¡¤ <aparam_list> ) , >=
+	<factor> -> ID ( ¡¤ <aparam_list> ) , <=
+	<factor> -> ID ( ¡¤ <aparam_list> ) , !=
+	<factor> -> ID ( ¡¤ <aparam_list> ) , ,
+	<aparam_list> -> ¡¤ @ , )
+	<aparam_list> -> ¡¤ <expression> , )
+	<aparam_list> -> ¡¤ <expression> , <aparam_list> , )
+	<expression> -> ¡¤ <add_expression> , )
+	<expression> -> ¡¤ <add_expression> <relop> <expression> , )
+	<expression> -> ¡¤ <add_expression> , ,
+	<expression> -> ¡¤ <add_expression> <relop> <expression> , ,
+	<add_expression> -> ¡¤ <item> , )
+	<add_expression> -> ¡¤ <item> + <add_expression> , )
+	<add_expression> -> ¡¤ <item> - <add_expression> , )
+	<add_expression> -> ¡¤ <item> , <
+	<add_expression> -> ¡¤ <item> , >
+	<add_expression> -> ¡¤ <item> , ==
+	<add_expression> -> ¡¤ <item> , >=
+	<add_expression> -> ¡¤ <item> , <=
+	<add_expression> -> ¡¤ <item> , !=
+	<add_expression> -> ¡¤ <item> + <add_expression> , <
+	<add_expression> -> ¡¤ <item> + <add_expression> , >
+	<add_expression> -> ¡¤ <item> + <add_expression> , ==
+	<add_expression> -> ¡¤ <item> + <add_expression> , >=
+	<add_expression> -> ¡¤ <item> + <add_expression> , <=
+	<add_expression> -> ¡¤ <item> + <add_expression> , !=
+	<add_expression> -> ¡¤ <item> - <add_expression> , <
+	<add_expression> -> ¡¤ <item> - <add_expression> , >
+	<add_expression> -> ¡¤ <item> - <add_expression> , ==
+	<add_expression> -> ¡¤ <item> - <add_expression> , >=
+	<add_expression> -> ¡¤ <item> - <add_expression> , <=
+	<add_expression> -> ¡¤ <item> - <add_expression> , !=
+	<add_expression> -> ¡¤ <item> , ,
+	<add_expression> -> ¡¤ <item> + <add_expression> , ,
+	<add_expression> -> ¡¤ <item> - <add_expression> , ,
+	<item> -> ¡¤ <factor> , )
+	<item> -> ¡¤ <factor> * <item> , )
+	<item> -> ¡¤ <factor> / <item> , )
+	<item> -> ¡¤ <factor> , +
+	<item> -> ¡¤ <factor> * <item> , +
+	<item> -> ¡¤ <factor> / <item> , +
+	<item> -> ¡¤ <factor> , -
+	<item> -> ¡¤ <factor> * <item> , -
+	<item> -> ¡¤ <factor> / <item> , -
+	<item> -> ¡¤ <factor> , <
+	<item> -> ¡¤ <factor> * <item> , <
+	<item> -> ¡¤ <factor> / <item> , <
+	<item> -> ¡¤ <factor> , >
+	<item> -> ¡¤ <factor> * <item> , >
+	<item> -> ¡¤ <factor> / <item> , >
+	<item> -> ¡¤ <factor> , ==
+	<item> -> ¡¤ <factor> * <item> , ==
+	<item> -> ¡¤ <factor> / <item> , ==
+	<item> -> ¡¤ <factor> , >=
+	<item> -> ¡¤ <factor> * <item> , >=
+	<item> -> ¡¤ <factor> / <item> , >=
+	<item> -> ¡¤ <factor> , <=
+	<item> -> ¡¤ <factor> * <item> , <=
+	<item> -> ¡¤ <factor> / <item> , <=
+	<item> -> ¡¤ <factor> , !=
+	<item> -> ¡¤ <factor> * <item> , !=
+	<item> -> ¡¤ <factor> / <item> , !=
+	<item> -> ¡¤ <factor> , ,
+	<item> -> ¡¤ <factor> * <item> , ,
+	<item> -> ¡¤ <factor> / <item> , ,
+	<factor> -> ¡¤ NUM , )
+	<factor> -> ¡¤ ID , )
+	<factor> -> ¡¤ ( <expression> ) , )
+	<factor> -> ¡¤ ID ( <aparam_list> ) , )
+	<factor> -> ¡¤ NUM , *
+	<factor> -> ¡¤ ID , *
+	<factor> -> ¡¤ ( <expression> ) , *
+	<factor> -> ¡¤ ID ( <aparam_list> ) , *
+	<factor> -> ¡¤ NUM , /
+	<factor> -> ¡¤ ID , /
+	<factor> -> ¡¤ ( <expression> ) , /
+	<factor> -> ¡¤ ID ( <aparam_list> ) , /
+	<factor> -> ¡¤ NUM , +
+	<factor> -> ¡¤ ID , +
+	<factor> -> ¡¤ ( <expression> ) , +
+	<factor> -> ¡¤ ID ( <aparam_list> ) , +
+	<factor> -> ¡¤ NUM , -
+	<factor> -> ¡¤ ID , -
+	<factor> -> ¡¤ ( <expression> ) , -
+	<factor> -> ¡¤ ID ( <aparam_list> ) , -
+	<factor> -> ¡¤ NUM , <
+	<factor> -> ¡¤ ID , <
+	<factor> -> ¡¤ ( <expression> ) , <
+	<factor> -> ¡¤ ID ( <aparam_list> ) , <
+	<factor> -> ¡¤ NUM , >
+	<factor> -> ¡¤ ID , >
+	<factor> -> ¡¤ ( <expression> ) , >
+	<factor> -> ¡¤ ID ( <aparam_list> ) , >
+	<factor> -> ¡¤ NUM , ==
+	<factor> -> ¡¤ ID , ==
+	<factor> -> ¡¤ ( <expression> ) , ==
+	<factor> -> ¡¤ ID ( <aparam_list> ) , ==
+	<factor> -> ¡¤ NUM , >=
+	<factor> -> ¡¤ ID , >=
+	<factor> -> ¡¤ ( <expression> ) , >=
+	<factor> -> ¡¤ ID ( <aparam_list> ) , >=
+	<factor> -> ¡¤ NUM , <=
+	<factor> -> ¡¤ ID , <=
+	<factor> -> ¡¤ ( <expression> ) , <=
+	<factor> -> ¡¤ ID ( <aparam_list> ) , <=
+	<factor> -> ¡¤ NUM , !=
+	<factor> -> ¡¤ ID , !=
+	<factor> -> ¡¤ ( <expression> ) , !=
+	<factor> -> ¡¤ ID ( <aparam_list> ) , !=
+	<factor> -> ¡¤ NUM , ,
+	<factor> -> ¡¤ ID , ,
+	<factor> -> ¡¤ ( <expression> ) , ,
+	<factor> -> ¡¤ ID ( <aparam_list> ) , ,
+ÏîÄ¿¼¯ 125 : 
+	<factor> -> ( <expression> ¡¤ ) , )
+	<factor> -> ( <expression> ¡¤ ) , *
+	<factor> -> ( <expression> ¡¤ ) , /
+	<factor> -> ( <expression> ¡¤ ) , +
+	<factor> -> ( <expression> ¡¤ ) , -
+	<factor> -> ( <expression> ¡¤ ) , <
+	<factor> -> ( <expression> ¡¤ ) , >
+	<factor> -> ( <expression> ¡¤ ) , ==
+	<factor> -> ( <expression> ¡¤ ) , >=
+	<factor> -> ( <expression> ¡¤ ) , <=
+	<factor> -> ( <expression> ¡¤ ) , !=
+	<factor> -> ( <expression> ¡¤ ) , ,
+ÏîÄ¿¼¯ 126 : 
+	<aparam_list> -> <expression> , ¡¤ <aparam_list> , )
+	<aparam_list> -> ¡¤ @ , )
+	<aparam_list> -> ¡¤ <expression> , )
+	<aparam_list> -> ¡¤ <expression> , <aparam_list> , )
+	<expression> -> ¡¤ <add_expression> , )
+	<expression> -> ¡¤ <add_expression> <relop> <expression> , )
+	<expression> -> ¡¤ <add_expression> , ,
+	<expression> -> ¡¤ <add_expression> <relop> <expression> , ,
+	<add_expression> -> ¡¤ <item> , )
+	<add_expression> -> ¡¤ <item> + <add_expression> , )
+	<add_expression> -> ¡¤ <item> - <add_expression> , )
+	<add_expression> -> ¡¤ <item> , <
+	<add_expression> -> ¡¤ <item> , >
+	<add_expression> -> ¡¤ <item> , ==
+	<add_expression> -> ¡¤ <item> , >=
+	<add_expression> -> ¡¤ <item> , <=
+	<add_expression> -> ¡¤ <item> , !=
+	<add_expression> -> ¡¤ <item> + <add_expression> , <
+	<add_expression> -> ¡¤ <item> + <add_expression> , >
+	<add_expression> -> ¡¤ <item> + <add_expression> , ==
+	<add_expression> -> ¡¤ <item> + <add_expression> , >=
+	<add_expression> -> ¡¤ <item> + <add_expression> , <=
+	<add_expression> -> ¡¤ <item> + <add_expression> , !=
+	<add_expression> -> ¡¤ <item> - <add_expression> , <
+	<add_expression> -> ¡¤ <item> - <add_expression> , >
+	<add_expression> -> ¡¤ <item> - <add_expression> , ==
+	<add_expression> -> ¡¤ <item> - <add_expression> , >=
+	<add_expression> -> ¡¤ <item> - <add_expression> , <=
+	<add_expression> -> ¡¤ <item> - <add_expression> , !=
+	<add_expression> -> ¡¤ <item> , ,
+	<add_expression> -> ¡¤ <item> + <add_expression> , ,
+	<add_expression> -> ¡¤ <item> - <add_expression> , ,
+	<item> -> ¡¤ <factor> , )
+	<item> -> ¡¤ <factor> * <item> , )
+	<item> -> ¡¤ <factor> / <item> , )
+	<item> -> ¡¤ <factor> , +
+	<item> -> ¡¤ <factor> * <item> , +
+	<item> -> ¡¤ <factor> / <item> , +
+	<item> -> ¡¤ <factor> , -
+	<item> -> ¡¤ <factor> * <item> , -
+	<item> -> ¡¤ <factor> / <item> , -
+	<item> -> ¡¤ <factor> , <
+	<item> -> ¡¤ <factor> * <item> , <
+	<item> -> ¡¤ <factor> / <item> , <
+	<item> -> ¡¤ <factor> , >
+	<item> -> ¡¤ <factor> * <item> , >
+	<item> -> ¡¤ <factor> / <item> , >
+	<item> -> ¡¤ <factor> , ==
+	<item> -> ¡¤ <factor> * <item> , ==
+	<item> -> ¡¤ <factor> / <item> , ==
+	<item> -> ¡¤ <factor> , >=
+	<item> -> ¡¤ <factor> * <item> , >=
+	<item> -> ¡¤ <factor> / <item> , >=
+	<item> -> ¡¤ <factor> , <=
+	<item> -> ¡¤ <factor> * <item> , <=
+	<item> -> ¡¤ <factor> / <item> , <=
+	<item> -> ¡¤ <factor> , !=
+	<item> -> ¡¤ <factor> * <item> , !=
+	<item> -> ¡¤ <factor> / <item> , !=
+	<item> -> ¡¤ <factor> , ,
+	<item> -> ¡¤ <factor> * <item> , ,
+	<item> -> ¡¤ <factor> / <item> , ,
+	<factor> -> ¡¤ NUM , )
+	<factor> -> ¡¤ ID , )
+	<factor> -> ¡¤ ( <expression> ) , )
+	<factor> -> ¡¤ ID ( <aparam_list> ) , )
+	<factor> -> ¡¤ NUM , *
+	<factor> -> ¡¤ ID , *
+	<factor> -> ¡¤ ( <expression> ) , *
+	<factor> -> ¡¤ ID ( <aparam_list> ) , *
+	<factor> -> ¡¤ NUM , /
+	<factor> -> ¡¤ ID , /
+	<factor> -> ¡¤ ( <expression> ) , /
+	<factor> -> ¡¤ ID ( <aparam_list> ) , /
+	<factor> -> ¡¤ NUM , +
+	<factor> -> ¡¤ ID , +
+	<factor> -> ¡¤ ( <expression> ) , +
+	<factor> -> ¡¤ ID ( <aparam_list> ) , +
+	<factor> -> ¡¤ NUM , -
+	<factor> -> ¡¤ ID , -
+	<factor> -> ¡¤ ( <expression> ) , -
+	<factor> -> ¡¤ ID ( <aparam_list> ) , -
+	<factor> -> ¡¤ NUM , <
+	<factor> -> ¡¤ ID , <
+	<factor> -> ¡¤ ( <expression> ) , <
+	<factor> -> ¡¤ ID ( <aparam_list> ) , <
+	<factor> -> ¡¤ NUM , >
+	<factor> -> ¡¤ ID , >
+	<factor> -> ¡¤ ( <expression> ) , >
+	<factor> -> ¡¤ ID ( <aparam_list> ) , >
+	<factor> -> ¡¤ NUM , ==
+	<factor> -> ¡¤ ID , ==
+	<factor> -> ¡¤ ( <expression> ) , ==
+	<factor> -> ¡¤ ID ( <aparam_list> ) , ==
+	<factor> -> ¡¤ NUM , >=
+	<factor> -> ¡¤ ID , >=
+	<factor> -> ¡¤ ( <expression> ) , >=
+	<factor> -> ¡¤ ID ( <aparam_list> ) , >=
+	<factor> -> ¡¤ NUM , <=
+	<factor> -> ¡¤ ID , <=
+	<factor> -> ¡¤ ( <expression> ) , <=
+	<factor> -> ¡¤ ID ( <aparam_list> ) , <=
+	<factor> -> ¡¤ NUM , !=
+	<factor> -> ¡¤ ID , !=
+	<factor> -> ¡¤ ( <expression> ) , !=
+	<factor> -> ¡¤ ID ( <aparam_list> ) , !=
+	<factor> -> ¡¤ NUM , ,
+	<factor> -> ¡¤ ID , ,
+	<factor> -> ¡¤ ( <expression> ) , ,
+	<factor> -> ¡¤ ID ( <aparam_list> ) , ,
+ÏîÄ¿¼¯ 127 : 
+	<expression> -> <add_expression> <relop> ¡¤ <expression> , )
+	<expression> -> <add_expression> <relop> ¡¤ <expression> , ,
+	<expression> -> ¡¤ <add_expression> , )
+	<expression> -> ¡¤ <add_expression> <relop> <expression> , )
+	<expression> -> ¡¤ <add_expression> , ,
+	<expression> -> ¡¤ <add_expression> <relop> <expression> , ,
+	<add_expression> -> ¡¤ <item> , )
+	<add_expression> -> ¡¤ <item> + <add_expression> , )
+	<add_expression> -> ¡¤ <item> - <add_expression> , )
+	<add_expression> -> ¡¤ <item> , <
+	<add_expression> -> ¡¤ <item> , >
+	<add_expression> -> ¡¤ <item> , ==
+	<add_expression> -> ¡¤ <item> , >=
+	<add_expression> -> ¡¤ <item> , <=
+	<add_expression> -> ¡¤ <item> , !=
+	<add_expression> -> ¡¤ <item> + <add_expression> , <
+	<add_expression> -> ¡¤ <item> + <add_expression> , >
+	<add_expression> -> ¡¤ <item> + <add_expression> , ==
+	<add_expression> -> ¡¤ <item> + <add_expression> , >=
+	<add_expression> -> ¡¤ <item> + <add_expression> , <=
+	<add_expression> -> ¡¤ <item> + <add_expression> , !=
+	<add_expression> -> ¡¤ <item> - <add_expression> , <
+	<add_expression> -> ¡¤ <item> - <add_expression> , >
+	<add_expression> -> ¡¤ <item> - <add_expression> , ==
+	<add_expression> -> ¡¤ <item> - <add_expression> , >=
+	<add_expression> -> ¡¤ <item> - <add_expression> , <=
+	<add_expression> -> ¡¤ <item> - <add_expression> , !=
+	<add_expression> -> ¡¤ <item> , ,
+	<add_expression> -> ¡¤ <item> + <add_expression> , ,
+	<add_expression> -> ¡¤ <item> - <add_expression> , ,
+	<item> -> ¡¤ <factor> , )
+	<item> -> ¡¤ <factor> * <item> , )
+	<item> -> ¡¤ <factor> / <item> , )
+	<item> -> ¡¤ <factor> , +
+	<item> -> ¡¤ <factor> * <item> , +
+	<item> -> ¡¤ <factor> / <item> , +
+	<item> -> ¡¤ <factor> , -
+	<item> -> ¡¤ <factor> * <item> , -
+	<item> -> ¡¤ <factor> / <item> , -
+	<item> -> ¡¤ <factor> , <
+	<item> -> ¡¤ <factor> * <item> , <
+	<item> -> ¡¤ <factor> / <item> , <
+	<item> -> ¡¤ <factor> , >
+	<item> -> ¡¤ <factor> * <item> , >
+	<item> -> ¡¤ <factor> / <item> , >
+	<item> -> ¡¤ <factor> , ==
+	<item> -> ¡¤ <factor> * <item> , ==
+	<item> -> ¡¤ <factor> / <item> , ==
+	<item> -> ¡¤ <factor> , >=
+	<item> -> ¡¤ <factor> * <item> , >=
+	<item> -> ¡¤ <factor> / <item> , >=
+	<item> -> ¡¤ <factor> , <=
+	<item> -> ¡¤ <factor> * <item> , <=
+	<item> -> ¡¤ <factor> / <item> , <=
+	<item> -> ¡¤ <factor> , !=
+	<item> -> ¡¤ <factor> * <item> , !=
+	<item> -> ¡¤ <factor> / <item> , !=
+	<item> -> ¡¤ <factor> , ,
+	<item> -> ¡¤ <factor> * <item> , ,
+	<item> -> ¡¤ <factor> / <item> , ,
+	<factor> -> ¡¤ NUM , )
+	<factor> -> ¡¤ ID , )
+	<factor> -> ¡¤ ( <expression> ) , )
+	<factor> -> ¡¤ ID ( <aparam_list> ) , )
+	<factor> -> ¡¤ NUM , *
+	<factor> -> ¡¤ ID , *
+	<factor> -> ¡¤ ( <expression> ) , *
+	<factor> -> ¡¤ ID ( <aparam_list> ) , *
+	<factor> -> ¡¤ NUM , /
+	<factor> -> ¡¤ ID , /
+	<factor> -> ¡¤ ( <expression> ) , /
+	<factor> -> ¡¤ ID ( <aparam_list> ) , /
+	<factor> -> ¡¤ NUM , +
+	<factor> -> ¡¤ ID , +
+	<factor> -> ¡¤ ( <expression> ) , +
+	<factor> -> ¡¤ ID ( <aparam_list> ) , +
+	<factor> -> ¡¤ NUM , -
+	<factor> -> ¡¤ ID , -
+	<factor> -> ¡¤ ( <expression> ) , -
+	<factor> -> ¡¤ ID ( <aparam_list> ) , -
+	<factor> -> ¡¤ NUM , <
+	<factor> -> ¡¤ ID , <
+	<factor> -> ¡¤ ( <expression> ) , <
+	<factor> -> ¡¤ ID ( <aparam_list> ) , <
+	<factor> -> ¡¤ NUM , >
+	<factor> -> ¡¤ ID , >
+	<factor> -> ¡¤ ( <expression> ) , >
+	<factor> -> ¡¤ ID ( <aparam_list> ) , >
+	<factor> -> ¡¤ NUM , ==
+	<factor> -> ¡¤ ID , ==
+	<factor> -> ¡¤ ( <expression> ) , ==
+	<factor> -> ¡¤ ID ( <aparam_list> ) , ==
+	<factor> -> ¡¤ NUM , >=
+	<factor> -> ¡¤ ID , >=
+	<factor> -> ¡¤ ( <expression> ) , >=
+	<factor> -> ¡¤ ID ( <aparam_list> ) , >=
+	<factor> -> ¡¤ NUM , <=
+	<factor> -> ¡¤ ID , <=
+	<factor> -> ¡¤ ( <expression> ) , <=
+	<factor> -> ¡¤ ID ( <aparam_list> ) , <=
+	<factor> -> ¡¤ NUM , !=
+	<factor> -> ¡¤ ID , !=
+	<factor> -> ¡¤ ( <expression> ) , !=
+	<factor> -> ¡¤ ID ( <aparam_list> ) , !=
+	<factor> -> ¡¤ NUM , ,
+	<factor> -> ¡¤ ID , ,
+	<factor> -> ¡¤ ( <expression> ) , ,
+	<factor> -> ¡¤ ID ( <aparam_list> ) , ,
+ÏîÄ¿¼¯ 128 : 
+	<add_expression> -> <item> + ¡¤ <add_expression> , )
+	<add_expression> -> <item> + ¡¤ <add_expression> , <
+	<add_expression> -> <item> + ¡¤ <add_expression> , >
+	<add_expression> -> <item> + ¡¤ <add_expression> , ==
+	<add_expression> -> <item> + ¡¤ <add_expression> , >=
+	<add_expression> -> <item> + ¡¤ <add_expression> , <=
+	<add_expression> -> <item> + ¡¤ <add_expression> , !=
+	<add_expression> -> <item> + ¡¤ <add_expression> , ,
+	<add_expression> -> ¡¤ <item> , )
+	<add_expression> -> ¡¤ <item> + <add_expression> , )
+	<add_expression> -> ¡¤ <item> - <add_expression> , )
+	<add_expression> -> ¡¤ <item> , <
+	<add_expression> -> ¡¤ <item> + <add_expression> , <
+	<add_expression> -> ¡¤ <item> - <add_expression> , <
+	<add_expression> -> ¡¤ <item> , >
+	<add_expression> -> ¡¤ <item> + <add_expression> , >
+	<add_expression> -> ¡¤ <item> - <add_expression> , >
+	<add_expression> -> ¡¤ <item> , ==
+	<add_expression> -> ¡¤ <item> + <add_expression> , ==
+	<add_expression> -> ¡¤ <item> - <add_expression> , ==
+	<add_expression> -> ¡¤ <item> , >=
+	<add_expression> -> ¡¤ <item> + <add_expression> , >=
+	<add_expression> -> ¡¤ <item> - <add_expression> , >=
+	<add_expression> -> ¡¤ <item> , <=
+	<add_expression> -> ¡¤ <item> + <add_expression> , <=
+	<add_expression> -> ¡¤ <item> - <add_expression> , <=
+	<add_expression> -> ¡¤ <item> , !=
+	<add_expression> -> ¡¤ <item> + <add_expression> , !=
+	<add_expression> -> ¡¤ <item> - <add_expression> , !=
+	<add_expression> -> ¡¤ <item> , ,
+	<add_expression> -> ¡¤ <item> + <add_expression> , ,
+	<add_expression> -> ¡¤ <item> - <add_expression> , ,
+	<item> -> ¡¤ <factor> , )
+	<item> -> ¡¤ <factor> * <item> , )
+	<item> -> ¡¤ <factor> / <item> , )
+	<item> -> ¡¤ <factor> , +
+	<item> -> ¡¤ <factor> * <item> , +
+	<item> -> ¡¤ <factor> / <item> , +
+	<item> -> ¡¤ <factor> , -
+	<item> -> ¡¤ <factor> * <item> , -
+	<item> -> ¡¤ <factor> / <item> , -
+	<item> -> ¡¤ <factor> , <
+	<item> -> ¡¤ <factor> * <item> , <
+	<item> -> ¡¤ <factor> / <item> , <
+	<item> -> ¡¤ <factor> , >
+	<item> -> ¡¤ <factor> * <item> , >
+	<item> -> ¡¤ <factor> / <item> , >
+	<item> -> ¡¤ <factor> , ==
+	<item> -> ¡¤ <factor> * <item> , ==
+	<item> -> ¡¤ <factor> / <item> , ==
+	<item> -> ¡¤ <factor> , >=
+	<item> -> ¡¤ <factor> * <item> , >=
+	<item> -> ¡¤ <factor> / <item> , >=
+	<item> -> ¡¤ <factor> , <=
+	<item> -> ¡¤ <factor> * <item> , <=
+	<item> -> ¡¤ <factor> / <item> , <=
+	<item> -> ¡¤ <factor> , !=
+	<item> -> ¡¤ <factor> * <item> , !=
+	<item> -> ¡¤ <factor> / <item> , !=
+	<item> -> ¡¤ <factor> , ,
+	<item> -> ¡¤ <factor> * <item> , ,
+	<item> -> ¡¤ <factor> / <item> , ,
+	<factor> -> ¡¤ NUM , )
+	<factor> -> ¡¤ ID , )
+	<factor> -> ¡¤ ( <expression> ) , )
+	<factor> -> ¡¤ ID ( <aparam_list> ) , )
+	<factor> -> ¡¤ NUM , *
+	<factor> -> ¡¤ ID , *
+	<factor> -> ¡¤ ( <expression> ) , *
+	<factor> -> ¡¤ ID ( <aparam_list> ) , *
+	<factor> -> ¡¤ NUM , /
+	<factor> -> ¡¤ ID , /
+	<factor> -> ¡¤ ( <expression> ) , /
+	<factor> -> ¡¤ ID ( <aparam_list> ) , /
+	<factor> -> ¡¤ NUM , +
+	<factor> -> ¡¤ ID , +
+	<factor> -> ¡¤ ( <expression> ) , +
+	<factor> -> ¡¤ ID ( <aparam_list> ) , +
+	<factor> -> ¡¤ NUM , -
+	<factor> -> ¡¤ ID , -
+	<factor> -> ¡¤ ( <expression> ) , -
+	<factor> -> ¡¤ ID ( <aparam_list> ) , -
+	<factor> -> ¡¤ NUM , <
+	<factor> -> ¡¤ ID , <
+	<factor> -> ¡¤ ( <expression> ) , <
+	<factor> -> ¡¤ ID ( <aparam_list> ) , <
+	<factor> -> ¡¤ NUM , >
+	<factor> -> ¡¤ ID , >
+	<factor> -> ¡¤ ( <expression> ) , >
+	<factor> -> ¡¤ ID ( <aparam_list> ) , >
+	<factor> -> ¡¤ NUM , ==
+	<factor> -> ¡¤ ID , ==
+	<factor> -> ¡¤ ( <expression> ) , ==
+	<factor> -> ¡¤ ID ( <aparam_list> ) , ==
+	<factor> -> ¡¤ NUM , >=
+	<factor> -> ¡¤ ID , >=
+	<factor> -> ¡¤ ( <expression> ) , >=
+	<factor> -> ¡¤ ID ( <aparam_list> ) , >=
+	<factor> -> ¡¤ NUM , <=
+	<factor> -> ¡¤ ID , <=
+	<factor> -> ¡¤ ( <expression> ) , <=
+	<factor> -> ¡¤ ID ( <aparam_list> ) , <=
+	<factor> -> ¡¤ NUM , !=
+	<factor> -> ¡¤ ID , !=
+	<factor> -> ¡¤ ( <expression> ) , !=
+	<factor> -> ¡¤ ID ( <aparam_list> ) , !=
+	<factor> -> ¡¤ NUM , ,
+	<factor> -> ¡¤ ID , ,
+	<factor> -> ¡¤ ( <expression> ) , ,
+	<factor> -> ¡¤ ID ( <aparam_list> ) , ,
+ÏîÄ¿¼¯ 129 : 
+	<add_expression> -> <item> - ¡¤ <add_expression> , )
+	<add_expression> -> <item> - ¡¤ <add_expression> , <
+	<add_expression> -> <item> - ¡¤ <add_expression> , >
+	<add_expression> -> <item> - ¡¤ <add_expression> , ==
+	<add_expression> -> <item> - ¡¤ <add_expression> , >=
+	<add_expression> -> <item> - ¡¤ <add_expression> , <=
+	<add_expression> -> <item> - ¡¤ <add_expression> , !=
+	<add_expression> -> <item> - ¡¤ <add_expression> , ,
+	<add_expression> -> ¡¤ <item> , )
+	<add_expression> -> ¡¤ <item> + <add_expression> , )
+	<add_expression> -> ¡¤ <item> - <add_expression> , )
+	<add_expression> -> ¡¤ <item> , <
+	<add_expression> -> ¡¤ <item> + <add_expression> , <
+	<add_expression> -> ¡¤ <item> - <add_expression> , <
+	<add_expression> -> ¡¤ <item> , >
+	<add_expression> -> ¡¤ <item> + <add_expression> , >
+	<add_expression> -> ¡¤ <item> - <add_expression> , >
+	<add_expression> -> ¡¤ <item> , ==
+	<add_expression> -> ¡¤ <item> + <add_expression> , ==
+	<add_expression> -> ¡¤ <item> - <add_expression> , ==
+	<add_expression> -> ¡¤ <item> , >=
+	<add_expression> -> ¡¤ <item> + <add_expression> , >=
+	<add_expression> -> ¡¤ <item> - <add_expression> , >=
+	<add_expression> -> ¡¤ <item> , <=
+	<add_expression> -> ¡¤ <item> + <add_expression> , <=
+	<add_expression> -> ¡¤ <item> - <add_expression> , <=
+	<add_expression> -> ¡¤ <item> , !=
+	<add_expression> -> ¡¤ <item> + <add_expression> , !=
+	<add_expression> -> ¡¤ <item> - <add_expression> , !=
+	<add_expression> -> ¡¤ <item> , ,
+	<add_expression> -> ¡¤ <item> + <add_expression> , ,
+	<add_expression> -> ¡¤ <item> - <add_expression> , ,
+	<item> -> ¡¤ <factor> , )
+	<item> -> ¡¤ <factor> * <item> , )
+	<item> -> ¡¤ <factor> / <item> , )
+	<item> -> ¡¤ <factor> , +
+	<item> -> ¡¤ <factor> * <item> , +
+	<item> -> ¡¤ <factor> / <item> , +
+	<item> -> ¡¤ <factor> , -
+	<item> -> ¡¤ <factor> * <item> , -
+	<item> -> ¡¤ <factor> / <item> , -
+	<item> -> ¡¤ <factor> , <
+	<item> -> ¡¤ <factor> * <item> , <
+	<item> -> ¡¤ <factor> / <item> , <
+	<item> -> ¡¤ <factor> , >
+	<item> -> ¡¤ <factor> * <item> , >
+	<item> -> ¡¤ <factor> / <item> , >
+	<item> -> ¡¤ <factor> , ==
+	<item> -> ¡¤ <factor> * <item> , ==
+	<item> -> ¡¤ <factor> / <item> , ==
+	<item> -> ¡¤ <factor> , >=
+	<item> -> ¡¤ <factor> * <item> , >=
+	<item> -> ¡¤ <factor> / <item> , >=
+	<item> -> ¡¤ <factor> , <=
+	<item> -> ¡¤ <factor> * <item> , <=
+	<item> -> ¡¤ <factor> / <item> , <=
+	<item> -> ¡¤ <factor> , !=
+	<item> -> ¡¤ <factor> * <item> , !=
+	<item> -> ¡¤ <factor> / <item> , !=
+	<item> -> ¡¤ <factor> , ,
+	<item> -> ¡¤ <factor> * <item> , ,
+	<item> -> ¡¤ <factor> / <item> , ,
+	<factor> -> ¡¤ NUM , )
+	<factor> -> ¡¤ ID , )
+	<factor> -> ¡¤ ( <expression> ) , )
+	<factor> -> ¡¤ ID ( <aparam_list> ) , )
+	<factor> -> ¡¤ NUM , *
+	<factor> -> ¡¤ ID , *
+	<factor> -> ¡¤ ( <expression> ) , *
+	<factor> -> ¡¤ ID ( <aparam_list> ) , *
+	<factor> -> ¡¤ NUM , /
+	<factor> -> ¡¤ ID , /
+	<factor> -> ¡¤ ( <expression> ) , /
+	<factor> -> ¡¤ ID ( <aparam_list> ) , /
+	<factor> -> ¡¤ NUM , +
+	<factor> -> ¡¤ ID , +
+	<factor> -> ¡¤ ( <expression> ) , +
+	<factor> -> ¡¤ ID ( <aparam_list> ) , +
+	<factor> -> ¡¤ NUM , -
+	<factor> -> ¡¤ ID , -
+	<factor> -> ¡¤ ( <expression> ) , -
+	<factor> -> ¡¤ ID ( <aparam_list> ) , -
+	<factor> -> ¡¤ NUM , <
+	<factor> -> ¡¤ ID , <
+	<factor> -> ¡¤ ( <expression> ) , <
+	<factor> -> ¡¤ ID ( <aparam_list> ) , <
+	<factor> -> ¡¤ NUM , >
+	<factor> -> ¡¤ ID , >
+	<factor> -> ¡¤ ( <expression> ) , >
+	<factor> -> ¡¤ ID ( <aparam_list> ) , >
+	<factor> -> ¡¤ NUM , ==
+	<factor> -> ¡¤ ID , ==
+	<factor> -> ¡¤ ( <expression> ) , ==
+	<factor> -> ¡¤ ID ( <aparam_list> ) , ==
+	<factor> -> ¡¤ NUM , >=
+	<factor> -> ¡¤ ID , >=
+	<factor> -> ¡¤ ( <expression> ) , >=
+	<factor> -> ¡¤ ID ( <aparam_list> ) , >=
+	<factor> -> ¡¤ NUM , <=
+	<factor> -> ¡¤ ID , <=
+	<factor> -> ¡¤ ( <expression> ) , <=
+	<factor> -> ¡¤ ID ( <aparam_list> ) , <=
+	<factor> -> ¡¤ NUM , !=
+	<factor> -> ¡¤ ID , !=
+	<factor> -> ¡¤ ( <expression> ) , !=
+	<factor> -> ¡¤ ID ( <aparam_list> ) , !=
+	<factor> -> ¡¤ NUM , ,
+	<factor> -> ¡¤ ID , ,
+	<factor> -> ¡¤ ( <expression> ) , ,
+	<factor> -> ¡¤ ID ( <aparam_list> ) , ,
+ÏîÄ¿¼¯ 130 : 
+	<item> -> <factor> * ¡¤ <item> , )
+	<item> -> <factor> * ¡¤ <item> , +
+	<item> -> <factor> * ¡¤ <item> , -
+	<item> -> <factor> * ¡¤ <item> , <
+	<item> -> <factor> * ¡¤ <item> , >
+	<item> -> <factor> * ¡¤ <item> , ==
+	<item> -> <factor> * ¡¤ <item> , >=
+	<item> -> <factor> * ¡¤ <item> , <=
+	<item> -> <factor> * ¡¤ <item> , !=
+	<item> -> <factor> * ¡¤ <item> , ,
+	<item> -> ¡¤ <factor> , )
+	<item> -> ¡¤ <factor> * <item> , )
+	<item> -> ¡¤ <factor> / <item> , )
+	<item> -> ¡¤ <factor> , +
+	<item> -> ¡¤ <factor> * <item> , +
+	<item> -> ¡¤ <factor> / <item> , +
+	<item> -> ¡¤ <factor> , -
+	<item> -> ¡¤ <factor> * <item> , -
+	<item> -> ¡¤ <factor> / <item> , -
+	<item> -> ¡¤ <factor> , <
+	<item> -> ¡¤ <factor> * <item> , <
+	<item> -> ¡¤ <factor> / <item> , <
+	<item> -> ¡¤ <factor> , >
+	<item> -> ¡¤ <factor> * <item> , >
+	<item> -> ¡¤ <factor> / <item> , >
+	<item> -> ¡¤ <factor> , ==
+	<item> -> ¡¤ <factor> * <item> , ==
+	<item> -> ¡¤ <factor> / <item> , ==
+	<item> -> ¡¤ <factor> , >=
+	<item> -> ¡¤ <factor> * <item> , >=
+	<item> -> ¡¤ <factor> / <item> , >=
+	<item> -> ¡¤ <factor> , <=
+	<item> -> ¡¤ <factor> * <item> , <=
+	<item> -> ¡¤ <factor> / <item> , <=
+	<item> -> ¡¤ <factor> , !=
+	<item> -> ¡¤ <factor> * <item> , !=
+	<item> -> ¡¤ <factor> / <item> , !=
+	<item> -> ¡¤ <factor> , ,
+	<item> -> ¡¤ <factor> * <item> , ,
+	<item> -> ¡¤ <factor> / <item> , ,
+	<factor> -> ¡¤ NUM , )
+	<factor> -> ¡¤ ID , )
+	<factor> -> ¡¤ ( <expression> ) , )
+	<factor> -> ¡¤ ID ( <aparam_list> ) , )
+	<factor> -> ¡¤ NUM , *
+	<factor> -> ¡¤ ID , *
+	<factor> -> ¡¤ ( <expression> ) , *
+	<factor> -> ¡¤ ID ( <aparam_list> ) , *
+	<factor> -> ¡¤ NUM , /
+	<factor> -> ¡¤ ID , /
+	<factor> -> ¡¤ ( <expression> ) , /
+	<factor> -> ¡¤ ID ( <aparam_list> ) , /
+	<factor> -> ¡¤ NUM , +
+	<factor> -> ¡¤ ID , +
+	<factor> -> ¡¤ ( <expression> ) , +
+	<factor> -> ¡¤ ID ( <aparam_list> ) , +
+	<factor> -> ¡¤ NUM , -
+	<factor> -> ¡¤ ID , -
+	<factor> -> ¡¤ ( <expression> ) , -
+	<factor> -> ¡¤ ID ( <aparam_list> ) , -
+	<factor> -> ¡¤ NUM , <
+	<factor> -> ¡¤ ID , <
+	<factor> -> ¡¤ ( <expression> ) , <
+	<factor> -> ¡¤ ID ( <aparam_list> ) , <
+	<factor> -> ¡¤ NUM , >
+	<factor> -> ¡¤ ID , >
+	<factor> -> ¡¤ ( <expression> ) , >
+	<factor> -> ¡¤ ID ( <aparam_list> ) , >
+	<factor> -> ¡¤ NUM , ==
+	<factor> -> ¡¤ ID , ==
+	<factor> -> ¡¤ ( <expression> ) , ==
+	<factor> -> ¡¤ ID ( <aparam_list> ) , ==
+	<factor> -> ¡¤ NUM , >=
+	<factor> -> ¡¤ ID , >=
+	<factor> -> ¡¤ ( <expression> ) , >=
+	<factor> -> ¡¤ ID ( <aparam_list> ) , >=
+	<factor> -> ¡¤ NUM , <=
+	<factor> -> ¡¤ ID , <=
+	<factor> -> ¡¤ ( <expression> ) , <=
+	<factor> -> ¡¤ ID ( <aparam_list> ) , <=
+	<factor> -> ¡¤ NUM , !=
+	<factor> -> ¡¤ ID , !=
+	<factor> -> ¡¤ ( <expression> ) , !=
+	<factor> -> ¡¤ ID ( <aparam_list> ) , !=
+	<factor> -> ¡¤ NUM , ,
+	<factor> -> ¡¤ ID , ,
+	<factor> -> ¡¤ ( <expression> ) , ,
+	<factor> -> ¡¤ ID ( <aparam_list> ) , ,
+ÏîÄ¿¼¯ 131 : 
+	<item> -> <factor> / ¡¤ <item> , )
+	<item> -> <factor> / ¡¤ <item> , +
+	<item> -> <factor> / ¡¤ <item> , -
+	<item> -> <factor> / ¡¤ <item> , <
+	<item> -> <factor> / ¡¤ <item> , >
+	<item> -> <factor> / ¡¤ <item> , ==
+	<item> -> <factor> / ¡¤ <item> , >=
+	<item> -> <factor> / ¡¤ <item> , <=
+	<item> -> <factor> / ¡¤ <item> , !=
+	<item> -> <factor> / ¡¤ <item> , ,
+	<item> -> ¡¤ <factor> , )
+	<item> -> ¡¤ <factor> * <item> , )
+	<item> -> ¡¤ <factor> / <item> , )
+	<item> -> ¡¤ <factor> , +
+	<item> -> ¡¤ <factor> * <item> , +
+	<item> -> ¡¤ <factor> / <item> , +
+	<item> -> ¡¤ <factor> , -
+	<item> -> ¡¤ <factor> * <item> , -
+	<item> -> ¡¤ <factor> / <item> , -
+	<item> -> ¡¤ <factor> , <
+	<item> -> ¡¤ <factor> * <item> , <
+	<item> -> ¡¤ <factor> / <item> , <
+	<item> -> ¡¤ <factor> , >
+	<item> -> ¡¤ <factor> * <item> , >
+	<item> -> ¡¤ <factor> / <item> , >
+	<item> -> ¡¤ <factor> , ==
+	<item> -> ¡¤ <factor> * <item> , ==
+	<item> -> ¡¤ <factor> / <item> , ==
+	<item> -> ¡¤ <factor> , >=
+	<item> -> ¡¤ <factor> * <item> , >=
+	<item> -> ¡¤ <factor> / <item> , >=
+	<item> -> ¡¤ <factor> , <=
+	<item> -> ¡¤ <factor> * <item> , <=
+	<item> -> ¡¤ <factor> / <item> , <=
+	<item> -> ¡¤ <factor> , !=
+	<item> -> ¡¤ <factor> * <item> , !=
+	<item> -> ¡¤ <factor> / <item> , !=
+	<item> -> ¡¤ <factor> , ,
+	<item> -> ¡¤ <factor> * <item> , ,
+	<item> -> ¡¤ <factor> / <item> , ,
+	<factor> -> ¡¤ NUM , )
+	<factor> -> ¡¤ ID , )
+	<factor> -> ¡¤ ( <expression> ) , )
+	<factor> -> ¡¤ ID ( <aparam_list> ) , )
+	<factor> -> ¡¤ NUM , *
+	<factor> -> ¡¤ ID , *
+	<factor> -> ¡¤ ( <expression> ) , *
+	<factor> -> ¡¤ ID ( <aparam_list> ) , *
+	<factor> -> ¡¤ NUM , /
+	<factor> -> ¡¤ ID , /
+	<factor> -> ¡¤ ( <expression> ) , /
+	<factor> -> ¡¤ ID ( <aparam_list> ) , /
+	<factor> -> ¡¤ NUM , +
+	<factor> -> ¡¤ ID , +
+	<factor> -> ¡¤ ( <expression> ) , +
+	<factor> -> ¡¤ ID ( <aparam_list> ) , +
+	<factor> -> ¡¤ NUM , -
+	<factor> -> ¡¤ ID , -
+	<factor> -> ¡¤ ( <expression> ) , -
+	<factor> -> ¡¤ ID ( <aparam_list> ) , -
+	<factor> -> ¡¤ NUM , <
+	<factor> -> ¡¤ ID , <
+	<factor> -> ¡¤ ( <expression> ) , <
+	<factor> -> ¡¤ ID ( <aparam_list> ) , <
+	<factor> -> ¡¤ NUM , >
+	<factor> -> ¡¤ ID , >
+	<factor> -> ¡¤ ( <expression> ) , >
+	<factor> -> ¡¤ ID ( <aparam_list> ) , >
+	<factor> -> ¡¤ NUM , ==
+	<factor> -> ¡¤ ID , ==
+	<factor> -> ¡¤ ( <expression> ) , ==
+	<factor> -> ¡¤ ID ( <aparam_list> ) , ==
+	<factor> -> ¡¤ NUM , >=
+	<factor> -> ¡¤ ID , >=
+	<factor> -> ¡¤ ( <expression> ) , >=
+	<factor> -> ¡¤ ID ( <aparam_list> ) , >=
+	<factor> -> ¡¤ NUM , <=
+	<factor> -> ¡¤ ID , <=
+	<factor> -> ¡¤ ( <expression> ) , <=
+	<factor> -> ¡¤ ID ( <aparam_list> ) , <=
+	<factor> -> ¡¤ NUM , !=
+	<factor> -> ¡¤ ID , !=
+	<factor> -> ¡¤ ( <expression> ) , !=
+	<factor> -> ¡¤ ID ( <aparam_list> ) , !=
+	<factor> -> ¡¤ NUM , ,
+	<factor> -> ¡¤ ID , ,
+	<factor> -> ¡¤ ( <expression> ) , ,
+	<factor> -> ¡¤ ID ( <aparam_list> ) , ,
+ÏîÄ¿¼¯ 132 : 
+	<factor> -> ID ( <aparam_list> ) ¡¤ , ;
+	<factor> -> ID ( <aparam_list> ) ¡¤ , *
+	<factor> -> ID ( <aparam_list> ) ¡¤ , /
+	<factor> -> ID ( <aparam_list> ) ¡¤ , +
+	<factor> -> ID ( <aparam_list> ) ¡¤ , -
+	<factor> -> ID ( <aparam_list> ) ¡¤ , <
+	<factor> -> ID ( <aparam_list> ) ¡¤ , >
+	<factor> -> ID ( <aparam_list> ) ¡¤ , ==
+	<factor> -> ID ( <aparam_list> ) ¡¤ , >=
+	<factor> -> ID ( <aparam_list> ) ¡¤ , <=
+	<factor> -> ID ( <aparam_list> ) ¡¤ , !=
+ÏîÄ¿¼¯ 133 : 
+	<factor> -> ID ( <aparam_list> ) ¡¤ , )
+	<factor> -> ID ( <aparam_list> ) ¡¤ , *
+	<factor> -> ID ( <aparam_list> ) ¡¤ , /
+	<factor> -> ID ( <aparam_list> ) ¡¤ , +
+	<factor> -> ID ( <aparam_list> ) ¡¤ , -
+	<factor> -> ID ( <aparam_list> ) ¡¤ , <
+	<factor> -> ID ( <aparam_list> ) ¡¤ , >
+	<factor> -> ID ( <aparam_list> ) ¡¤ , ==
+	<factor> -> ID ( <aparam_list> ) ¡¤ , >=
+	<factor> -> ID ( <aparam_list> ) ¡¤ , <=
+	<factor> -> ID ( <aparam_list> ) ¡¤ , !=
+ÏîÄ¿¼¯ 134 : 
+	<A> -> @ ¡¤ , {
+ÏîÄ¿¼¯ 135 : 
+	<if_sent> -> if ( <expression> ) <M> <A> ¡¤ <sent_block> , if
+	<if_sent> -> if ( <expression> ) <M> <A> ¡¤ <sent_block> <N> else <M> <A> <sent_block> , if
+	<if_sent> -> if ( <expression> ) <M> <A> ¡¤ <sent_block> , while
+	<if_sent> -> if ( <expression> ) <M> <A> ¡¤ <sent_block> <N> else <M> <A> <sent_block> , while
+	<if_sent> -> if ( <expression> ) <M> <A> ¡¤ <sent_block> , return
+	<if_sent> -> if ( <expression> ) <M> <A> ¡¤ <sent_block> <N> else <M> <A> <sent_block> , return
+	<if_sent> -> if ( <expression> ) <M> <A> ¡¤ <sent_block> , ID
+	<if_sent> -> if ( <expression> ) <M> <A> ¡¤ <sent_block> <N> else <M> <A> <sent_block> , ID
+	<if_sent> -> if ( <expression> ) <M> <A> ¡¤ <sent_block> , }
+	<if_sent> -> if ( <expression> ) <M> <A> ¡¤ <sent_block> <N> else <M> <A> <sent_block> , }
+	<sent_block> -> ¡¤ { <inner_declare> <sent_list> } , if
+	<sent_block> -> ¡¤ { <sent_list> } , if
+	<sent_block> -> ¡¤ { <inner_declare> <sent_list> } , else
+	<sent_block> -> ¡¤ { <sent_list> } , else
+	<sent_block> -> ¡¤ { <inner_declare> <sent_list> } , while
+	<sent_block> -> ¡¤ { <sent_list> } , while
+	<sent_block> -> ¡¤ { <inner_declare> <sent_list> } , return
+	<sent_block> -> ¡¤ { <sent_list> } , return
+	<sent_block> -> ¡¤ { <inner_declare> <sent_list> } , ID
+	<sent_block> -> ¡¤ { <sent_list> } , ID
+	<sent_block> -> ¡¤ { <inner_declare> <sent_list> } , }
+	<sent_block> -> ¡¤ { <sent_list> } , }
+ÏîÄ¿¼¯ 136 : 
+	<while_sent> -> while <M> ( <expression> ) <M> ¡¤ <A> <sent_block> , if
+	<while_sent> -> while <M> ( <expression> ) <M> ¡¤ <A> <sent_block> , while
+	<while_sent> -> while <M> ( <expression> ) <M> ¡¤ <A> <sent_block> , return
+	<while_sent> -> while <M> ( <expression> ) <M> ¡¤ <A> <sent_block> , ID
+	<while_sent> -> while <M> ( <expression> ) <M> ¡¤ <A> <sent_block> , }
+	<A> -> ¡¤ @ , {
+ÏîÄ¿¼¯ 137 : 
+	<factor> -> ID ( <aparam_list> ¡¤ ) , )
+	<factor> -> ID ( <aparam_list> ¡¤ ) , *
+	<factor> -> ID ( <aparam_list> ¡¤ ) , /
+	<factor> -> ID ( <aparam_list> ¡¤ ) , +
+	<factor> -> ID ( <aparam_list> ¡¤ ) , -
+	<factor> -> ID ( <aparam_list> ¡¤ ) , <
+	<factor> -> ID ( <aparam_list> ¡¤ ) , >
+	<factor> -> ID ( <aparam_list> ¡¤ ) , ==
+	<factor> -> ID ( <aparam_list> ¡¤ ) , >=
+	<factor> -> ID ( <aparam_list> ¡¤ ) , <=
+	<factor> -> ID ( <aparam_list> ¡¤ ) , !=
+	<factor> -> ID ( <aparam_list> ¡¤ ) , ,
+ÏîÄ¿¼¯ 138 : 
+	<factor> -> ( <expression> ) ¡¤ , )
+	<factor> -> ( <expression> ) ¡¤ , *
+	<factor> -> ( <expression> ) ¡¤ , /
+	<factor> -> ( <expression> ) ¡¤ , +
+	<factor> -> ( <expression> ) ¡¤ , -
+	<factor> -> ( <expression> ) ¡¤ , <
+	<factor> -> ( <expression> ) ¡¤ , >
+	<factor> -> ( <expression> ) ¡¤ , ==
+	<factor> -> ( <expression> ) ¡¤ , >=
+	<factor> -> ( <expression> ) ¡¤ , <=
+	<factor> -> ( <expression> ) ¡¤ , !=
+	<factor> -> ( <expression> ) ¡¤ , ,
+ÏîÄ¿¼¯ 139 : 
+	<aparam_list> -> <expression> , <aparam_list> ¡¤ , )
+ÏîÄ¿¼¯ 140 : 
+	<expression> -> <add_expression> <relop> <expression> ¡¤ , )
+	<expression> -> <add_expression> <relop> <expression> ¡¤ , ,
+ÏîÄ¿¼¯ 141 : 
+	<add_expression> -> <item> + <add_expression> ¡¤ , )
+	<add_expression> -> <item> + <add_expression> ¡¤ , <
+	<add_expression> -> <item> + <add_expression> ¡¤ , >
+	<add_expression> -> <item> + <add_expression> ¡¤ , ==
+	<add_expression> -> <item> + <add_expression> ¡¤ , >=
+	<add_expression> -> <item> + <add_expression> ¡¤ , <=
+	<add_expression> -> <item> + <add_expression> ¡¤ , !=
+	<add_expression> -> <item> + <add_expression> ¡¤ , ,
+ÏîÄ¿¼¯ 142 : 
+	<add_expression> -> <item> - <add_expression> ¡¤ , )
+	<add_expression> -> <item> - <add_expression> ¡¤ , <
+	<add_expression> -> <item> - <add_expression> ¡¤ , >
+	<add_expression> -> <item> - <add_expression> ¡¤ , ==
+	<add_expression> -> <item> - <add_expression> ¡¤ , >=
+	<add_expression> -> <item> - <add_expression> ¡¤ , <=
+	<add_expression> -> <item> - <add_expression> ¡¤ , !=
+	<add_expression> -> <item> - <add_expression> ¡¤ , ,
+ÏîÄ¿¼¯ 143 : 
+	<item> -> <factor> * <item> ¡¤ , )
+	<item> -> <factor> * <item> ¡¤ , +
+	<item> -> <factor> * <item> ¡¤ , -
+	<item> -> <factor> * <item> ¡¤ , <
+	<item> -> <factor> * <item> ¡¤ , >
+	<item> -> <factor> * <item> ¡¤ , ==
+	<item> -> <factor> * <item> ¡¤ , >=
+	<item> -> <factor> * <item> ¡¤ , <=
+	<item> -> <factor> * <item> ¡¤ , !=
+	<item> -> <factor> * <item> ¡¤ , ,
+ÏîÄ¿¼¯ 144 : 
+	<item> -> <factor> / <item> ¡¤ , )
+	<item> -> <factor> / <item> ¡¤ , +
+	<item> -> <factor> / <item> ¡¤ , -
+	<item> -> <factor> / <item> ¡¤ , <
+	<item> -> <factor> / <item> ¡¤ , >
+	<item> -> <factor> / <item> ¡¤ , ==
+	<item> -> <factor> / <item> ¡¤ , >=
+	<item> -> <factor> / <item> ¡¤ , <=
+	<item> -> <factor> / <item> ¡¤ , !=
+	<item> -> <factor> / <item> ¡¤ , ,
+ÏîÄ¿¼¯ 145 : 
+	<if_sent> -> if ( <expression> ) <M> <A> <sent_block> ¡¤ , if
+	<if_sent> -> if ( <expression> ) <M> <A> <sent_block> ¡¤ <N> else <M> <A> <sent_block> , if
+	<if_sent> -> if ( <expression> ) <M> <A> <sent_block> ¡¤ , while
+	<if_sent> -> if ( <expression> ) <M> <A> <sent_block> ¡¤ <N> else <M> <A> <sent_block> , while
+	<if_sent> -> if ( <expression> ) <M> <A> <sent_block> ¡¤ , return
+	<if_sent> -> if ( <expression> ) <M> <A> <sent_block> ¡¤ <N> else <M> <A> <sent_block> , return
+	<if_sent> -> if ( <expression> ) <M> <A> <sent_block> ¡¤ , ID
+	<if_sent> -> if ( <expression> ) <M> <A> <sent_block> ¡¤ <N> else <M> <A> <sent_block> , ID
+	<if_sent> -> if ( <expression> ) <M> <A> <sent_block> ¡¤ , }
+	<if_sent> -> if ( <expression> ) <M> <A> <sent_block> ¡¤ <N> else <M> <A> <sent_block> , }
+	<N> -> ¡¤ @ , else
+ÏîÄ¿¼¯ 146 : 
+	<sent_block> -> { ¡¤ <inner_declare> <sent_list> } , if
+	<sent_block> -> { ¡¤ <sent_list> } , if
+	<sent_block> -> { ¡¤ <inner_declare> <sent_list> } , else
+	<sent_block> -> { ¡¤ <sent_list> } , else
+	<sent_block> -> { ¡¤ <inner_declare> <sent_list> } , while
+	<sent_block> -> { ¡¤ <sent_list> } , while
+	<sent_block> -> { ¡¤ <inner_declare> <sent_list> } , return
+	<sent_block> -> { ¡¤ <sent_list> } , return
+	<sent_block> -> { ¡¤ <inner_declare> <sent_list> } , ID
+	<sent_block> -> { ¡¤ <sent_list> } , ID
+	<sent_block> -> { ¡¤ <inner_declare> <sent_list> } , }
+	<sent_block> -> { ¡¤ <sent_list> } , }
+	<inner_declare> -> ¡¤ <inner_var_dec> , if
+	<inner_declare> -> ¡¤ <inner_var_dec> , while
+	<inner_declare> -> ¡¤ <inner_var_dec> , return
+	<inner_declare> -> ¡¤ <inner_var_dec> , ID
+	<inner_declare> -> ¡¤ <inner_var_dec> <inner_declare> , if
+	<inner_declare> -> ¡¤ <inner_var_dec> <inner_declare> , while
+	<inner_declare> -> ¡¤ <inner_var_dec> <inner_declare> , return
+	<inner_declare> -> ¡¤ <inner_var_dec> <inner_declare> , ID
+	<sent_list> -> ¡¤ <sent> <M> <sent_list> , }
+	<sent_list> -> ¡¤ <sent> , }
+	<inner_var_dec> -> ¡¤ int ID ; , if
+	<inner_var_dec> -> ¡¤ int ID ; , while
+	<inner_var_dec> -> ¡¤ int ID ; , return
+	<inner_var_dec> -> ¡¤ int ID ; , ID
+	<inner_var_dec> -> ¡¤ int ID ; , int
+	<sent> -> ¡¤ <if_sent> , if
+	<sent> -> ¡¤ <if_sent> , while
+	<sent> -> ¡¤ <if_sent> , return
+	<sent> -> ¡¤ <if_sent> , ID
+	<sent> -> ¡¤ <while_sent> , if
+	<sent> -> ¡¤ <while_sent> , while
+	<sent> -> ¡¤ <while_sent> , return
+	<sent> -> ¡¤ <while_sent> , ID
+	<sent> -> ¡¤ <return_sent> , if
+	<sent> -> ¡¤ <return_sent> , while
+	<sent> -> ¡¤ <return_sent> , return
+	<sent> -> ¡¤ <return_sent> , ID
+	<sent> -> ¡¤ <assign_sent> , if
+	<sent> -> ¡¤ <assign_sent> , while
+	<sent> -> ¡¤ <assign_sent> , return
+	<sent> -> ¡¤ <assign_sent> , ID
+	<sent> -> ¡¤ <if_sent> , }
+	<sent> -> ¡¤ <while_sent> , }
+	<sent> -> ¡¤ <return_sent> , }
+	<sent> -> ¡¤ <assign_sent> , }
+	<if_sent> -> ¡¤ if ( <expression> ) <M> <A> <sent_block> , if
+	<if_sent> -> ¡¤ if ( <expression> ) <M> <A> <sent_block> <N> else <M> <A> <sent_block> , if
+	<if_sent> -> ¡¤ if ( <expression> ) <M> <A> <sent_block> , while
+	<if_sent> -> ¡¤ if ( <expression> ) <M> <A> <sent_block> <N> else <M> <A> <sent_block> , while
+	<if_sent> -> ¡¤ if ( <expression> ) <M> <A> <sent_block> , return
+	<if_sent> -> ¡¤ if ( <expression> ) <M> <A> <sent_block> <N> else <M> <A> <sent_block> , return
+	<if_sent> -> ¡¤ if ( <expression> ) <M> <A> <sent_block> , ID
+	<if_sent> -> ¡¤ if ( <expression> ) <M> <A> <sent_block> <N> else <M> <A> <sent_block> , ID
+	<while_sent> -> ¡¤ while <M> ( <expression> ) <M> <A> <sent_block> , if
+	<while_sent> -> ¡¤ while <M> ( <expression> ) <M> <A> <sent_block> , while
+	<while_sent> -> ¡¤ while <M> ( <expression> ) <M> <A> <sent_block> , return
+	<while_sent> -> ¡¤ while <M> ( <expression> ) <M> <A> <sent_block> , ID
+	<return_sent> -> ¡¤ return ; , if
+	<return_sent> -> ¡¤ return <expression> ; , if
+	<return_sent> -> ¡¤ return ; , while
+	<return_sent> -> ¡¤ return <expression> ; , while
+	<return_sent> -> ¡¤ return ; , return
+	<return_sent> -> ¡¤ return <expression> ; , return
+	<return_sent> -> ¡¤ return ; , ID
+	<return_sent> -> ¡¤ return <expression> ; , ID
+	<assign_sent> -> ¡¤ ID = <expression> ; , if
+	<assign_sent> -> ¡¤ ID = <expression> ; , while
+	<assign_sent> -> ¡¤ ID = <expression> ; , return
+	<assign_sent> -> ¡¤ ID = <expression> ; , ID
+	<if_sent> -> ¡¤ if ( <expression> ) <M> <A> <sent_block> , }
+	<if_sent> -> ¡¤ if ( <expression> ) <M> <A> <sent_block> <N> else <M> <A> <sent_block> , }
+	<while_sent> -> ¡¤ while <M> ( <expression> ) <M> <A> <sent_block> , }
+	<return_sent> -> ¡¤ return ; , }
+	<return_sent> -> ¡¤ return <expression> ; , }
+	<assign_sent> -> ¡¤ ID = <expression> ; , }
+ÏîÄ¿¼¯ 147 : 
+	<while_sent> -> while <M> ( <expression> ) <M> <A> ¡¤ <sent_block> , if
+	<while_sent> -> while <M> ( <expression> ) <M> <A> ¡¤ <sent_block> , while
+	<while_sent> -> while <M> ( <expression> ) <M> <A> ¡¤ <sent_block> , return
+	<while_sent> -> while <M> ( <expression> ) <M> <A> ¡¤ <sent_block> , ID
+	<while_sent> -> while <M> ( <expression> ) <M> <A> ¡¤ <sent_block> , }
+	<sent_block> -> ¡¤ { <inner_declare> <sent_list> } , if
+	<sent_block> -> ¡¤ { <sent_list> } , if
+	<sent_block> -> ¡¤ { <inner_declare> <sent_list> } , while
+	<sent_block> -> ¡¤ { <sent_list> } , while
+	<sent_block> -> ¡¤ { <inner_declare> <sent_list> } , return
+	<sent_block> -> ¡¤ { <sent_list> } , return
+	<sent_block> -> ¡¤ { <inner_declare> <sent_list> } , ID
+	<sent_block> -> ¡¤ { <sent_list> } , ID
+	<sent_block> -> ¡¤ { <inner_declare> <sent_list> } , }
+	<sent_block> -> ¡¤ { <sent_list> } , }
+ÏîÄ¿¼¯ 148 : 
+	<factor> -> ID ( <aparam_list> ) ¡¤ , )
+	<factor> -> ID ( <aparam_list> ) ¡¤ , *
+	<factor> -> ID ( <aparam_list> ) ¡¤ , /
+	<factor> -> ID ( <aparam_list> ) ¡¤ , +
+	<factor> -> ID ( <aparam_list> ) ¡¤ , -
+	<factor> -> ID ( <aparam_list> ) ¡¤ , <
+	<factor> -> ID ( <aparam_list> ) ¡¤ , >
+	<factor> -> ID ( <aparam_list> ) ¡¤ , ==
+	<factor> -> ID ( <aparam_list> ) ¡¤ , >=
+	<factor> -> ID ( <aparam_list> ) ¡¤ , <=
+	<factor> -> ID ( <aparam_list> ) ¡¤ , !=
+	<factor> -> ID ( <aparam_list> ) ¡¤ , ,
+ÏîÄ¿¼¯ 149 : 
+	<if_sent> -> if ( <expression> ) <M> <A> <sent_block> <N> ¡¤ else <M> <A> <sent_block> , if
+	<if_sent> -> if ( <expression> ) <M> <A> <sent_block> <N> ¡¤ else <M> <A> <sent_block> , while
+	<if_sent> -> if ( <expression> ) <M> <A> <sent_block> <N> ¡¤ else <M> <A> <sent_block> , return
+	<if_sent> -> if ( <expression> ) <M> <A> <sent_block> <N> ¡¤ else <M> <A> <sent_block> , ID
+	<if_sent> -> if ( <expression> ) <M> <A> <sent_block> <N> ¡¤ else <M> <A> <sent_block> , }
+ÏîÄ¿¼¯ 150 : 
+	<N> -> @ ¡¤ , else
+ÏîÄ¿¼¯ 151 : 
+	<sent_block> -> { <inner_declare> ¡¤ <sent_list> } , if
+	<sent_block> -> { <inner_declare> ¡¤ <sent_list> } , else
+	<sent_block> -> { <inner_declare> ¡¤ <sent_list> } , while
+	<sent_block> -> { <inner_declare> ¡¤ <sent_list> } , return
+	<sent_block> -> { <inner_declare> ¡¤ <sent_list> } , ID
+	<sent_block> -> { <inner_declare> ¡¤ <sent_list> } , }
+	<sent_list> -> ¡¤ <sent> <M> <sent_list> , }
+	<sent_list> -> ¡¤ <sent> , }
+	<sent> -> ¡¤ <if_sent> , if
+	<sent> -> ¡¤ <if_sent> , while
+	<sent> -> ¡¤ <if_sent> , return
+	<sent> -> ¡¤ <if_sent> , ID
+	<sent> -> ¡¤ <while_sent> , if
+	<sent> -> ¡¤ <while_sent> , while
+	<sent> -> ¡¤ <while_sent> , return
+	<sent> -> ¡¤ <while_sent> , ID
+	<sent> -> ¡¤ <return_sent> , if
+	<sent> -> ¡¤ <return_sent> , while
+	<sent> -> ¡¤ <return_sent> , return
+	<sent> -> ¡¤ <return_sent> , ID
+	<sent> -> ¡¤ <assign_sent> , if
+	<sent> -> ¡¤ <assign_sent> , while
+	<sent> -> ¡¤ <assign_sent> , return
+	<sent> -> ¡¤ <assign_sent> , ID
+	<sent> -> ¡¤ <if_sent> , }
+	<sent> -> ¡¤ <while_sent> , }
+	<sent> -> ¡¤ <return_sent> , }
+	<sent> -> ¡¤ <assign_sent> , }
+	<if_sent> -> ¡¤ if ( <expression> ) <M> <A> <sent_block> , if
+	<if_sent> -> ¡¤ if ( <expression> ) <M> <A> <sent_block> <N> else <M> <A> <sent_block> , if
+	<if_sent> -> ¡¤ if ( <expression> ) <M> <A> <sent_block> , while
+	<if_sent> -> ¡¤ if ( <expression> ) <M> <A> <sent_block> <N> else <M> <A> <sent_block> , while
+	<if_sent> -> ¡¤ if ( <expression> ) <M> <A> <sent_block> , return
+	<if_sent> -> ¡¤ if ( <expression> ) <M> <A> <sent_block> <N> else <M> <A> <sent_block> , return
+	<if_sent> -> ¡¤ if ( <expression> ) <M> <A> <sent_block> , ID
+	<if_sent> -> ¡¤ if ( <expression> ) <M> <A> <sent_block> <N> else <M> <A> <sent_block> , ID
+	<while_sent> -> ¡¤ while <M> ( <expression> ) <M> <A> <sent_block> , if
+	<while_sent> -> ¡¤ while <M> ( <expression> ) <M> <A> <sent_block> , while
+	<while_sent> -> ¡¤ while <M> ( <expression> ) <M> <A> <sent_block> , return
+	<while_sent> -> ¡¤ while <M> ( <expression> ) <M> <A> <sent_block> , ID
+	<return_sent> -> ¡¤ return ; , if
+	<return_sent> -> ¡¤ return <expression> ; , if
+	<return_sent> -> ¡¤ return ; , while
+	<return_sent> -> ¡¤ return <expression> ; , while
+	<return_sent> -> ¡¤ return ; , return
+	<return_sent> -> ¡¤ return <expression> ; , return
+	<return_sent> -> ¡¤ return ; , ID
+	<return_sent> -> ¡¤ return <expression> ; , ID
+	<assign_sent> -> ¡¤ ID = <expression> ; , if
+	<assign_sent> -> ¡¤ ID = <expression> ; , while
+	<assign_sent> -> ¡¤ ID = <expression> ; , return
+	<assign_sent> -> ¡¤ ID = <expression> ; , ID
+	<if_sent> -> ¡¤ if ( <expression> ) <M> <A> <sent_block> , }
+	<if_sent> -> ¡¤ if ( <expression> ) <M> <A> <sent_block> <N> else <M> <A> <sent_block> , }
+	<while_sent> -> ¡¤ while <M> ( <expression> ) <M> <A> <sent_block> , }
+	<return_sent> -> ¡¤ return ; , }
+	<return_sent> -> ¡¤ return <expression> ; , }
+	<assign_sent> -> ¡¤ ID = <expression> ; , }
+ÏîÄ¿¼¯ 152 : 
+	<sent_block> -> { <sent_list> ¡¤ } , if
+	<sent_block> -> { <sent_list> ¡¤ } , else
+	<sent_block> -> { <sent_list> ¡¤ } , while
+	<sent_block> -> { <sent_list> ¡¤ } , return
+	<sent_block> -> { <sent_list> ¡¤ } , ID
+	<sent_block> -> { <sent_list> ¡¤ } , }
+ÏîÄ¿¼¯ 153 : 
+	<while_sent> -> while <M> ( <expression> ) <M> <A> <sent_block> ¡¤ , if
+	<while_sent> -> while <M> ( <expression> ) <M> <A> <sent_block> ¡¤ , while
+	<while_sent> -> while <M> ( <expression> ) <M> <A> <sent_block> ¡¤ , return
+	<while_sent> -> while <M> ( <expression> ) <M> <A> <sent_block> ¡¤ , ID
+	<while_sent> -> while <M> ( <expression> ) <M> <A> <sent_block> ¡¤ , }
+ÏîÄ¿¼¯ 154 : 
+	<sent_block> -> { ¡¤ <inner_declare> <sent_list> } , if
+	<sent_block> -> { ¡¤ <sent_list> } , if
+	<sent_block> -> { ¡¤ <inner_declare> <sent_list> } , while
+	<sent_block> -> { ¡¤ <sent_list> } , while
+	<sent_block> -> { ¡¤ <inner_declare> <sent_list> } , return
+	<sent_block> -> { ¡¤ <sent_list> } , return
+	<sent_block> -> { ¡¤ <inner_declare> <sent_list> } , ID
+	<sent_block> -> { ¡¤ <sent_list> } , ID
+	<sent_block> -> { ¡¤ <inner_declare> <sent_list> } , }
+	<sent_block> -> { ¡¤ <sent_list> } , }
+	<inner_declare> -> ¡¤ <inner_var_dec> , if
+	<inner_declare> -> ¡¤ <inner_var_dec> , while
+	<inner_declare> -> ¡¤ <inner_var_dec> , return
+	<inner_declare> -> ¡¤ <inner_var_dec> , ID
+	<inner_declare> -> ¡¤ <inner_var_dec> <inner_declare> , if
+	<inner_declare> -> ¡¤ <inner_var_dec> <inner_declare> , while
+	<inner_declare> -> ¡¤ <inner_var_dec> <inner_declare> , return
+	<inner_declare> -> ¡¤ <inner_var_dec> <inner_declare> , ID
+	<sent_list> -> ¡¤ <sent> <M> <sent_list> , }
+	<sent_list> -> ¡¤ <sent> , }
+	<inner_var_dec> -> ¡¤ int ID ; , if
+	<inner_var_dec> -> ¡¤ int ID ; , while
+	<inner_var_dec> -> ¡¤ int ID ; , return
+	<inner_var_dec> -> ¡¤ int ID ; , ID
+	<inner_var_dec> -> ¡¤ int ID ; , int
+	<sent> -> ¡¤ <if_sent> , if
+	<sent> -> ¡¤ <if_sent> , while
+	<sent> -> ¡¤ <if_sent> , return
+	<sent> -> ¡¤ <if_sent> , ID
+	<sent> -> ¡¤ <while_sent> , if
+	<sent> -> ¡¤ <while_sent> , while
+	<sent> -> ¡¤ <while_sent> , return
+	<sent> -> ¡¤ <while_sent> , ID
+	<sent> -> ¡¤ <return_sent> , if
+	<sent> -> ¡¤ <return_sent> , while
+	<sent> -> ¡¤ <return_sent> , return
+	<sent> -> ¡¤ <return_sent> , ID
+	<sent> -> ¡¤ <assign_sent> , if
+	<sent> -> ¡¤ <assign_sent> , while
+	<sent> -> ¡¤ <assign_sent> , return
+	<sent> -> ¡¤ <assign_sent> , ID
+	<sent> -> ¡¤ <if_sent> , }
+	<sent> -> ¡¤ <while_sent> , }
+	<sent> -> ¡¤ <return_sent> , }
+	<sent> -> ¡¤ <assign_sent> , }
+	<if_sent> -> ¡¤ if ( <expression> ) <M> <A> <sent_block> , if
+	<if_sent> -> ¡¤ if ( <expression> ) <M> <A> <sent_block> <N> else <M> <A> <sent_block> , if
+	<if_sent> -> ¡¤ if ( <expression> ) <M> <A> <sent_block> , while
+	<if_sent> -> ¡¤ if ( <expression> ) <M> <A> <sent_block> <N> else <M> <A> <sent_block> , while
+	<if_sent> -> ¡¤ if ( <expression> ) <M> <A> <sent_block> , return
+	<if_sent> -> ¡¤ if ( <expression> ) <M> <A> <sent_block> <N> else <M> <A> <sent_block> , return
+	<if_sent> -> ¡¤ if ( <expression> ) <M> <A> <sent_block> , ID
+	<if_sent> -> ¡¤ if ( <expression> ) <M> <A> <sent_block> <N> else <M> <A> <sent_block> , ID
+	<while_sent> -> ¡¤ while <M> ( <expression> ) <M> <A> <sent_block> , if
+	<while_sent> -> ¡¤ while <M> ( <expression> ) <M> <A> <sent_block> , while
+	<while_sent> -> ¡¤ while <M> ( <expression> ) <M> <A> <sent_block> , return
+	<while_sent> -> ¡¤ while <M> ( <expression> ) <M> <A> <sent_block> , ID
+	<return_sent> -> ¡¤ return ; , if
+	<return_sent> -> ¡¤ return <expression> ; , if
+	<return_sent> -> ¡¤ return ; , while
+	<return_sent> -> ¡¤ return <expression> ; , while
+	<return_sent> -> ¡¤ return ; , return
+	<return_sent> -> ¡¤ return <expression> ; , return
+	<return_sent> -> ¡¤ return ; , ID
+	<return_sent> -> ¡¤ return <expression> ; , ID
+	<assign_sent> -> ¡¤ ID = <expression> ; , if
+	<assign_sent> -> ¡¤ ID = <expression> ; , while
+	<assign_sent> -> ¡¤ ID = <expression> ; , return
+	<assign_sent> -> ¡¤ ID = <expression> ; , ID
+	<if_sent> -> ¡¤ if ( <expression> ) <M> <A> <sent_block> , }
+	<if_sent> -> ¡¤ if ( <expression> ) <M> <A> <sent_block> <N> else <M> <A> <sent_block> , }
+	<while_sent> -> ¡¤ while <M> ( <expression> ) <M> <A> <sent_block> , }
+	<return_sent> -> ¡¤ return ; , }
+	<return_sent> -> ¡¤ return <expression> ; , }
+	<assign_sent> -> ¡¤ ID = <expression> ; , }
+ÏîÄ¿¼¯ 155 : 
+	<if_sent> -> if ( <expression> ) <M> <A> <sent_block> <N> else ¡¤ <M> <A> <sent_block> , if
+	<if_sent> -> if ( <expression> ) <M> <A> <sent_block> <N> else ¡¤ <M> <A> <sent_block> , while
+	<if_sent> -> if ( <expression> ) <M> <A> <sent_block> <N> else ¡¤ <M> <A> <sent_block> , return
+	<if_sent> -> if ( <expression> ) <M> <A> <sent_block> <N> else ¡¤ <M> <A> <sent_block> , ID
+	<if_sent> -> if ( <expression> ) <M> <A> <sent_block> <N> else ¡¤ <M> <A> <sent_block> , }
+	<M> -> ¡¤ @ , {
+ÏîÄ¿¼¯ 156 : 
+	<sent_block> -> { <inner_declare> <sent_list> ¡¤ } , if
+	<sent_block> -> { <inner_declare> <sent_list> ¡¤ } , else
+	<sent_block> -> { <inner_declare> <sent_list> ¡¤ } , while
+	<sent_block> -> { <inner_declare> <sent_list> ¡¤ } , return
+	<sent_block> -> { <inner_declare> <sent_list> ¡¤ } , ID
+	<sent_block> -> { <inner_declare> <sent_list> ¡¤ } , }
+ÏîÄ¿¼¯ 157 : 
+	<sent_block> -> { <sent_list> } ¡¤ , if
+	<sent_block> -> { <sent_list> } ¡¤ , else
+	<sent_block> -> { <sent_list> } ¡¤ , while
+	<sent_block> -> { <sent_list> } ¡¤ , return
+	<sent_block> -> { <sent_list> } ¡¤ , ID
+	<sent_block> -> { <sent_list> } ¡¤ , }
+ÏîÄ¿¼¯ 158 : 
+	<sent_block> -> { <inner_declare> ¡¤ <sent_list> } , if
+	<sent_block> -> { <inner_declare> ¡¤ <sent_list> } , while
+	<sent_block> -> { <inner_declare> ¡¤ <sent_list> } , return
+	<sent_block> -> { <inner_declare> ¡¤ <sent_list> } , ID
+	<sent_block> -> { <inner_declare> ¡¤ <sent_list> } , }
+	<sent_list> -> ¡¤ <sent> <M> <sent_list> , }
+	<sent_list> -> ¡¤ <sent> , }
+	<sent> -> ¡¤ <if_sent> , if
+	<sent> -> ¡¤ <if_sent> , while
+	<sent> -> ¡¤ <if_sent> , return
+	<sent> -> ¡¤ <if_sent> , ID
+	<sent> -> ¡¤ <while_sent> , if
+	<sent> -> ¡¤ <while_sent> , while
+	<sent> -> ¡¤ <while_sent> , return
+	<sent> -> ¡¤ <while_sent> , ID
+	<sent> -> ¡¤ <return_sent> , if
+	<sent> -> ¡¤ <return_sent> , while
+	<sent> -> ¡¤ <return_sent> , return
+	<sent> -> ¡¤ <return_sent> , ID
+	<sent> -> ¡¤ <assign_sent> , if
+	<sent> -> ¡¤ <assign_sent> , while
+	<sent> -> ¡¤ <assign_sent> , return
+	<sent> -> ¡¤ <assign_sent> , ID
+	<sent> -> ¡¤ <if_sent> , }
+	<sent> -> ¡¤ <while_sent> , }
+	<sent> -> ¡¤ <return_sent> , }
+	<sent> -> ¡¤ <assign_sent> , }
+	<if_sent> -> ¡¤ if ( <expression> ) <M> <A> <sent_block> , if
+	<if_sent> -> ¡¤ if ( <expression> ) <M> <A> <sent_block> <N> else <M> <A> <sent_block> , if
+	<if_sent> -> ¡¤ if ( <expression> ) <M> <A> <sent_block> , while
+	<if_sent> -> ¡¤ if ( <expression> ) <M> <A> <sent_block> <N> else <M> <A> <sent_block> , while
+	<if_sent> -> ¡¤ if ( <expression> ) <M> <A> <sent_block> , return
+	<if_sent> -> ¡¤ if ( <expression> ) <M> <A> <sent_block> <N> else <M> <A> <sent_block> , return
+	<if_sent> -> ¡¤ if ( <expression> ) <M> <A> <sent_block> , ID
+	<if_sent> -> ¡¤ if ( <expression> ) <M> <A> <sent_block> <N> else <M> <A> <sent_block> , ID
+	<while_sent> -> ¡¤ while <M> ( <expression> ) <M> <A> <sent_block> , if
+	<while_sent> -> ¡¤ while <M> ( <expression> ) <M> <A> <sent_block> , while
+	<while_sent> -> ¡¤ while <M> ( <expression> ) <M> <A> <sent_block> , return
+	<while_sent> -> ¡¤ while <M> ( <expression> ) <M> <A> <sent_block> , ID
+	<return_sent> -> ¡¤ return ; , if
+	<return_sent> -> ¡¤ return <expression> ; , if
+	<return_sent> -> ¡¤ return ; , while
+	<return_sent> -> ¡¤ return <expression> ; , while
+	<return_sent> -> ¡¤ return ; , return
+	<return_sent> -> ¡¤ return <expression> ; , return
+	<return_sent> -> ¡¤ return ; , ID
+	<return_sent> -> ¡¤ return <expression> ; , ID
+	<assign_sent> -> ¡¤ ID = <expression> ; , if
+	<assign_sent> -> ¡¤ ID = <expression> ; , while
+	<assign_sent> -> ¡¤ ID = <expression> ; , return
+	<assign_sent> -> ¡¤ ID = <expression> ; , ID
+	<if_sent> -> ¡¤ if ( <expression> ) <M> <A> <sent_block> , }
+	<if_sent> -> ¡¤ if ( <expression> ) <M> <A> <sent_block> <N> else <M> <A> <sent_block> , }
+	<while_sent> -> ¡¤ while <M> ( <expression> ) <M> <A> <sent_block> , }
+	<return_sent> -> ¡¤ return ; , }
+	<return_sent> -> ¡¤ return <expression> ; , }
+	<assign_sent> -> ¡¤ ID = <expression> ; , }
+ÏîÄ¿¼¯ 159 : 
+	<sent_block> -> { <sent_list> ¡¤ } , if
+	<sent_block> -> { <sent_list> ¡¤ } , while
+	<sent_block> -> { <sent_list> ¡¤ } , return
+	<sent_block> -> { <sent_list> ¡¤ } , ID
+	<sent_block> -> { <sent_list> ¡¤ } , }
+ÏîÄ¿¼¯ 160 : 
+	<if_sent> -> if ( <expression> ) <M> <A> <sent_block> <N> else <M> ¡¤ <A> <sent_block> , if
+	<if_sent> -> if ( <expression> ) <M> <A> <sent_block> <N> else <M> ¡¤ <A> <sent_block> , while
+	<if_sent> -> if ( <expression> ) <M> <A> <sent_block> <N> else <M> ¡¤ <A> <sent_block> , return
+	<if_sent> -> if ( <expression> ) <M> <A> <sent_block> <N> else <M> ¡¤ <A> <sent_block> , ID
+	<if_sent> -> if ( <expression> ) <M> <A> <sent_block> <N> else <M> ¡¤ <A> <sent_block> , }
+	<A> -> ¡¤ @ , {
+ÏîÄ¿¼¯ 161 : 
+	<sent_block> -> { <inner_declare> <sent_list> } ¡¤ , if
+	<sent_block> -> { <inner_declare> <sent_list> } ¡¤ , else
+	<sent_block> -> { <inner_declare> <sent_list> } ¡¤ , while
+	<sent_block> -> { <inner_declare> <sent_list> } ¡¤ , return
+	<sent_block> -> { <inner_declare> <sent_list> } ¡¤ , ID
+	<sent_block> -> { <inner_declare> <sent_list> } ¡¤ , }
+ÏîÄ¿¼¯ 162 : 
+	<sent_block> -> { <inner_declare> <sent_list> ¡¤ } , if
+	<sent_block> -> { <inner_declare> <sent_list> ¡¤ } , while
+	<sent_block> -> { <inner_declare> <sent_list> ¡¤ } , return
+	<sent_block> -> { <inner_declare> <sent_list> ¡¤ } , ID
+	<sent_block> -> { <inner_declare> <sent_list> ¡¤ } , }
+ÏîÄ¿¼¯ 163 : 
+	<sent_block> -> { <sent_list> } ¡¤ , if
+	<sent_block> -> { <sent_list> } ¡¤ , while
+	<sent_block> -> { <sent_list> } ¡¤ , return
+	<sent_block> -> { <sent_list> } ¡¤ , ID
+	<sent_block> -> { <sent_list> } ¡¤ , }
+ÏîÄ¿¼¯ 164 : 
+	<if_sent> -> if ( <expression> ) <M> <A> <sent_block> <N> else <M> <A> ¡¤ <sent_block> , if
+	<if_sent> -> if ( <expression> ) <M> <A> <sent_block> <N> else <M> <A> ¡¤ <sent_block> , while
+	<if_sent> -> if ( <expression> ) <M> <A> <sent_block> <N> else <M> <A> ¡¤ <sent_block> , return
+	<if_sent> -> if ( <expression> ) <M> <A> <sent_block> <N> else <M> <A> ¡¤ <sent_block> , ID
+	<if_sent> -> if ( <expression> ) <M> <A> <sent_block> <N> else <M> <A> ¡¤ <sent_block> , }
+	<sent_block> -> ¡¤ { <inner_declare> <sent_list> } , if
+	<sent_block> -> ¡¤ { <sent_list> } , if
+	<sent_block> -> ¡¤ { <inner_declare> <sent_list> } , while
+	<sent_block> -> ¡¤ { <sent_list> } , while
+	<sent_block> -> ¡¤ { <inner_declare> <sent_list> } , return
+	<sent_block> -> ¡¤ { <sent_list> } , return
+	<sent_block> -> ¡¤ { <inner_declare> <sent_list> } , ID
+	<sent_block> -> ¡¤ { <sent_list> } , ID
+	<sent_block> -> ¡¤ { <inner_declare> <sent_list> } , }
+	<sent_block> -> ¡¤ { <sent_list> } , }
+ÏîÄ¿¼¯ 165 : 
+	<sent_block> -> { <inner_declare> <sent_list> } ¡¤ , if
+	<sent_block> -> { <inner_declare> <sent_list> } ¡¤ , while
+	<sent_block> -> { <inner_declare> <sent_list> } ¡¤ , return
+	<sent_block> -> { <inner_declare> <sent_list> } ¡¤ , ID
+	<sent_block> -> { <inner_declare> <sent_list> } ¡¤ , }
+ÏîÄ¿¼¯ 166 : 
+	<if_sent> -> if ( <expression> ) <M> <A> <sent_block> <N> else <M> <A> <sent_block> ¡¤ , if
+	<if_sent> -> if ( <expression> ) <M> <A> <sent_block> <N> else <M> <A> <sent_block> ¡¤ , while
+	<if_sent> -> if ( <expression> ) <M> <A> <sent_block> <N> else <M> <A> <sent_block> ¡¤ , return
+	<if_sent> -> if ( <expression> ) <M> <A> <sent_block> <N> else <M> <A> <sent_block> ¡¤ , ID
+	<if_sent> -> if ( <expression> ) <M> <A> <sent_block> <N> else <M> <A> <sent_block> ¡¤ , }

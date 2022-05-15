@@ -1,0 +1,139 @@
+**************************产生式**********************************
+第 0 条产生式为：<start> -> <program>
+第 1 条产生式为：<program> -> <N> <declare_list>
+第 2 条产生式为：<N> -> @
+第 3 条产生式为：<declare_list> -> <declare> <declare_list>
+第 4 条产生式为：<declare_list> -> <declare>
+第 5 条产生式为：<declare> -> int ID <M> <A> <func_declare>
+第 6 条产生式为：<declare> -> int ID <var_declare>
+第 7 条产生式为：<declare> -> void ID <M> <A> <func_declare>
+第 8 条产生式为：<var_declare> -> ;
+第 9 条产生式为：<M> -> @
+第 10 条产生式为：<A> -> @
+第 11 条产生式为：<func_declare> -> ( <fparam> ) <sent_block>
+第 12 条产生式为：<fparam> -> <param_list>
+第 13 条产生式为：<fparam> -> void
+第 14 条产生式为：<param_list> -> <param>
+第 15 条产生式为：<param_list> -> <param> , <param_list>
+第 16 条产生式为：<param> -> int ID
+第 17 条产生式为：<sent_block> -> { <inner_declare> <sent_list> }
+第 18 条产生式为：<sent_block> -> { <sent_list> }
+第 19 条产生式为：<inner_declare> -> <inner_var_dec>
+第 20 条产生式为：<inner_declare> -> <inner_var_dec> <inner_declare>
+第 21 条产生式为：<inner_var_dec> -> int ID ;
+第 22 条产生式为：<sent_list> -> <sent> <M> <sent_list>
+第 23 条产生式为：<sent_list> -> <sent>
+第 24 条产生式为：<sent> -> <if_sent>
+第 25 条产生式为：<sent> -> <while_sent>
+第 26 条产生式为：<sent> -> <return_sent>
+第 27 条产生式为：<sent> -> <assign_sent>
+第 28 条产生式为：<if_sent> -> if ( <expression> ) <M> <A> <sent_block>
+第 29 条产生式为：<if_sent> -> if ( <expression> ) <M> <A> <sent_block> <N> else <M> <A> <sent_block>
+第 30 条产生式为：<while_sent> -> while <M> ( <expression> ) <M> <A> <sent_block>
+第 31 条产生式为：<return_sent> -> return ;
+第 32 条产生式为：<return_sent> -> return <expression> ;
+第 33 条产生式为：<assign_sent> -> ID = <expression> ;
+第 34 条产生式为：<expression> -> <add_expression>
+第 35 条产生式为：<expression> -> <add_expression> <relop> <expression>
+第 36 条产生式为：<add_expression> -> <item>
+第 37 条产生式为：<add_expression> -> <item> + <add_expression>
+第 38 条产生式为：<add_expression> -> <item> - <add_expression>
+第 39 条产生式为：<item> -> <factor>
+第 40 条产生式为：<item> -> <factor> * <item>
+第 41 条产生式为：<item> -> <factor> / <item>
+第 42 条产生式为：<factor> -> NUM
+第 43 条产生式为：<factor> -> ID
+第 44 条产生式为：<factor> -> ( <expression> )
+第 45 条产生式为：<factor> -> ID ( <aparam_list> )
+第 46 条产生式为：<aparam_list> -> @
+第 47 条产生式为：<aparam_list> -> <expression>
+第 48 条产生式为：<aparam_list> -> <expression> , <aparam_list>
+第 49 条产生式为：<relop> -> <
+第 50 条产生式为：<relop> -> >
+第 51 条产生式为：<relop> -> ==
+第 52 条产生式为：<relop> -> >=
+第 53 条产生式为：<relop> -> <=
+第 54 条产生式为：<relop> -> !=
+**************************firstw集合***************************
+             <start> :                  int                void
+           <program> :                  int                void
+                 <N> :                    @
+      <declare_list> :                  int                void
+                   @ :                    @
+           <declare> :                  int                void
+                 int :                  int
+                  ID :                   ID
+                 <M> :                    @
+                 <A> :                    @
+      <func_declare> :                    (
+       <var_declare> :                    ;
+                void :                 void
+                   ; :                    ;
+                   ( :                    (
+            <fparam> :                 void                 int
+                   ) :                    )
+        <sent_block> :                    {
+        <param_list> :                  int
+             <param> :                  int
+                   , :                    ,
+                   { :                    {
+     <inner_declare> :                  int
+         <sent_list> :                   if               while              return                  ID
+                   } :                    }
+     <inner_var_dec> :                  int
+              <sent> :                   if               while              return                  ID
+           <if_sent> :                   if
+        <while_sent> :                while
+       <return_sent> :               return
+       <assign_sent> :                   ID
+                  if :                   if
+        <expression> :                  NUM                  ID                   (
+                else :                 else
+               while :                while
+              return :               return
+                   = :                    =
+    <add_expression> :                  NUM                  ID                   (
+             <relop> :                    <                   >                  ==                  >=                  <=                  !=
+              <item> :                  NUM                  ID                   (
+                   + :                    +
+                   - :                    -
+            <factor> :                  NUM                  ID                   (
+                   * :                    *
+                   / :                    /
+                 NUM :                  NUM
+       <aparam_list> :                    @                 NUM                  ID                   (
+                   < :                    <
+                   > :                    >
+                  == :                   ==
+                  >= :                   >=
+                  <= :                   <=
+                  != :                   !=
+                   # :                    #
+*************************follow集合***************************
+             <start> :                    #
+           <program> :                    #
+                 <N> :                  int                void                else
+      <declare_list> :                    #
+           <declare> :                  int                void                   #
+                 <M> :                    (                  if               while              return                  ID                   {
+                 <A> :                    (                   {
+      <func_declare> :                  int                void                   #
+       <var_declare> :                  int                void                   #
+            <fparam> :                    )
+        <sent_block> :                  int                void                   #                  if               while              return                  ID                   }                else
+        <param_list> :                    )
+             <param> :                    )                   ,
+     <inner_declare> :                   if               while              return                  ID
+         <sent_list> :                    }
+     <inner_var_dec> :                   if               while              return                  ID                 int
+              <sent> :                   if               while              return                  ID                   }
+           <if_sent> :                   if               while              return                  ID                   }
+        <while_sent> :                   if               while              return                  ID                   }
+       <return_sent> :                   if               while              return                  ID                   }
+       <assign_sent> :                   if               while              return                  ID                   }
+        <expression> :                    )                   ;                   ,
+    <add_expression> :                    )                   ;                   <                   >                  ==                  >=                  <=                  !=                   ,
+             <relop> :                  NUM                  ID                   (
+              <item> :                    )                   ;                   <                   >                  ==                  >=                  <=                  !=                   +                   -                   ,
+            <factor> :                    )                   ;                   <                   >                  ==                  >=                  <=                  !=                   +                   -                   *                   /                   ,
+       <aparam_list> :                    )
