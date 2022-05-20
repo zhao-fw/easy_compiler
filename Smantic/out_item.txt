@@ -1,6 +1,6 @@
 *****************************item_set********************************
 �酊深� 0 : 
-	<start> -> ， <program> , #
+	<start> -> ， <program> , # 
 	<program> -> ， <N> <declare_list> , #
 	<N> -> ， @ , int
 	<N> -> ， @ , void

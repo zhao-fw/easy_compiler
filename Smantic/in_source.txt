@@ -10,7 +10,6 @@ int main(int x)
  int c;
  x = x + 2; 
  a=fun(m, c, x);
- //fun(m, c, x);
  c=0;
  while(c<3)
  {

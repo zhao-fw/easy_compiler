@@ -4,10 +4,10 @@
 <declare_list> -> <declare> <declare_list>
 <declare_list> -> <declare>
 <declare> -> int ID <M> <A> <func_declare>
+<M> -> @
 <declare> -> int ID <var_declare>
 <declare> -> void ID <M> <A> <func_declare>
 <var_declare> -> ;
-<M> -> @
 <A> -> @
 <func_declare> -> ( <fparam> ) <sent_block>
 <fparam> -> <param_list>

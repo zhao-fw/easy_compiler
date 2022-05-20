@@ -55,7 +55,7 @@
 第 53 条产生式为：<relop> -> <=
 第 54 条产生式为：<relop> -> !=
 **************************firstw集合***************************
-             <start> :                  int                void
+             <start> :                  int                 void
            <program> :                  int                void
                  <N> :                    @
       <declare_list> :                  int                void
