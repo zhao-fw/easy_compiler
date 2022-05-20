@@ -13,7 +13,7 @@ using namespace std;
 
 #define SYMBOL_NUM 100
 #define PRODUCTION_NUM 100
-#define MAX_NUM 200
+#define MAX_NUM 250
 
 struct symbol
 {
