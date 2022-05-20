@@ -69,6 +69,7 @@ public:
 		in.close();
 		out.close();
 		//销毁链表还没写
+		
 	}
 };
 char Lexer::GetChar() {
