@@ -121,8 +121,8 @@ int main()
 		{
 			/*
 			* 非空移进：input：pop一次
-			*			symbol：push输入的SYM
-			*			state：push转移后的state_id
+			*		symbol：push输入的SYM
+			*		state：push转移后的state_id
 			*/
 
 			// 转移后的状态
@@ -140,8 +140,8 @@ int main()
 		{
 			/*
 			* 空移进：input：不变
-			* 		  symbol：不变
-			* 		  state：push转移后的state_id
+			* 		symbol：不变
+			* 		state：push转移后的state_id
 			*/
 
 			// 转移后的状态
@@ -154,8 +154,8 @@ int main()
 		{
 			/* 
 			* 非空规约：input：push(产生式的左边)
-			*			symbol：pop 产生式右边符号的数量 次
-			*			state：pop 产生式右边符号的数量 次
+			*		symbol：pop 产生式右边符号的数量 次
+			*		state：pop 产生式右边符号的数量 次
 			*/
 
 			// 操作需要的相关信息（根据需要使用）
@@ -187,8 +187,8 @@ int main()
 		{
 			/* 
 			* 空规约：input.push(产生式的左边)
-			*		  symbol不变
-			*		  state.pop 一次
+			*		 symbol不变
+			*		 state.pop 一次
 			*/
 
 			// 操作需要的相关信息（根据需要使用）
