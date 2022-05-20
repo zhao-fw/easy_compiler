@@ -3,7 +3,6 @@
 #include "Smantic.hpp"
 #include "Lexer.hpp"
 #include <stack>
-
 using namespace std;
 
 // 由Lexer得到输入的SYM序列
