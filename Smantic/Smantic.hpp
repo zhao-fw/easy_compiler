@@ -16,7 +16,7 @@ enum KIND {
 	VARIABLE,		//变量
 	FUNCTION,		//函数
 	GLOBAL_V,		//全局变量
-	FORMAL_PARA		//形参
+	FORMAL_PARA	//形参
 };
 
 //名字表

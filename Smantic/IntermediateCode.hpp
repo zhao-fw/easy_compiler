@@ -4,6 +4,7 @@
 #include<string>
 #include<vector>
 using namespace std;
+
 //ËÄÔªÊ½
 struct Quaternary {
 	string op;
