@@ -1,0 +1,55 @@
+<start> -> <program>
+<program> -> <N> <declare_list>
+<N> -> @
+<declare_list> -> <declare> <declare_list>
+<declare_list> -> <declare>
+<declare> -> int ID <M> <A> <func_declare>
+<declare> -> int ID <var_declare>
+<declare> -> void ID <M> <A> <func_declare>
+<var_declare> -> ;
+<M> -> @
+<A> -> @
+<func_declare> -> ( <fparam> ) <sent_block>
+<fparam> -> <param_list>
+<fparam> -> void
+<param_list> -> <param>
+<param_list> -> <param> , <param_list>
+<param> -> int ID
+<sent_block> -> { <inner_declare> <sent_list> }
+<sent_block> -> { <sent_list> }
+<inner_declare> -> <inner_var_dec>
+<inner_declare> -> <inner_var_dec> <inner_declare>
+<inner_var_dec> -> int ID ;
+<sent_list> -> <sent> <M> <sent_list>
+<sent_list> -> <sent>
+<sent> -> <if_sent>
+<sent> -> <while_sent>
+<sent> -> <return_sent>
+<sent> -> <assign_sent>
+<if_sent> -> if ( <expression> ) <M> <A> <sent_block>
+<if_sent> -> if ( <expression> ) <M> <A> <sent_block> <N> else <M> <A> <sent_block>
+<while_sent> -> while <M> ( <expression> ) <M> <A> <sent_block>
+<return_sent> -> return ;
+<return_sent> -> return <expression> ;
+<assign_sent> -> ID = <expression> ;
+<expression> -> <add_expression>
+<expression> -> <add_expression> <relop> <expression>
+<add_expression> -> <item>
+<add_expression> -> <item> + <add_expression>
+<add_expression> -> <item> - <add_expression>
+<item> -> <factor>
+<item> -> <factor> * <item>
+<item> -> <factor> / <item>
+<factor> -> NUM
+<factor> -> ID
+<factor> -> ( <expression> )
+<factor> -> ID ( <aparam_list> )
+<aparam_list> -> @
+<aparam_list> -> <expression>
+<aparam_list> -> <expression> , <aparam_list>
+<relop> -> >
+<relop> -> <
+<relop> -> >=
+<relop> -> <=
+<relop> -> !=
+<relop> -> ==

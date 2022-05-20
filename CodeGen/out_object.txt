@@ -1,0 +1,80 @@
+j main
+Label0:
+sw $ra 4($sp)
+j main
+demo:
+sw $ra 4($sp)
+lw  8($sp)
+addi  $zero 2
+add $s7  
+addi  $zero 2
+mul $s6 $s7 
+add $v0 $zero $s6
+lw $ra 4($sp)
+jr $ra
+main:
+addi  $zero 3
+addi  $zero 4
+addi  $zero 2
+sw  8($sp)
+sw  12($sp)
+lw  0($sp)
+sw  24($sp)
+sw $sp 16($sp)
+addi $sp $sp 16
+jal demo
+lw $sp 0($sp)
+lw  0($sp)
+sw  28($sp)
+lw  0($sp)
+sw  32($sp)
+lw  12($sp)
+sw  36($sp)
+lw  8($sp)
+sw  40($sp)
+sw $sp 16($sp)
+addi $sp $sp 16
+jal program
+lw $sp 0($sp)
+lw  0($sp)
+j end
+program:
+sw $ra 4($sp)
+addi  $zero 0
+sw  20($sp)
+lw  12($sp)
+lw  16($sp)
+add $s7  
+lw  8($sp)
+bgt  $s7 Label2
+Label1:
+j Label3
+Label2:
+lw  12($sp)
+lw  16($sp)
+mul $s7  
+addi  $zero 1
+add $s7 $s7 
+lw  8($sp)
+add $s6  $s7
+sw $s6 24($sp)
+j Label4
+Label3:
+lw  8($sp)
+Label4:
+lw  20($sp)
+addi  $zero 100
+ble   Label6
+Label5:
+j Label7
+Label6:
+lw  24($sp)
+addi  $zero 2
+mul $s7  
+sw $s7 20($sp)
+j Label4
+Label7:
+lw $v0 20($sp)
+lw $ra 4($sp)
+jr $ra
+end:
