@@ -10,8 +10,7 @@ struct SemanticListNode {
 };
 
 /*
-	建立符号（终结与非终结符）
-	记录符号的属性
+ * 建立符号（终结与非终结符）记录符号的属性
 */
 class SYM
 {

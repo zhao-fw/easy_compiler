@@ -13,6 +13,7 @@
 using namespace std;
 string key[KEY_NUM] = { "int","void","if","else","while","return" };//1~KEY_NUM
 char singleC[SINGLE_NUM + 8] = { ';' ,',' ,'(', ')' ,'{' , '}', '#', '+', '-', '*', '/', '=', '>', '<' };
+
 typedef struct WT {
 	string word = "";
 	char type_name[20] = { 0 };
